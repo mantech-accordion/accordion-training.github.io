@@ -1,10 +1,11 @@
 ---
 layout: default
-title: 2. Accordion 소개
+title: 2. Kubernetes
 nav_order: 2
+parent: 1. 기초
 ---
 
-# Accordion 소개
+# 1. 쿠버네티스 기초
 {: .no_toc }
 
 ## Table of contents
@@ -23,22 +24,6 @@ By default, all generated HTML pages are indexed using the following data points
 - Page content
 - Page URL
 
-## 아코디언 소개
+## 쿠버네티스 
 
-In your site's `_config.yml`, enable search:
-
-```yaml
-# Enable or disable the site search
-# Supports true (default) or false
-search_enabled: true
-```
-
-
-## 아코디언v2 아키텍쳐 및 v1과 차이점
-
-
-## 아코디언v2 인스톨러 구조 및 설정 방법
-
-### [실습]아코디언v2 인스톨(3H) - 멀티 클러스터 구성
-
-### 트러블슈팅 
+### [실습]쿠버네티스 설치 및 리소스 배포

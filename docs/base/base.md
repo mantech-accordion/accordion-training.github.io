@@ -1,10 +1,12 @@
 ---
 layout: default
-title: 3. 애플리케이션 배포
-nav_order: 3
+title: 1. 기초
+nav_order: 2
+has_children: true
+permalink: /docs/base
 ---
 
-# 애플리케이션 배포
+# 1. 기초
 {: .no_toc }
 
 ## Table of contents
@@ -23,17 +25,7 @@ By default, all generated HTML pages are indexed using the following data points
 - Page content
 - Page URL
 
-## 아코디언v2 헬름 & 카탈로그 & 파이프라인 소개
-
-### Helm
-
-### 카탈로그 
-
-
-### 파이프라인
-
-
-### 아코디언v2 카탈로그와 아코디언v1 앱의 차이점
+## 컨테이너 이론
 
 In your site's `_config.yml`, enable search:
 
@@ -44,20 +36,9 @@ search_enabled: true
 ```
 
 
-## 워크로드, 구성, 네트워크, 접근제어
-
-### 워크로드
+### [실습]컨테이너 설치 및 실행
 
 
-### 구성
+## 쿠버네티스 
 
-### 접근제어
-
-### [실습]헬름 & 카탈로그 배포
-
-## 카탈로그 & 파이프라인 & 태스크 작성 가이드
-
-
-### [실습]카탈로그 & 태스크 작성, 배포
-
-### 트러블슈팅 
+### [실습]쿠버네티스 설치 및 리소스 배포

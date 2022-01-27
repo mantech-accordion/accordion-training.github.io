@@ -1,10 +1,12 @@
 ---
 layout: default
-title: 1. Kubernetes 기초
-nav_order: 1
+title: 3. 애플리케이션 배포
+nav_order: 3
+has_children: true
+permalink: /docs/application
 ---
 
-# Accordion 소개
+# 3. 애플리케이션 배포
 {: .no_toc }
 
 ## Table of contents
@@ -23,20 +25,4 @@ By default, all generated HTML pages are indexed using the following data points
 - Page content
 - Page URL
 
-## 컨테이너 이론
-
-In your site's `_config.yml`, enable search:
-
-```yaml
-# Enable or disable the site search
-# Supports true (default) or false
-search_enabled: true
-```
-
-
-### [실습]컨테이너 설치 및 실행
-
-
-## 쿠버네티스 
-
-### [실습]쿠버네티스 설치 및 리소스 배포
+## 아코디언v2 헬름 & 카탈로그 & 파이프라인 소개

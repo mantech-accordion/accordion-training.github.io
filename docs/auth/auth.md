@@ -1,10 +1,12 @@
 ---
 layout: default
-title: 4. 권한 & 모니터링 알림
+title: 4. 권한
 nav_order: 4
+has_children: true
+permalink: /docs/auth
 ---
 
-# 권한 & 모니터링 알림
+# 권한
 {: .no_toc }
 
 ## Table of contents
@@ -24,24 +26,3 @@ By default, all generated HTML pages are indexed using the following data points
 - Page URL
 
 ## 멀티 클러스터 계정 권한
-
-### [실습]멀티 클러스터 계정 권한
-
-
-## 모니터링 & 알림
-
-
-### [실습]알림 설정
-
-In your site's `_config.yml`, enable search:
-
-```yaml
-# Enable or disable the site search
-# Supports true (default) or false
-search_enabled: true
-```
-
-
-## 아코디언v2 로드맵 공유 및 향후 계획
-
-## 서포트 사이트 사용방법 공유

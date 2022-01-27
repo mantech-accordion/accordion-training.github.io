@@ -16,7 +16,7 @@
 title: Accordion_v2 Training
 description: 아코디언v2 교육
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://accordion-training.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mantech-accordion.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"

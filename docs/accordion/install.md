@@ -139,7 +139,3 @@ acc-system    deployment.apps/apm-agent-injector             1/1     1          
 ![acc-ins-1.png](/assets/images/accordion/acc-ins-1.png)
 
 
-
-## [실습]아코디언v2 인스톨(3H) - 멀티 클러스터 구성
-
-## 트러블슈팅 

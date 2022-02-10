@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 5-2. [실습]알림 설정
-parent: 5. 모니터링 알림
+title: [실습]알림 설정
+parent: 6. 모니터링 알림
 ---
 
 # [실습]알림 설정

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 4. 권한
-nav_order: 4
+title: 5. 권한
+nav_order: 5
 has_children: true
 permalink: /docs/auth
 ---

@@ -2,7 +2,7 @@
 layout: default
 title: 3-2. Catalog
 nav_order: 2
-parent: 3. 애플리케이션 배포
+parent: 3. 애플리케이션
 ---
 
 # 카탈로그 

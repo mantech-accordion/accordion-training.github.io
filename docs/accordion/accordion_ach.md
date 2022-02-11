@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 2-1. Accordion 아키텍쳐
-nav_order: 1
-parent: 2. Accordion 소개
+title: 2-2. Accordion 아키텍쳐
+nav_order: 2
+parent: 2. Accordion v2
 ---
 
 # 2-1. 아코디언v2 아키텍쳐

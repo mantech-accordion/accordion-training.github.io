@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 2-4. 실습
-nav_order: 4
-parent: 2. Accordion 소개
+title: 2-5. 실습
+nav_order: 5
+parent: 2. Accordion v2
 ---
 
-# 2-2. Accordion 설치
+# 2-4.[실습]아코디언v2 인스톨
 {: .no_toc }
 
 ## Table of contents
@@ -14,9 +14,8 @@ parent: 2. Accordion 소개
 1. TOC
 {:toc}
 
----
 
-# [실습]아코디언v2 인스톨
+---
 
 
 ### 라이선스 등록

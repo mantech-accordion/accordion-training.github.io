@@ -1,10 +1,11 @@
 ---
 layout: default
-title: 8. 파트너 서포트
-nav_order: 8
+title: 6-1. 시스템
+nav_order: 1
+parent: 6. 모니터링&알림
 ---
 
-# 파트너 서포트 사이트
+# 6-1. 시스템
 {: .no_toc }
 
 ## Table of contents
@@ -15,3 +16,4 @@ nav_order: 8
 
 ---
 
+## 부제목

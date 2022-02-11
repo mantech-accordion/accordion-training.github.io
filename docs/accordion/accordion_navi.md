@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 2-3. Accordion 메뉴 구성
+title: 2-3. Accordion 메뉴 소개
 nav_order: 3
-parent: 2. Accordion 소개
+parent: 2. Accordion v2
 ---
-# 2-3. Accordion 메뉴 구성
+# 2-3. Accordion 메뉴 소개
 {: .no_toc }
 
 ## Table of contents

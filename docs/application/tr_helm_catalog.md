@@ -1,15 +1,22 @@
 ---
 layout: default
-title: 3-8. [실습]Helm & 카탈로그 배포
+title: 3-8. 실습
 nav_order: 8
 parent: 3. 애플리케이션
 ---
 
 # [실습]Helm & 카탈로그 배포
+{: .no_toc }
 
-## 카탈로그 & 파이프라인 & 태스크 작성 가이드
+## Table of contents
+{: .no_toc .text-delta }
 
+1. TOC
+{:toc}
 
-### [실습]카탈로그 & 태스크 작성, 배포
+---
 
-### 트러블슈팅 
+## Helm 배포
+
+---
+## 카탈로그 배포

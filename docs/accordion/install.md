@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 2-2. Accordion 설치
-nav_order: 2
-parent: 2. Accordion 소개
+title: 2-4. Accordion 설치
+nav_order: 4
+parent: 2. Accordion v2
 ---
 
 # 2-2. Accordion 설치

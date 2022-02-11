@@ -6,4 +6,4 @@ has_children: true
 permalink: /docs/workload
 ---
 
-# 워크로드
+# 4. 워크로드

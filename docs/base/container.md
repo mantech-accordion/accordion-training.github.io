@@ -2,16 +2,17 @@
 layout: default
 title: 1-1. Container
 nav_order: 1
-parent: 1. 기초
+parent: 1. Container & Kubernetes
 ---
 
-# 1. 컨테이너 기초
+# 1-1. Container
+{: .no_toc }
+
 ## Table of contents
 {: .no_toc .text-delta }
+
 1. TOC
 {:toc}
-
-
 ---
 
 다양한 인프라, 온프레미스 및 클라우드에 비즈니스 애플리케이션을 배포할 수 있는 유연성과 기능에 대한 IT 부문의 점점 더 시급한 요구는 오늘날 컨테이너화에서 가장 실용적이고 효과적인 해답을 찾습니다 . 실제로 소프트웨어를 컨테이너화하면 배포 단계를 단순화하여 애플리케이션 및 소프트웨어 제품의 릴리스 및 업데이트 속도를 높일 수 있습니다.

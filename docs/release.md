@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 8. 파트너 서포트
-nav_order: 8
+title: 7. 릴리즈 계획
+nav_order: 7
 ---
 
-# 파트너 서포트 사이트
+# 아코디언v2 로드맵
 {: .no_toc }
 
 ## Table of contents
@@ -14,4 +14,3 @@ nav_order: 8
 {:toc}
 
 ---
-

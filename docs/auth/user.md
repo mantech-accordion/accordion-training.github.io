@@ -1,10 +1,11 @@
 ---
 layout: default
-title: 8. 파트너 서포트
-nav_order: 8
+title: 5-1. 사용자
+nav_order: 1
+parent: 5. 사용자&그룹 권한 
 ---
 
-# 파트너 서포트 사이트
+# 5-1. 사용자
 {: .no_toc }
 
 ## Table of contents
@@ -14,4 +15,3 @@ nav_order: 8
 {:toc}
 
 ---
-

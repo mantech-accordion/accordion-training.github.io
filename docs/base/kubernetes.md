@@ -2,10 +2,10 @@
 layout: default
 title: 1-2. Kubernetes
 nav_order: 2
-parent: 1. 기초
+parent: 1. Container & Kubernetes
 ---
 
-# 1. 쿠버네티스 기초
+# 1-2. Kubernetes
 {: .no_toc }
 
 ## Table of contents

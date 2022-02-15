@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 6-1. 시스템
+title: 6-6. 서비스메시
 nav_order: 1
 parent: 6. 모니터링&알림
 ---
 
-# 6-1. 시스템
+# 6-6. 서비스메시
 {: .no_toc }
 
 ## Table of contents
@@ -15,5 +15,3 @@ parent: 6. 모니터링&알림
 {:toc}
 
 ---
-
-## 부제목

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 3-2. Catalog
+title: 3-2. Catalog 이해
 nav_order: 2
 parent: 3. 애플리케이션
 ---
@@ -15,6 +15,8 @@ parent: 3. 애플리케이션
 {:toc}
 
 ---
+
+카탈로그는 아코디언의 가장 중요한 구성 요소 중 하나입니다. 카탈로그는 서비스를 패키징하고 배포 및 관리하는 데 최적화된 방법입니다. 
 
 ![catalog-1.png](/assets/images/application/catalog-1.png)
 

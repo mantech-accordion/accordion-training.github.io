@@ -19,3 +19,15 @@ parent: 5-3. 권한
 
 
 ## 네임스페이스 권한
+
+**네임스페이스 권한 목록**
+![5_account-auth-namespace.png](/assets/images/auth/5_account-auth-namespace.png)
+
+**네임스페이스 권한 생성**
+![5_account-auth-namespace-create.png](/assets/images/auth/5_account-auth-namespace-create.png)
+
+**생성된 네임스페이스 권한 확인**
+![5_account-auth-namespace-create-success.png](/assets/images/auth/5_account-auth-namespace-create-success.png)
+
+**네임스페이스 권한 삭제**
+![5_account-auth-namespace-delete-confirm.png](/assets/images/auth/5_account-auth-namespace-delete-confirm.png)

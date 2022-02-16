@@ -1,13 +1,13 @@
 ---
 layout: default
-title: 5-3. 권한
+title: 4-3. 권한
 nav_order: 2
 has_children: true
-parent: 5. 계정
+parent: 4. 계정
 
 ---
 
-# 5-3. 권한
+# 4-3. 권한
 {: .no_toc }
 
 ## Table of contents

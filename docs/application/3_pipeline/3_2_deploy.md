@@ -1,8 +1,9 @@
 ---
 layout: default
-title: 3-6. Pipeline 배포
-nav_order: 6
-parent: 3. 애플리케이션
+title: 5-3-2. 파이프라인 배포
+nav_order: 3
+grand_parent: 5. 애플리케이션
+parent: 5-3. 파이프라인
 ---
 
 # 파이프라인
@@ -16,6 +17,8 @@ parent: 3. 애플리케이션
 
 ---
 
+Namespace
+{: .label .label-green }
 ## 파이프라인 메뉴
 ![pipeline-001.png](/assets/images/application/pipeline/pipeline-001.png)
 

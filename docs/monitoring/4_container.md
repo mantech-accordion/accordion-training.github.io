@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 6-4. 컨테이너 로그
-nav_order: 1
-parent: 6. 모니터링&알림
+title: 11-4. 컨테이너 로그
+nav_order: 4
+parent: 11. 모니터링&알림
 ---
 
-# 6-4. 컨테이너 로그
+# 11-4. 컨테이너 로그
 {: .no_toc }
 
 ## Table of contents

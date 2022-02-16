@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 5-2. 그룹
+title: 4-2. 그룹
 nav_order: 2
-parent: 5. 계정
+parent: 4. 계정
 ---
 
-# 5-2. 그룹
+# 4-2. 그룹
 {: .no_toc }
 
 ## Table of contents

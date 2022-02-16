@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 6-3. 이벤트 로그
-nav_order: 1
-parent: 6. 모니터링&알림
+title: 11-3. 이벤트 로그
+nav_order: 3
+parent: 11. 모니터링&알림
 ---
 
-# 6-3. 이벤트 로그
+# 11-3. 이벤트 로그
 {: .no_toc }
 
 ## Table of contents

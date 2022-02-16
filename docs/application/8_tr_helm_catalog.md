@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 3-8. 실습
+title: 5-8. 실습
 nav_order: 8
-parent: 3. 애플리케이션
+parent: 5. 애플리케이션
 ---
 
 # [실습]Helm & 카탈로그 배포
@@ -16,6 +16,8 @@ parent: 3. 애플리케이션
 
 ---
 
+Namespace
+{: .label .label-green }
 ## Helm 배포
 
 ---

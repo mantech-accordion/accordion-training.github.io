@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 6-5. 감사 로그
-nav_order: 1
-parent: 6. 모니터링&알림
+title: 11-5. 감사 로그
+nav_order: 5
+parent: 11. 모니터링&알림
 ---
 
-# 6-5. 감사 로그
+# 11-5. 감사 로그
 {: .no_toc }
 
 ## Table of contents

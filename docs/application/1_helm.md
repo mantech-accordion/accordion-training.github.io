@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 3-1. Helm
+title: 5-1. Helm
 nav_order: 1
-parent: 3. 애플리케이션
+parent: 5. 애플리케이션
 ---
 
-# 3-1. Helm
+# 4-1. Helm
 {: .no_toc }
 
 ## Table of contents
@@ -15,6 +15,14 @@ parent: 3. 애플리케이션
 {:toc}
 
 ---
+
+
+<div class="code-example" markdown="1">
+Namespace
+{: .label .label-green }
+</div>
+
+
 
 ## Helm 이란?
 Helm은 Kubernetes 애플리케이션 관리를 지원합니다. 

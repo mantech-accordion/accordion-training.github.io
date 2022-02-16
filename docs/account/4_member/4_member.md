@@ -1,13 +1,13 @@
 ---
 layout: default
-title: 5-4. 멤버
+title: 4-4. 멤버
 nav_order: 2
 has_children: true
-parent: 5. 계정
+parent: 4. 계정
 
 ---
 
-# 5-4. 멤버
+# 4-4. 멤버
 {: .no_toc }
 
 ## Table of contents

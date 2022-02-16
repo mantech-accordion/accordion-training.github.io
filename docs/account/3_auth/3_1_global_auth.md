@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 5-3-1. 글로벌 권한
+title: 4-3-1. 글로벌 권한
 nav_order: 2
-grand_parent: 5. 계정
-parent: 5-3. 권한
+grand_parent: 4. 계정
+parent: 4-3. 권한
 ---
 
-# 5-3. 글로벌 권한
+# 4-3. 글로벌 권한
 {: .no_toc }
 
 ## Table of contents

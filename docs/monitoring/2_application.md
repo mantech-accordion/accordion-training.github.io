@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 6-2. 애플리케이션
-nav_order: 1
-parent: 6. 모니터링&알림
+title: 11-2. 애플리케이션
+nav_order: 2
+parent: 11. 모니터링&알림
 ---
 
-# 6-2. 애플리케이션
+# 11-2. 애플리케이션
 {: .no_toc }
 
 ## Table of contents

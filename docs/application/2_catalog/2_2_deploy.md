@@ -1,8 +1,9 @@
 ---
 layout: default
-title: 3-3. Catalog 배포
+title: 5-2-2. 카탈로그 배포
 nav_order: 3
-parent: 3. 애플리케이션
+grand_parent: 5. 애플리케이션
+parent: 5-2. 카탈로그
 ---
 
 # 카탈로그 
@@ -15,6 +16,9 @@ parent: 3. 애플리케이션
 {:toc}
 
 ---
+
+Namespace
+{: .label .label-green }
 
 ![deploy-001.png](/assets/images/application/catalog/deploy-001.png)
 ![deploy-002.png](/assets/images/application/catalog/deploy-002.png)

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 7. 릴리즈 계획
-nav_order: 7
+title: 릴리즈 계획
+nav_order: 99
 ---
 
 # 아코디언v2 로드맵

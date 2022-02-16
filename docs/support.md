@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 8. 파트너 서포트
-nav_order: 8
+title: 파트너 서포트
+nav_order: 100
 ---
 
 # 파트너 서포트 사이트

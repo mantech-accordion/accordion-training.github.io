@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 6-7. 알림
+title: 11-7. 알림
 nav_order: 1
-parent: 6. 모니터링&알림
+parent: 11. 모니터링&알림
 ---
 
-# 6-7. 알림
+# 11-7. 알림
 {: .no_toc }
 
 ## Table of contents

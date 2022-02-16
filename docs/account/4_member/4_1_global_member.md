@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 5-4-1. 글로벌 멤버
+title: 4-4-1. 글로벌 멤버
 nav_order: 2
-grand_parent: 5. 계정
-parent: 5-4. 멤버
+grand_parent: 4. 계정
+parent: 4-4. 멤버
 ---
 
-# 5-4. 글로벌 멤버
+# 4-4. 글로벌 멤버
 {: .no_toc }
 
 ## Table of contents

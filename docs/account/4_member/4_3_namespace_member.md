@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 11-4-3. 네임스페이스 멤버
+title: 4-4-3. 네임스페이스 멤버
 nav_order: 2
-grand_parent: 11. 계정
-parent: 11-4. 멤버
+grand_parent: 4. 계정
+parent: 4-4. 멤버
 ---
 
-# 11-4-3. 네임스페이스 멤버
+# 4-4-3. 네임스페이스 멤버
 {: .no_toc }
 
 ## Table of contents
@@ -23,4 +23,4 @@ Namespace
 </div>
 
 ## 네임스페이스 멤버
-네임스페이스 멤버는 [11-4-2. 클러스터 멤버](../4_2_cluster_member)를 참고하면 된다.
+네임스페이스 멤버는 [4-4-2. 클러스터 멤버](../4_2_cluster_member)를 참고하면 된다.

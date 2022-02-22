@@ -1,13 +1,13 @@
 ---
 layout: default
-title: 4-4. 멤버
+title: 11-4. 멤버
 nav_order: 2
 has_children: true
-parent: 4. 계정
+parent: 11. 계정
 
 ---
 
-# 4-4. 멤버
+# 11-4. 멤버
 {: .no_toc }
 
 ## Table of contents
@@ -15,13 +15,4 @@ parent: 4. 계정
 
 1. TOC
 {:toc}
-
----
-
-## 글로벌 멤버
-
-## 클러스터 멤버
-
-## 네임스페이스 멤버
-
 

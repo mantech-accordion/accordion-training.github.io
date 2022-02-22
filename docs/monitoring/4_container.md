@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 6-4. 컨테이너 로그
+title: 11-4. 컨테이너 로그
 nav_order: 1
-parent: 6. 모니터링&알림
+parent: 11. 모니터링&알림
 ---
 
-# 6-4. 컨테이너 로그
+# 11-4. 컨테이너 로그
 {: .no_toc }
 
 Cluster 내에 있는 pod들의 container 로그와 시간별 로그 통계를 제공한다. 범위설정에서 설정한 간격으로 통계를 나타내며 개수와 총 개수를 나타내며 Node, Namespace, Pod, Container 의 이름과 로그를 제공한다.

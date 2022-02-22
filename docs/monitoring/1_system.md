@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 6-1. 시스템
+title: 11-1. 시스템
 nav_order: 1
-parent: 6. 모니터링&알림
+parent: 11. 모니터링&알림
 ---
 
-# 6-1. 시스템
+# 11-1. 시스템
 {: .no_toc }
 
 [모니터링] - [시스템] 클릭시 확인할 수 있다. Cluster에서는 Overview/Pods/Nodes/Namespaces/Deployments/Statefulsets/GPU 모니터링 지표를 제공한다.

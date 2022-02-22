@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 6-3. 이벤트 로그
+title: 11-3. 이벤트 로그
 nav_order: 1
-parent: 6. 모니터링&알림
+parent: 11. 모니터링&알림
 ---
 
-# 6-3. 이벤트 로그
+# 11-3. 이벤트 로그
 {: .no_toc }
 
 ## Table of contents
@@ -42,7 +42,7 @@ cluster 내의 이벤트 로그를 제공한다. 범위설정에서 설정한 �
 
 **검색 조건**
 
-검색조건은 아래와 같이 총 6가지에 해당한다.
+검색조건은 아래와 같이 총 11가지에 해당한다.
 
 - namespace
 - name

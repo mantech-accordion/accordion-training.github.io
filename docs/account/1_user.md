@@ -19,6 +19,11 @@ parent: 11. 계정
 
 ---
 
+<div class="code-example" markdown="1">
+Global
+{: .label .label-purple }
+</div>
+
 **사용자 목록**
 
 메뉴에서 [계정] - [사용자]를 클릭하면 다음과 같이 사용자의 목록을 확인할 수 있다. 좌측 사용자 목록에서 사용자 아이콘은 사용자 Active 여부에 따라 녹색/빨강으로 표시된다.

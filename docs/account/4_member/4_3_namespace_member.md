@@ -17,5 +17,10 @@ parent: 11-4. 멤버
 
 ---
 
+<div class="code-example" markdown="1">
+Namespace
+{: .label .label-green }
+</div>
+
 ## 네임스페이스 멤버
 네임스페이스 멤버는 [11-4-2. 클러스터 멤버](../4_2_cluster_member)를 참고하면 된다.

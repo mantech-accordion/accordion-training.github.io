@@ -18,6 +18,14 @@ Cluster 내에 있는 pod들의 container 로그와 시간별 로그 통계를 �
 
 ---
 
+<div class="code-example" markdown="1">
+Cluster
+{: .label .label-blue }
+
+Namespace
+{: .label .label-green }
+</div>
+
 **검색조건**
 
 검색조건은 아래와 같이 총 4가지에 해당한다.

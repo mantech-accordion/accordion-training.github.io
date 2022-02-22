@@ -15,3 +15,9 @@ parent: 11. 계정
 
 1. TOC
 {:toc}
+
+---
+<div class="code-example" markdown="1">
+Global
+{: .label .label-purple }
+</div>

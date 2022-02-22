@@ -15,3 +15,8 @@ parent: 6. 모니터링&알림
 {:toc}
 
 ---
+
+<div class="code-example" markdown="1">
+Cluster
+{: .label .label-blue }
+</div>

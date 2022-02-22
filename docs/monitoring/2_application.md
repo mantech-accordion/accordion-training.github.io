@@ -17,9 +17,17 @@ parent: 6. 모니터링&알림
 
 ---
 
+<div class="code-example" markdown="1">
+Namespace
+{: .label .label-green }
+</div>
+
 ## Overview
 - 서비스 : Active Service Total EQ, Active Service EQ, TPS, 금일 TPS, 방문자수, 응답시간, XLog
 - 시스템 : CPU, Memory
+
+![2_app_overview.png](/assets/images/monitoring/2_app_overview.png)
+
 
 **Active Service**
 

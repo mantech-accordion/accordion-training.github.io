@@ -16,6 +16,14 @@ parent: 6. 모니터링&알림
 
 ---
 
+<div class="code-example" markdown="1">
+Cluster
+{: .label .label-blue }
+
+Namespace
+{: .label .label-green }
+</div>
+
 ## 이벤트 로그
 cluster 내의 이벤트 로그를 제공한다. 범위설정에서 설정한 간격으로 통계를 나타내며 개수와 총 개수를 나타내며 Time, Namespace, Name, Count, Kind, Type, Reason, Message 를 제공한다.
 

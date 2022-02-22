@@ -18,6 +18,13 @@ parent: 6. 모니터링&알림
 
 ---
 
+<div class="code-example" markdown="1">
+Cluster
+{: .label .label-blue }
+
+Namespace
+{: .label .label-green }
+</div>
 
 **차트 이미지 다운로드**
 

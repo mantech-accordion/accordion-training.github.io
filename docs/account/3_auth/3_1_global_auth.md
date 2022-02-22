@@ -17,6 +17,11 @@ parent: 11-3. 권한
 
 ---
 
+<div class="code-example" markdown="1">
+Global
+{: .label .label-purple }
+</div>
+
 ## 글로벌 권한
 글로벌 권한은 모든 메뉴에 대한 권한을 설정 할 수 있다.
 

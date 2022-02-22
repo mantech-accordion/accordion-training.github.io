@@ -18,6 +18,14 @@ parent: 6. 모니터링&알림
 
 ---
 
+<div class="code-example" markdown="1">
+Cluster
+{: .label .label-blue }
+
+Namespace
+{: .label .label-green }
+</div>
+
 | 항목  | 설명 |
 |---|---|
 | Time   | 날짜 (yyyy-mm-dd HH:mm:ss) |

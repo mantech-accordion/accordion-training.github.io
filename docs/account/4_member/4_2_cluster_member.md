@@ -17,6 +17,11 @@ parent: 11-4. 멤버
 
 ---
 
+<div class="code-example" markdown="1">
+Cluster
+{: .label .label-blue }
+</div>
+
 ## 클러스터 멤버
 
 **클러스터 멤버 목록**

@@ -21,6 +21,47 @@ Namespace
 {: .label .label-green }
 </div>
 
+## 스테이트풀셋(Statefulset)
+스테이트풀셋은 애플리케이션의 스테이트풀을 관리하는데 사용하는 워크로드 오브젝트입니다.
+파드 집합의 디플로이먼트와 스케일링을 관리하며, 파드들의 순서 및 고유성을 보장합니다.
+
+**스테이트풀셋의 일부 대표적인 용도**
+
+- 안정된, 고유한 네트워크 식별자.
+- 안정된, 지속성을 갖는 스토리지.
+- 순차적인, 정상 배포(graceful deployment)와 스케일링.
+- 순차적인, 자동 롤링 업데이트.
+
+---
+
+## 메뉴이동
+`워크로드` ➡ `스테이트풀셋`
+
 ![wl-sts.png](/assets/images/workload/wl-sts.png)
 
-![wl-015.png](/assets/images/workload/wl-015.png)
+---
+
+## 화면구성
+배포된 스테이트풀셋 정보를 제공합니다.
+
+![wl-015.png](/assets/images/workload/wl-015.png){: width="800" }
+
+---
+
+## 스테이트풀셋 생성
+`+생성` 을 선택하면 나타나는 모달에서 쿠버네티스 스테이트풀셋 리소스 정보를 입력하여 생성할 수 있습니다.
+![statefulset-create.png](/assets/images/workload/statefulset-create.png){: width="800" }
+
+---
+
+## 스테이트풀셋 수정
+수정하려는 스테이트풀셋을 선택하고 우측의 YAML 편집기에서 정보를 변경 후 수정 버튼을 선택하여 반영합니다.
+스테이트풀셋도 디플로이먼트와 동일하게 오토스케일 설정이 가능합니다.
+
+---
+
+## 스테이트풀셋 삭제
+
+삭제하려는 스테이트풀셋을 선택하고 우측의 삭제 버튼을 선택합니다.
+
+![statefulset-delete.png](/assets/images/workload/statefulset-delete.png){: width="800" }

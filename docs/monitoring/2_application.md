@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 6-2. 애플리케이션
+title: 11-2. 애플리케이션
 nav_order: 1
-parent: 6. 모니터링&알림
+parent: 11. 모니터링&알림
 ---
 
-# 6-2. 애플리케이션
+# 11-2. 애플리케이션
 {: .no_toc }
 애플리케이션이란, 실시간으로 모니터링 지표를 제공하여 운영 중인 어플리케이션의 문제점을 빠르게 파악할 수 있도록 한다.
 
@@ -17,9 +17,17 @@ parent: 6. 모니터링&알림
 
 ---
 
+<div class="code-example" markdown="1">
+Namespace
+{: .label .label-green }
+</div>
+
 ## Overview
 - 서비스 : Active Service Total EQ, Active Service EQ, TPS, 금일 TPS, 방문자수, 응답시간, XLog
 - 시스템 : CPU, Memory
+
+![2_app_overview.png](/assets/images/monitoring/2_app_overview.png)
+
 
 **Active Service**
 

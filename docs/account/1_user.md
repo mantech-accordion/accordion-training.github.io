@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 11-1. 사용자
+title: 4-1. 사용자
 nav_order: 1
-parent: 11. 계정
+parent: 4. 계정
 ---
 
-# 11-1. 사용자
+# 4-1. 사용자
 {: .no_toc }
 
 <!-- 사용자별로 다수 그룹에 속할 수 있으며 그룹은 멤버를 통하여 여러의 권한을 가질 수 있다. -->
@@ -19,17 +19,22 @@ parent: 11. 계정
 
 ---
 
+<div class="code-example" markdown="1">
+Global
+{: .label .label-purple }
+</div>
+
 **사용자 목록**
 
 메뉴에서 [계정] - [사용자]를 클릭하면 다음과 같이 사용자의 목록을 확인할 수 있다. 좌측 사용자 목록에서 사용자 아이콘은 사용자 Active 여부에 따라 녹색/빨강으로 표시된다.
 
-![11_user-list.png](/assets/images/auth/11_user-list.png)
+![4_user-list.png](/assets/images/auth/4_user-list.png)
 
 **사용자 생성**
 
 [생성]을 클릭 후 내용을 입력하여 사용자를 생성할 수 있다.
 
-![11_user-create.png](/assets/images/auth/11_user-create.png)
+![4_user-create.png](/assets/images/auth/4_user-create.png)
 
 | 항목  | 설명 |
 |---|---|
@@ -50,11 +55,11 @@ parent: 11. 계정
 
 
 
-![11_user-update.png](/assets/images/auth/11_user-update.png)
+![4_user-update.png](/assets/images/auth/4_user-update.png)
 
 **사용자 삭제**
 
 [삭제] 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 사용자 명 입력 후 [Delete] 버튼 클릭 시 사용자가 삭제된다.
 
 
-![11_user-delete.png](/assets/images/auth/11_user-delete.png)
+![4_user-delete.png](/assets/images/auth/4_user-delete.png)

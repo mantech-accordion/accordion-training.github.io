@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 11-3-2. 클러스터 권한
+title: 4-3-2. 클러스터 권한
 nav_order: 2
-grand_parent: 11. 계정
-parent: 11-3. 권한
+grand_parent: 4. 계정
+parent: 4-3. 권한
 ---
 
-# 11-3-2. 클러스터 권한
+# 4-3-2. 클러스터 권한
 {: .no_toc }
 
 ## Table of contents
@@ -22,13 +22,13 @@ parent: 11-3. 권한
 클러스터 권한은 클러스터 메뉴에 대한 권한을 설정 할 수 있다.
 
 **클러스터 권한 목록**
-![11_account-auth-cluster-list.png](/assets/images/auth/11_account-auth-cluster-list.png)
+![4_account-auth-cluster-list.png](/assets/images/auth/4_account-auth-cluster-list.png)
 
 **클러스터 권한 생성**
-![11_account-auth-cluster-create.png](/assets/images/auth/11_account-auth-cluster-create.png)
+![4_account-auth-cluster-create.png](/assets/images/auth/4_account-auth-cluster-create.png)
 
 **생성된 클러스터 권한 수정**
-![11_account-auth-cluster-create-success.png](/assets/images/auth/11_account-auth-cluster-create-success.png)
+![4_account-auth-cluster-create-success.png](/assets/images/auth/4_account-auth-cluster-create-success.png)
 
 **클러스터 권한 삭제**
-![11_account-auth-cluster-delete-confirm.png](/assets/images/auth/11_account-auth-cluster-delete-confirm.png)
+![4_account-auth-cluster-delete-confirm.png](/assets/images/auth/4_account-auth-cluster-delete-confirm.png)

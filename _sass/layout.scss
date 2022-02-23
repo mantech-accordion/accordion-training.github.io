@@ -44,8 +44,10 @@
   padding-bottom: $gutter-spacing-sm;
 
   @include mq(md) {
-    padding-top: $gutter-spacing;
-    padding-bottom: $gutter-spacing;
+    padding-top: $sp-10;
+    padding-bottom: $gutter-spacing-bs;
+    padding-left: $gutter-spacing;
+    padding-right: $gutter-spacing;
   }
 }
 
@@ -91,6 +93,7 @@
   @include mq(md) {
     display: block;
     padding-top: $sp-8;
+    //padding-top:$sp-4;
     padding-bottom: $gutter-spacing-sm;
     overflow-y: auto;
     flex: 1 1 auto;

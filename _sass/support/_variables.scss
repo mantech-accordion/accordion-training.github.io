@@ -105,6 +105,10 @@ $spacers: (
   sp-8: $spacing-unit * 3,
   sp-9: $spacing-unit * 3.5,
   sp-10: $spacing-unit * 4,
+  sp-11: $spacing-unit * 4.5,
+  sp-12: $spacing-unit * 5,
+  sp-13: $spacing-unit * 5.5,
+  sp-14: $spacing-unit * 6,
 ) !default;
 
 $sp-1: map-get($spacers, sp-1) !default; // 0.25 rem == 4px
@@ -117,6 +121,10 @@ $sp-7: map-get($spacers, sp-7) !default; // 2.5  rem == 40px
 $sp-8: map-get($spacers, sp-8) !default; // 3    rem == 48px
 $sp-9: map-get($spacers, sp-9) !default; // 3.5  rem == 56px
 $sp-10: map-get($spacers, sp-10) !default; // 4  rem == 64px
+$sp-11: map-get($spacers, sp-11) !default; // 4.5rem == 72px
+$sp-12: map-get($spacers, sp-12) !default; // 5  rem == 80px
+$sp-13: map-get($spacers, sp-13) !default; // 5  rem == 88px
+$sp-14: map-get($spacers, sp-14) !default; // 5  rem == 96px
 
 //
 // Borders
@@ -129,10 +137,11 @@ $border-color: $grey-lt-100 !default;
 //
 // Grid system
 //
-
-$gutter-spacing: $sp-6 !default;
+//$gutter-spacing: $sp-6 !default;
+$gutter-spacing-bs: $sp-6 !default;
+$gutter-spacing: $sp-14 !default;
 $gutter-spacing-sm: $sp-4 !default;
-$nav-width: 264px !default;
+$nav-width: 340px !default;
 $nav-width-md: 248px !default;
 $nav-list-item-height: $sp-6 !default;
 $nav-list-item-height-sm: $sp-8 !default;

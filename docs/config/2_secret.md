@@ -52,7 +52,7 @@ Namespace
 ---
 
 ## 시크릿 생성
-`+생성`을 클릭 후 내용을 입력하여 시크릿을 생성할 수 있다. 시크릿은 FORM/YAML로 입력할 수 있습니다.
+`+생성`을 클릭 후 내용을 입력하여 시크릿을 생성할 수 있습니다. 시크릿은 FORM/YAML로 입력할 수 있습니다.
 
 ![config-sc-002.png](/assets/images/config/config-sc-002.png){: width="800" }
 

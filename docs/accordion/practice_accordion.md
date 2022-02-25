@@ -21,7 +21,7 @@ parent: 2. Accordion v2
 ### 라이선스 등록
 글로벌 설정 > 라이선스 > 등록
 
-![practice-1.png](/assets/images/accordion/practice-1.png)
-![practice-2.png](/assets/images/accordion/practice-2.png)
+![practice-1.png](/assets/images/accordion/practice-1.png){: width="800" }
+![practice-2.png](/assets/images/accordion/practice-2.png){: width="800" }
 
 ## 트러블슈팅 

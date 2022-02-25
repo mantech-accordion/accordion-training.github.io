@@ -136,6 +136,6 @@ acc-system    deployment.apps/apm-agent-injector             1/1     1          
 |:---------|:------|:------|
 | https://VIP://30000      | admin  | accordion!@# |
 
-![acc-ins-1.png](/assets/images/accordion/acc-ins-1.png)
+![acc-ins-1.png](/assets/images/accordion/acc-ins-1.png){: width="800" }
 
 

@@ -64,7 +64,7 @@ spec:
 ---
 
 ## 서비스 생성
-`+생성`을 클릭 후 내용을 입력하여 서비스를 생성할 수 있다. 서비스는 FORM/YAML로 입력할 수 있습니다.
+`+생성`을 클릭 후 내용을 입력하여 서비스를 생성할 수 있습니다. 서비스는 FORM/YAML로 입력할 수 있습니다.
 
 ![network-005.png](/assets/images/network/network-005.png){: width="800" }
 

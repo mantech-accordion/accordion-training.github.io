@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4-2. 그룹
-nav_order: 2
+nav_order: 4
 parent: 4. 계정
 ---
 
@@ -20,12 +20,19 @@ parent: 4. 계정
 
 ---
 
+## 메뉴이동
+`계정` ➡ `그룹`
+
+![group.png](/assets/images/auth/group.png)
+
+---
+
 **그룹 생성**
 
 그룹은 그룹별로 사용자 목록을 관리한다.
 그룹 생성 시 이름만 입력하며 아래와 같이 빈 사용자 목록을 확인 할 수 있다.
 
-![4_group-create.png](/assets/images/auth/4_group-create.png)
+![4_group-create.png](/assets/images/auth/4_group-create.png){: width="800" }
 
 **그룹에 사용자 추가**
 
@@ -33,11 +40,11 @@ parent: 4. 계정
 사용자 메뉴에서 그룹에 추가할 특정 사용자를 목록에서 클릭한다.
 우측의 사용자 Group 항목에서 사용자에게 추가하려는 Group을 입력하거나 선택하여 그룹에 사용자를 추가한다.
 
-![4_group-user-add.png](/assets/images/auth/4_group-user-add.png)
+![4_group-user-add.png](/assets/images/auth/4_group-user-add.png){: width="800" }
 
 사용자에 그룹 추가 후 해당 그룹을 확인하면 그룹의 사용자 목록에 사용자가 추가된 것을 확인 할 수 있다.
 
-![4_group-user-list.png](/assets/images/auth/4_group-user-list.png)
+![4_group-user-list.png](/assets/images/auth/4_group-user-list.png){: width="800" }
 
 | 항목  | 설명 |
 |---|---|
@@ -59,11 +66,11 @@ parent: 4. 계정
 그리고 그룹과 그룹에 부여하려는 권한을 가진 글로벌 권한을 선택하여 글로벌 멤버로 설정한다.
 클러스터/네임스페이스도 글로벌 권한 부여와 동일한 방식으로 권한 부여한다.
 
-![4_group-global-member.png](/assets/images/auth/4_group-global-member.png)
+![4_group-global-member.png](/assets/images/auth/4_group-global-member.png){: width="800" }
 
 **그룹 삭제**
 
 [삭제] 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 그룹 명 입력 후 [Delete] 버튼 클릭 시 그룹이 삭제된다.
 
-![4_group-delete.png](/assets/images/auth/4_group-delete.png)
+![4_group-delete.png](/assets/images/auth/4_group-delete.png){: width="800" }
 

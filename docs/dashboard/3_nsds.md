@@ -22,7 +22,18 @@ Namespace
 ## 네임스페이스 대시보드
 네임스페이스 대시보드는 네임스페이스에 대한 정보와 시스템 리소스를 확인할 수 있다.
 
-![3_ns_dashboard_main.png](/assets/images/dashboard/3_ns_dashboard_main.png)
+---
+
+## 메뉴이동
+`네임스페이스 대시보드`
+
+![nd.png](/assets/images/dashboard/nd.png)
+
+---
+
+**네임스페이스 대시보드 전체화면**
+
+![3_ns_dashboard_main.png](/assets/images/dashboard/3_ns_dashboard_main.png){: width="800" }
 
 ## Namespace Info
 네임스페이스 대시보드는 네임스페이스에 대한 정보와 시스템 리소스를 확인할 수 있다.
@@ -39,7 +50,7 @@ Namespace
 |Network Usage|5분간 네트워크 사용률|
 |Average Network|평균 네트워크 사용률|
 
-![3_ns_info.png](/assets/images/dashboard/3_ns_info.png)
+![3_ns_info.png](/assets/images/dashboard/3_ns_info.png){: width="800" }
 
 ## Namespace CPU/Memory Usage Top5
 네임스페이스 내에서 CPU 사용량이 가장 많은 Pod 5개, Memory 사용량이 가장 많은 Pod 5개를 확인할 수 있다.
@@ -57,4 +68,4 @@ Namespace
 |POD IP|Pod의 IP|
 |NODE|Pod가 배포된 Node의 이름|
 
-![3_ns_pods.png](/assets/images/dashboard/3_ns_pods.png)
+![3_ns_pods.png](/assets/images/dashboard/3_ns_pods.png){: width="800" }

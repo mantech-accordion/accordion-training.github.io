@@ -24,8 +24,23 @@ Namespace
 {: .label .label-green }
 </div>
 
+---
+
+## 메뉴이동
+`모니터링` ➡ `이벤트 로그`
+
+![event.png](/assets/images/monitoring/event.png)
+
+---
+
 ## 이벤트 로그
 cluster 내의 이벤트 로그를 제공한다. 범위설정에서 설정한 간격으로 통계를 나타내며 개수와 총 개수를 나타내며 Time, Namespace, Name, Count, Kind, Type, Reason, Message 를 제공한다.
+
+---
+
+[모니터링] - [이벤트 로그] 클릭시 확인할 수 있다.
+
+![event_log.png](/assets/images/monitoring/event_log.png){: width="800" }
 
 | 항목  | 설명 |
 |---|---|
@@ -38,7 +53,9 @@ cluster 내의 이벤트 로그를 제공한다. 범위설정에서 설정한 �
 | Reason   | 해당 상태에 있는 이유  |
 | Message   | 마지막 상태 전환에 대한 세부 정보  |
 
----
+로그 클릭 시 우측에 자세한 로그내용이 나온다.
+
+![event_log_detail.png](/assets/images/monitoring/event_log_detail.png){: width="800" }
 
 **검색 조건**
 
@@ -51,9 +68,20 @@ cluster 내의 이벤트 로그를 제공한다. 범위설정에서 설정한 �
 - reason
 - message
 
+![event_log_condition.png](/assets/images/monitoring/event_log_condition.png)
+
 **새로고침 주기**
 
 - 새로고침 주기는 초단위(5,10,15)로 설정할 수 있으며 원하는 주기를 선택하면 새로고침 주기가 적용된다.
 - 새로고침 주기 설정 좌측 버튼을 클릭하면 즉시 새로고침 된다.
 
+![container_reload.png](/assets/images/monitoring/container_reload.png)
+
 **검색 입력 방법**
+
+검색어에 포함되는 내용을 조회한다.
+
+검색어 검색 시 여러개의 조건에 맞는 검색을 할 수 있다.
+검색조건 입력하면 검색창 하단의 검색조건이 나타난다. 검색 조건을 선택하고 검색 조건의 검색어를 입력하여 검색한다. 또는 검색조건과 검색어를 직접 입력하여 검색한다.
+
+![2_app_overview.png](/assets/images/monitoring/2_app_overview.png){: width="800" }

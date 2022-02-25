@@ -26,6 +26,25 @@ Namespace
 {: .label .label-green }
 </div>
 
+---
+
+## 메뉴이동
+`모니터링` ➡ `컨테이너 로그`
+
+![sys.png](/assets/images/monitoring/sys.png)
+
+---
+
+[모니터링] - [컨테이너 로그] 클릭시 확인할 수 있다.
+
+![container_log.png](/assets/images/monitoring/container_log.png){: width="800" }
+
+로그 클릭 시 우측에 자세한 로그내용이 나온다.
+
+![container_log_detail.png](/assets/images/monitoring/container_log_detail.png){: width="800" }
+
+---
+
 **검색조건**
 
 검색조건은 아래와 같이 총 4가지에 해당한다.
@@ -34,6 +53,8 @@ Namespace
 - nodeName
 - podName
 - containerName
+
+![container_log_condition.png](/assets/images/monitoring/container_log_condition.png)
 
 **새로고침 주기**
 

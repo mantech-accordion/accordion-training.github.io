@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4-4-3. 네임스페이스 멤버
-nav_order: 2
+nav_order: 4
 grand_parent: 4. 계정
 parent: 4-4. 멤버
 ---
@@ -24,3 +24,12 @@ Namespace
 
 ## 네임스페이스 멤버
 네임스페이스 멤버는 [4-4-2. 클러스터 멤버](../4_2_cluster_member)를 참고하면 된다.
+
+---
+
+## 메뉴이동
+`설정` ➡ `네임스페이스 멤버`
+
+![nm.png](/assets/images/auth/nm.png)
+
+---

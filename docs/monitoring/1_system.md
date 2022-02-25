@@ -26,17 +26,27 @@ Namespace
 {: .label .label-green }
 </div>
 
+---
+
+## 메뉴이동
+`모니터링` ➡ `시스템`
+
+![sys.png](/assets/images/monitoring/sys.png)
+
+---
+
 **차트 이미지 다운로드**
 
-차트 우측 상단 햄버거 버튼을 클릭하면 SVG, PNG, CSV파일로 차트를 다운 받을수 있다
-![](/assets/images/auth/)
+차트 우측 상단 햄버거 버튼을 클릭하면 SVG, PNG, CSV파일로 차트를 다운 받을수 있다.
+
+![download.png](/assets/images/monitoring/download.png)
 
 **새로고침 주기**
 
 - 새로고침 주기는 초단위(5,10,30) 분단위(1,5,15,30) 시단위(1,2) 일단위(1)로 설정할 수 있으며 원하는 주기를 선택하면 새로고침 주기가 적용된다.
 - 새로고침 주기 설정 좌측 버튼을 클릭하면 즉시 새로고침 된다.
 
-![](/assets/images/auth/)
+![reload.png](/assets/images/monitoring/reload.png)
 
 
 ---
@@ -45,7 +55,7 @@ Namespace
 
 CPU/Memory/Network 사용량 차트와 네임스페이스별 CPU/Memory/Network 사용량을 테이블로 보여준다.
 
-![](/assets/images/auth/)
+![system_overview.png](/assets/images/monitoring/system_overview.png){: width="800" }
 
 
 | 항목  | 설명 |
@@ -65,7 +75,7 @@ CPU/Memory/Network 사용량 차트와 네임스페이스별 CPU/Memory/Network 
 
 Node/Namespace 를 선택하여 Node/Namespace 별로 Pod 정보를 확인할 수 있다.
 
-![](/assets/images/auth/)
+![system_pods.png](/assets/images/monitoring/system_pods.png){: width="800" }
 
 
 | 항목  | 설명 |
@@ -89,7 +99,7 @@ Node/Namespace 를 선택하여 Node/Namespace 별로 Pod 정보를 확인할 �
 
 Node를 다중 선택하여 검색 가능하며 선택된 Node 목록의 CPU/Memory/Disk/Network Received/Network Transmitted 모니터링 차트를 제공한다.
 
-![](/assets/images/auth/)
+![system_nodes.png](/assets/images/monitoring/system_nodes.png){: width="800" }
 
 **Namespaces**
 
@@ -126,6 +136,10 @@ Namespace/Deployment를 선택하여 Namespace/Deployment의 Pod들을 시스템
 - Network Tx
 - Network Rx
 
+특정 파드 선택시 특정 파드의 모니터링 정보만 확인할 수도 있다.
+
+![system_deployments.png](/assets/images/monitoring/system_deployments.png){: width="800" }
+
 **StatefulSets**
 
 Namespace/Statefulset를 선택하여 Namespace/Statefulset의 Pod들을 시스템 모니터링 정보를 확인할 수 있다.
@@ -134,6 +148,10 @@ Namespace/Statefulset를 선택하여 Namespace/Statefulset의 Pod들을 시스�
 - Memory
 - Network Tx
 - Network Rx
+
+특정 파드 선택시 특정 파드의 모니터링 정보만 확인할 수도 있다
+
+![system_statefulsets.png](/assets/images/monitoring/system_statefulsets.png){: width="800" }
 
 **GPU**
 

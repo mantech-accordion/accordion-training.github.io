@@ -26,6 +26,25 @@ Namespace
 {: .label .label-green }
 </div>
 
+---
+
+## 메뉴이동
+`모니터링` ➡ `감사 로그`
+
+![audit.png](/assets/images/monitoring/audit.png)
+
+---
+
+## 감사로그
+cluster 내의 감사로그를 제공한다. 범위설정에서 설정한 간격으로 통계를 나타내며 개수와 총 개수를 나타내며 Node, Namespace, Pod, Container 의 이름과 로그를 제공한다.
+
+---
+
+[모니터링] - [감사로그] 클릭시 확인할 수 있다.
+
+![audit_log.png](/assets/images/monitoring/audit_log.png){: width="800" }
+
+
 | 항목  | 설명 |
 |---|---|
 | Time   | 날짜 (yyyy-mm-dd HH:mm:ss) |
@@ -37,6 +56,9 @@ Namespace
 | User Name   | impersonatedUser의 이름 |
 | Message   | 감사로그의 상세 설명 |
 
+로그 클릭 시 우측에 자세한 로그내용이 나온다.
+
+![audit_log_detail.png](/assets/images/monitoring/audit_log_detail.png){: width="800" }
 
 **검색 조건**
 
@@ -51,3 +73,5 @@ Namespace
 - verb : get, list, create, update, patch, watch, delete 와 같은 리소스 요청에 사용하는 API 동사
 
 - statusCode : HTTP 상태코드
+
+![audit_log_condition.png](/assets/images/monitoring/audit_log_detail.png){: width="800" }

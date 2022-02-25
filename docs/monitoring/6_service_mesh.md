@@ -20,3 +20,12 @@ parent: 11. 모니터링&알림
 Cluster
 {: .label .label-blue }
 </div>
+
+---
+
+## 메뉴이동
+`모니터링` ➡ `서비스 메시`
+
+![sm.png](/assets/images/monitoring/sm.png)
+
+---

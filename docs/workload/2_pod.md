@@ -24,6 +24,32 @@ Namespace
 ## 파드(Pod)
 파드(Pod)는 Kubernetes에서 관리하는 가장 작은 배포 단위입니다.
 Kubernetes와 Pod는 한 개 또는 여러 개의 컨테이너를 포함합니다.
+파드는 하나 이상의 컨테이너의 그룹이며 스토리지 및 네트워크를 공유하고, 해당 컨테이너를 구동하는 방식에 대한 명세를 갖습니다. 
+
+
+![](https://d33wubrfki0l68.cloudfront.net/aecab1f649bc640ebef1f05581bfcc91a48038c4/728d6/images/docs/pod.svg){: width="600" }
+
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+
+
+{% endhighlight %}
+   
+</details>
+
 
 ---
 
@@ -74,3 +100,22 @@ Kubernetes와 Pod는 한 개 또는 여러 개의 컨테이너를 포함합니�
 모달에서 네임스페이스와 파드 이름을 입력하여 삭제합니다.
 
 ![pod-delete.png](/assets/images/workload/pod-delete.png){: width="800" }
+
+---
+## 연습문제
+
+**1. 클러스터에 몇 개의 파드가 있습니까?**
+
+<input />
+
+**2. 아래 속성으로 새 파드를 만드세요. 생성한 파드의 상태와 로그를 확인하세요.**
+
+```
+- image: nginx
+```
+
+**3. 파드가 어떤 노드에 위치했는지 확인하세요.**
+
+<input />
+
+**4. 생성한 파드를 삭제하세요.**

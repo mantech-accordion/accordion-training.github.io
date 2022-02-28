@@ -32,6 +32,62 @@ Namespace
 - 모든 노드에서 로그 수집 데몬 실행
 - 모든 노드에서 노드 모니터링 데몬 실행
 
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
+
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: fluentd-elasticsearch
+  namespace: kube-system
+  labels:
+    k8s-app: fluentd-logging
+spec:
+  selector:
+    matchLabels:
+      name: fluentd-elasticsearch
+  template:
+    metadata:
+      labels:
+        name: fluentd-elasticsearch
+    spec:
+      tolerations:
+      # this toleration is to have the daemonset runnable on master nodes
+      # remove it if your masters can't run pods
+      - key: node-role.kubernetes.io/master
+        operator: Exists
+        effect: NoSchedule
+      containers:
+      - name: fluentd-elasticsearch
+        image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2
+        resources:
+          limits:
+            memory: 200Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
+        volumeMounts:
+        - name: varlog
+          mountPath: /var/log
+        - name: varlibdockercontainers
+          mountPath: /var/lib/docker/containers
+          readOnly: true
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: varlog
+        hostPath:
+          path: /var/log
+      - name: varlibdockercontainers
+        hostPath:
+          path: /var/lib/docker/containers
+
+    
+{% endhighlight %}
+   
+</details>
+
 ---
 
 ## 메뉴이동
@@ -65,3 +121,27 @@ Namespace
 삭제하려는 데몬셋을 선택하고 우측의 삭제 버튼을 선택한다.모달에서 네임스페이스와 데몬셋 이름을 입력하여 삭제합니다.
 
 ![daemonset-delete.png](/assets/images/workload/daemonset-delete.png){: width="800" }
+
+
+---
+## 연습문제
+
+**1. 클러스터에 몇 개의 데몬셋이 있습니까?**
+
+<input />
+
+**2. 아래 속성으로 새 데몬셋을 만드세요.**
+
+```
+- Name: elasticsearch
+- Namespace: demo
+- Image: k8s.gcr.io/fluentd-elasticsearch:1.20
+```
+
+**3. 새롭게 생성한 데몬셋의 포드가 어떤 노드에 위치해있습니까?**
+
+<input />
+
+
+**4. 생성한 데몬셋을 삭제하세요.**
+

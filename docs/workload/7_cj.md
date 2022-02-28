@@ -34,6 +34,38 @@ Namespace
 - 백업
 - 리포트 생성등 정기적 작업
 
+
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
+
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: hello
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: hello
+            image: busybox
+            imagePullPolicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            - date; echo Hello from the Kubernetes cluster
+          restartPolicy: OnFailure
+
+
+    
+{% endhighlight %}
+   
+</details>
+
 ---
 
 ## 메뉴이동
@@ -103,3 +135,25 @@ Namespace
 모달에서 네임스페이스와 크론잡 이름을 입력하여 삭제합니다.
 
 ![cronjob-delete.png](/assets/images/workload/cronjob-delete.png){: width="800" }
+
+
+---
+## 연습문제
+
+**1. 클러스터에 몇 개의 크론잡이 있습니까?**
+<input />
+
+**2. 아래 속성으로 새 크론잡을 만드세요.**
+
+```
+- name: hello; 
+- image: busybox
+- schedule: "*/1 * * * *"
+- command: ["/bin/sh", "-c", "date; echo Hello from the Kubernetes cluster"]
+```
+
+**3. 생성한 크론잡의 결과 값을 무엇입니까?**
+
+<input />
+
+**4. 생성한 크론잡잡을 삭제하세요.**

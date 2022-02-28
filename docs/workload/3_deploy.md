@@ -24,6 +24,38 @@ Namespace
 ## 디플로이먼트(Deployment)
 디플로이먼트(Deployment)는 Kuberenetes에서 주로 사용되는 오브젝트입니다. ReplicaSet을 이용하여 Pod을 업데이트 가능하며 이력을 저장하여 Rollback하거나 특정 버전 revision으로 돌아갈 수 있습니다.
 
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+
+
+{% endhighlight %}
+   
+</details>
+
 ---
 ## 메뉴이동
 `워크로드` ➡ `디플로이먼트`
@@ -117,3 +149,24 @@ Namespace
 삭제하려는 디플로이먼트를 선택하고 우측의 삭제 버튼을 선택합니다.
 
 ![deployment-delete.png](/assets/images/workload/deployment-delete.png){: width="800" }
+
+---
+## 연습문제
+
+**1. 클러스터에 몇 개의 파드가 있습니까?**
+
+<input />
+
+**2. 클러스터에 몇 개의 디플로이먼트가 있습니까?**
+
+<input />
+
+**3. 아래 속성으로 새 디플로이먼트를 만드세요.**
+
+```
+- name: httpd-frontend; 
+- replicas: 3; 
+- image: httpd:2.4-alpine
+```
+
+**4. 생성한 디플로이먼트를 삭제하세요.**

@@ -29,6 +29,30 @@ Namespace
 간단한 사례는 잡 오브젝트를 하나 생성해서 파드 하나를 안정적으로 실행하고 완료하는 것입니다. 첫 번째 파드가 실패 또는 삭제된 경우(예로는 노드 하드웨어의 실패 또는 노드 재부팅) 잡 오브젝트는 새로운 파드를 기동시킵니다.
 잡을 사용하면 여러 파드를 병렬로 실행할 수도 있습니다.
 
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pi
+spec:
+  template:
+    spec:
+      containers:
+      - name: pi
+        image: perl
+        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
+      restartPolicy: Never
+  backoffLimit: 4
+
+{% endhighlight %}
+   
+</details>
+
+
 ---
 
 ## 메뉴이동
@@ -79,3 +103,24 @@ Namespace
 모달에서 네임스페이스와 잡 이름을 입력하여 삭제합니다.
 
 ![job-delete.png](/assets/images/workload/job-delete.png){: width="800" }
+
+---
+## 연습문제
+
+**1. 클러스터에 몇 개의 잡이 있습니까?**
+
+<input />
+
+**2. 아래 속성으로 새 잡을 만드세요.**
+
+```
+- name: pi
+- image: perl
+- command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
+```
+
+**3. 생성한 잡의 결과 값을 무엇입니까?**
+
+<input />
+
+**4. 생성한 잡을 삭제하세요.**

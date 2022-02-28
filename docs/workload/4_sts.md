@@ -32,6 +32,53 @@ Namespace
 - 순차적인, 정상 배포(graceful deployment)와 스케일링.
 - 순차적인, 자동 롤링 업데이트.
 
+
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
+
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: web
+spec:
+  selector:
+    matchLabels:
+      app: nginx # .spec.template.metadata.labels 와 일치해야 한다
+  serviceName: "nginx"
+  replicas: 3 # 기본값은 1
+  minReadySeconds: 10 # 기본값은 0
+  template:
+    metadata:
+      labels:
+        app: nginx # .spec.selector.matchLabels 와 일치해야 한다
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: nginx
+        image: k8s.gcr.io/nginx-slim:0.8
+        ports:
+        - containerPort: 80
+          name: web
+        volumeMounts:
+        - name: www
+          mountPath: /usr/share/nginx/html
+  volumeClaimTemplates:
+  - metadata:
+      name: www
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "my-storage-class"
+      resources:
+        requests:
+          storage: 1Gi
+
+    
+{% endhighlight %}
+   
+</details>
+
 ---
 
 ## 메뉴이동
@@ -65,3 +112,20 @@ Namespace
 삭제하려는 스테이트풀셋을 선택하고 우측의 삭제 버튼을 선택합니다.
 
 ![statefulset-delete.png](/assets/images/workload/statefulset-delete.png){: width="800" }
+
+---
+## 연습문제
+
+**1. 클러스터에 몇 개의 스테이트풀셋이 있습니까?**
+
+<input />
+
+**2. 아래 속성으로 새 스테이트풀셋을 만드세요.**
+
+```
+- name: mysql; 
+- replicas: 1; 
+- image: mysql:5.7.37
+```
+
+**3. 생성한 스테이트풀셋을 삭제하세요.**

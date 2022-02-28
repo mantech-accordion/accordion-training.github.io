@@ -34,6 +34,27 @@ Namespace
 - 네임스페이스에서 리소스에 대한 요청과 제한 사이의 비율을 지정
 - 네임스페이스에서 컴퓨팅 리소스에 대한 기본 요청/제한을 설정하고 런타임에 있는 컨테이너에 자동으로 설정
 
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
+
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: mem-limit-range
+spec:
+  limits:
+  - default:
+      memory: 512Mi
+    defaultRequest:
+      memory: 256Mi
+    type: Container
+
+{% endhighlight %}
+   
+</details>
+
 ---
 
 ## 메뉴이동
@@ -67,3 +88,25 @@ Namespace
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 네임스페이스/리밋레인지 명 입력 후 `Delete` 버튼 클릭 시 리밋레인지이 삭제됩니다.
 
 ![limit-delete.png](/assets/images/config/limit-delete.png){: width="800" }
+
+
+---
+## 연습문제
+
+**1. 클러스터에 몇 개의 리밋레인지이 있습니까?**
+
+<input />
+
+**2. 아래 속성으로 리밋레인지과 파드를 생성하세요.**
+
+```
+- LimitRange Name:  mem-limit-range
+- default memory : 512Mi
+- defaultRequest memory: 256Mi
+---
+- Pod name: nginx
+- Image name: nginx
+```
+
+
+**4. 생성한 리밋레인지과 파드를 삭제하세요.**

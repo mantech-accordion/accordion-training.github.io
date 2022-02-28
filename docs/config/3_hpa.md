@@ -30,6 +30,35 @@ Kuberenetes에서, HorizontalPodAutoscaler 는 워크로드 리소스(예: 디�
 
 Horizontal Pod Autoscaling은 크기 조절이 불가능한 오브젝트(예: 데몬셋)에는 적용할 수 없습니다.
 
+![](https://d33wubrfki0l68.cloudfront.net/4fe1ef7265a93f5f564bd3fbb0269ebd10b73b4e/1775d/images/docs/horizontal-pod-autoscaler.svg){: width="600" }
+
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
+
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: php-apache
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: php-apache
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50
+{% endhighlight %}
+   
+</details>
+
 ---
 
 ## 메뉴이동
@@ -63,3 +92,25 @@ Horizontal Pod Autoscaling은 크기 조절이 불가능한 오브젝트(예: �
 삭제하려는 HPA을 선택하고 우측의 삭제 버튼을 선택합니다.
 
 ![hpa-delete.png](/assets/images/config/hpa-delete.png){: width="800" }
+
+---
+## 연습문제
+
+**1. 클러스터에 몇 개의 HPA가 있습니까?**
+
+<input />
+
+**2. 아래 속성으로 HPA와 디플로이먼트를 생성하세요.**
+
+```
+- HPA Name: php-apache
+- Resource Utilization: CPU
+- averageUtilization: 50
+---
+- Deployment name: php-apache
+- Image name: k8s.gcr.io/hpa-example
+- resources: limits(cpu: 500m), requests(cpu: 200m)
+```
+
+
+**4. 생성한 HPA와 디플로이먼트를 삭제하세요.**

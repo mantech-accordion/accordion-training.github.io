@@ -35,6 +35,46 @@ Namespace
 - Docker Registry
 - SSH 키
 
+
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysecret
+type: Opaque
+data:
+  USER_NAME: YWRtaW4=
+  PASSWORD: MWYyZDFlMmU2N2Rm
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: secret-env-pod
+spec:
+  containers:
+  - name: mycontainer
+    image: redis
+    env:
+      - name: SECRET_USERNAME
+        valueFrom:
+          secretKeyRef:
+            name: mysecret
+            key: username
+      - name: SECRET_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: mysecret
+            key: password
+  restartPolicy: Never
+
+{% endhighlight %}
+   
+</details>
+
 ---
 
 ## 메뉴이동
@@ -84,3 +124,26 @@ Namespace
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 네임스페이스/시크릿 명 입력 후 `Delete` 버튼 클릭 시 시크릿이 삭제됩니다.
 
 ![secret-delete.png](/assets/images/config/secret-delete.png){: width="800" }
+
+---
+## 연습문제
+
+**1. 클러스터에 몇 개의 시크릿이 있습니까?**
+
+<input />
+
+**2. 아래 속성으로 시크릿과 파드를 생성하고 생성한 시크릿을 파드 환경변수로 사용하세요.**
+
+```
+- Secret Name: db-secret
+- Secret 1: DB_Host=sql01
+- Secret 2: DB_User=root
+- Secret 3: DB_Password=password123
+---
+Pod name: webapp-pod
+Image name: mysql:5.7.37
+Env From: Secret=db-secret
+```
+
+
+**4. 생성한 파드와 시크릿을 삭제하세요.**

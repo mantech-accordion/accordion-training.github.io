@@ -6,7 +6,7 @@ grand_parent: 4. 계정
 parent: 4-3. 권한
 ---
 
-# 4-3. 글로벌 권한
+# 4-3-1. 글로벌 권한
 {: .no_toc }
 
 ## Table of contents

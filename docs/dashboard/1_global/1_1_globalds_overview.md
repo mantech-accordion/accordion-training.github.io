@@ -1,11 +1,12 @@
 ---
 layout: default
-title: 3-1. 글로벌대시보드
-nav_order: 1
-parent: 3. 대시보드
+title: 3-1-1. 글로벌대시보드
+nav_order: 3
+grand_parent: 3. 대시보드
+parent: 3-1. 글로벌대시보드
 ---
 
-# 3-1. 글로벌대시보드
+# 3-1-1. 글로벌대시보드
 {: .no_toc }
 
 ## Table of contents
@@ -19,9 +20,6 @@ parent: 3. 대시보드
 <div class="code-example" markdown="1">
 Global
 {: .label .label-purple }
-
-Cluster
-{: .label .label-blue }
 
 </div>
 

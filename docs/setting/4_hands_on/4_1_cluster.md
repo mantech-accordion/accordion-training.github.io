@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 12-4-1. 실습1.
+title: 12-4-1. 실습1. 클러스터
 nav_order: 1
 parent: 12-4. 실습
 grand_parent: 12. 설정
 ---
 
-# 12-4-1. 실습1.
+# 12-4-1. 실습1. 클러스터
 {: .no_toc }
 
 ## Table of contents
@@ -26,14 +26,50 @@ Cluster
 
 ## 실습1. 클러스터
 
----
+사용자는 워커노드에 리소스 사용률에 대해 알림을 받을 수 있습니다.
 
+사용자는 설정 한 노드에서 임계치가 넘었을 시점으로부터 대기 시간 이후에 몇 분(시간) 간격으로 반복적으로 알림을 받고 이 알림 반복설정을 하여 사용자가 설정한 이메일 or 슬랙 채널로 알림을 발송 받을 수 있습니다. 또한 알림을 원하지 않을 경우 알림 시간 제한으로 시간대를 설정 할 수 있습니다.
 
-### 1) 타입 : 노드(Node)
+### 1) 타입 : 노드(Node))
+
+1. 알림을 받고자 하는 클러스터 노드 선택
+2. 설정 메뉴 선택
+3. 알림 정책 선택
+4. 알림 정책 생성
+5. 알림 정책명: demo-alert-node 작성
+6. 알림 규칙 추가
+7. 알림 규칙명: demo-alert-disk-node 작성
+8. 타입을 Node로 지정 acc-node1에서 disk 사용률이 40% 이상일 시 알림 수준을 Info 수준으로 메일 or 슬랙으로 알림 발송, 알림 발송 시간에 대한 설정은 알림 정책 고급옵션 활성화
+9. 발송 받을 슬랙 및 메일 추가,설정
+10. 처음 알림 오기까지 30초 대기(그룹 대기 시간) 후 3분 간격으로 반복 알림(그룹 반복 시간) 후 1시간 후에 다시 알림 발송(알림 반복 시간) 설정, 알림 발송 제한은 am 02 ~ am 08 시로 설정
+(즉, 그룹대기시간: 30초, 그룹 반복 시간: 3분, 알림 반복 시간: 1시간)
+처음 알림 대기 시간 30초 이후 1시간 3분 간격으로 알림 발송
+
+11. 알림 규칙 활성화
+12. 알림 규칙 설정 완료
+
+![](/assets/images/setting/)
+![](/assets/images/setting/)
 
 ---
 
 ### 2) 타입 : 노드 셀렉터(Node Selector)
+
+1. 알림을 받고자 하는 클러스터 노드 선택
+2. 설정 메뉴 선택
+3. 알림 정책 선택
+4. 알림 정책 생성
+5. 알림 정책명: demo-mem-alert 작성
+6. 알림 규칙 추가
+7. 알림 규칙명: demo-mem-alert 작성
+8. 타입을 Node Selector로 지정 acc-node1에서 memory 사용률이 40% 이상일 시 알림 수준을 Info 수준으로 메일 or 슬랙으로 알림 발송, 알림 발송 시간에 대한 설정은 알림 정책 고급옵션 활성화
+9. 발송 받을 슬랙 및 메일 추가,설정
+10. 처음 알림 오기까지 30초 대기(그룹 대기 시간) 후 3분 간격으로 반복 알림(그룹 반복 시간) 후 1시간 후에 다시 알림 발송(알림 반복 시간) 설정, 알림 발송 제한은 am 02 ~ am 08 시로 설정
+11. 알림 규칙 활성화
+12. 알림 규칙 설정 완료
+
+![](/assets/images/setting/)
+![](/assets/images/setting/)
 
 ---
 
@@ -43,22 +79,21 @@ Cluster
 2. 설정 메뉴 선택
 3. 알림 정책 선택
 4. 알림 정책 생성
-5. 알림 정책명: demo-alert 작성
+5. 알림 정책명: demo-cpu-alert 작성
 6. 알림 규칙 추가
-7. 알림 규칙명: test-disk-alert 작성
+7. 알림 규칙명: test-cpu-alert 작성
 8. 타입을 Expresstion으로 지정 클러스터 node에 대한 CPU 사용량이 이상일 시 알림 수준을 critical 수준으로 메일 or 슬랙으로 알림 발송, 알림 발송 시간에 대한 설정은 알림 정책 고급옵션 활성화
 EX) sum(rate(container_cpu_usage_seconds_total{container_name!="POD",namespace!=""}[5m])) by (node)
 
-9⃣.발송 받을 슬랙 및 메일 추가,설정
-1⃣0⃣. 처음 알림 오기까지 30초 대기(그룹 대기 시간) 후 3분 간격으로 반복 알림(그룹 반복 시간) 후 1시간 후에 다시 알림 발송(알림 반복 시간) 설정, 알림 발송 제한은 am 03 ~ am 08 시로 설정
-1⃣1⃣. 알림 규칙 활성화
-1⃣2⃣. 알림 규칙 설정 완료
+9. 발송 받을 슬랙 및 메일 추가,설정
+10. 처음 알림 오기까지 30초 대기(그룹 대기 시간) 후 3분 간격으로 반복 알림(그룹 반복 시간) 후 1시간 후에 다시 알림 발송(알림 반복 시간) 설정, 알림 발송 제한은 am 03 ~ am 08 시로 설정
+11. 알림 규칙 활성화
+12. 알림 규칙 설정 완료
 
 ![](/assets/images/setting/)
-
 ![](/assets/images/setting/)
 
-위 같은 따라하기는 하나의 알림 규칙 만 생성 했기 때문에 여러 가지 알림 규칙을 생성 하려면 6⃣번 과정 부터 사용자가 원하는 노드에 임계치를 설정하여 알림을 받으면 된다.
+---
 
 **노드 관련 PromQL 리소스 메트릭 예시**
 
@@ -149,30 +184,44 @@ count by (node)(sum by (namespace,pod,container)(kube_pod_container_info{contain
 sum by (namespace) (kube_pod_status_ready{condition="false"})
 ```
 
-CPU 오버 커밋
+- CPU 오버 커밋
 
+```bash
 sum(kube_pod_container_resource_limits{resource="cpu"}) - sum(kube_node_status_capacity_cpu_cores)
+```
 
-메모리 오버 커밋 sum(kube_pod_container_resource_limits{resource="memory"}) - 
+- 메모리 오버 커밋 sum(kube_pod_container_resource_limits{resource="memory"}) - 
 
+```bash
 sum(kube_node_status_capacity_memory_bytes)
+```
 
-클러스터 별 준비된 노드 수
+- 클러스터 별 준비된 노드 수
 
+```bash
 sum(kube_node_status_condition{condition="Ready", status="true"}==1) by (node)
+```
 
-클러스터 별 사용하지 않는 CPU core 확인
+- 클러스터 별 사용하지 않는 CPU core 확인
 
+```bash
 sum((rate(container_cpu_usage_seconds_total{container!="POD",container!=""}[30m]) - on (namespace,pod,container) group_left avg by (namespace,pod,container)(kube_pod_container_resource_requests{resource="cpu"})) * -1 >0 by (node))
+```
 
-클러스터 별 사용하지 않는 memory 확인
+- 클러스터 별 사용하지 않는 memory 확인
 
+```bash
 sum((container_memory_usage_bytes{container!="POD",container!=""} - on (namespace,pod,container) avg by (namespace,pod,container)(kube_pod_container_resource_requests{resource="memory"})) * -1 >0 ) / (102410241024)
+```
 
-Ready 상태가 아닌 node 확인
+- Ready 상태가 아닌 node 확인
 
+```bash
 sum(kube_node_status_condition{condition="NotReady",status="true"})
+```
 
-클러스터 수준에서 CPU 사용량
+- 클러스터 수준에서 CPU 사용량
 
+```bash
 sum (rate (container_cpu_usage_seconds_total{image!=""}[1m])) by (node)
+```

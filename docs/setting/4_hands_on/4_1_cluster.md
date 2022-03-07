@@ -143,9 +143,11 @@ count by (namespace)(sum by (namespace,pod,container)(kube_pod_container_info{co
 count by (node)(sum by (namespace,pod,container)(kube_pod_container_info{container!=""}) unless sum by (namespace,pod,container)(kube_pod_container_resource_limits{resource="cpu"}))
 ```
 
-모든 종류의 문제가 있는 모든 Pod 확인
+- 모든 종류의 문제가 있는 모든 Pod 확인
 
+```bash
 sum by (namespace) (kube_pod_status_ready{condition="false"})
+```
 
 CPU 오버 커밋
 

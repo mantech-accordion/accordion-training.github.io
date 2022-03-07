@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 2-4-2. 인스톨러 구조 및 설정 방법
+title: 2-4-2. 인스톨러 구조
 nav_order: 4
 parent: 2-4. Accordion 설치
 grand_parent: 2. Accordion v2
@@ -17,10 +17,102 @@ grand_parent: 2. Accordion v2
 
 ---
 
-## 인스톨러 구조 및 설정 방법
+## 인스톨러 구조
 
-!!!!!!!!!구조사진 필요
+### accordion-installer
+```bash
+accordion-installer/
+|-- roles           # 디렉토리  
+|-- group_vars      # 디렉토리
+|-- hosts           # cluster구성할 hosts 설정
+|-- install.sh      # 설치 
+|-- uninstall.sh    # 삭제
+|-- status.sh       # 설치 후 상태확인
+|-- add-aks.sh
+|-- add-eks.sh
+|-- add-kubeconfig.sh
+|-- addaks.yml
+|-- addeks.yml
+|-- addkubeconfig.yml
+|-- addmaster.sh
+|-- addmember.sh
+|-- addmember.yml
+|-- addnode.sh
+|-- all.retry
+|-- all.yml
+|-- ansible.cfg
+|-- getconfig.yml
+|-- kube-teardown.retry
+|-- kube-teardown.yml
+|-- lic.txt
+|-- master.yml
+|-- node.yml
+|-- remove-aks.sh
+|-- remove-eks.sh
+|-- removeaks.yml
+|-- removeeks.yml
+|-- removemember.sh
+|-- removemember.yml
+|-- removenode.sh
+|-- restore.sh
+|-- restore.yml
+|-- run_role.yml
+`-- THIRDPARTYLICENSE.txt
+```
 
+- group_vars
+```bash
+group_vars/
+|-- host.yml
+|-- all.yml
+|-- config.yml
+|-- aks.yml
+|-- eks.yml
+|-- etcd-master-cluster-manager.yml
+|-- etcd-master-cluster-member.yml
+`-- member.yml
+```
+
+- roles
+```bash
+roles/
+|-- 0-rpms-install
+|-- 1-add-uid-gid
+|-- 2-nfs
+|-- 3-kube-prerequisite
+|-- 4-add-containerd
+|-- 4-containerd
+|-- 4-cri-o
+|-- 5-kube-install
+|-- 6-kube-init-join
+|-- 6-kube-init-join-cluster
+|-- 6-kube-init-join-cluster-single
+|-- 7-node-label
+|-- 8-weave-kube
+|-- 9-acc-registry
+|-- 10-crd
+|-- 11-acc-system
+|-- 12-acc-global
+|-- 13-acc-global-after
+|-- 14-backup
+|-- add-aks
+|-- add-eks
+|-- add-gpu
+|-- add-kubeconfig
+|-- add-master
+|-- add-node
+|-- cloud-acc-system
+|-- cloud-crd
+|-- kube-teardown
+|-- member-info
+|-- remove-aks
+|-- remove-eks
+|-- remove-node
+|-- restore-etcd
+`-- restore-etcd-single
+```
+
+---
 
 **설치 준비사항**
 - ssh key 생성, 복사, 접속 확인

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 5-9. 실습 심화
-nav_order: 9
+title: 5-4. 실습
+nav_order: 8
 parent: 5. 애플리케이션
 ---
 
-# [실습]카탈로그 & 태스크 작성, 배포
+# [실습]Helm & 카탈로그 배포
 {: .no_toc }
 
 ## Table of contents
@@ -16,11 +16,10 @@ parent: 5. 애플리케이션
 
 ---
 
+<div class="code-example" markdown="1">
 Namespace
 {: .label .label-green }
-## 카탈로그 작성
+</div>
 
 
 ---
-
-## 태스크 작성

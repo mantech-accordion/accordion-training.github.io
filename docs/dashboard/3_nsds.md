@@ -16,11 +16,14 @@ parent: 3. 대시보드
 
 ---
 
+<div class="code-example" markdown="1">
 Namespace
 {: .label .label-green }
+</div>
+
 
 ## 네임스페이스 대시보드
-네임스페이스 대시보드는 네임스페이스에 대한 정보와 시스템 리소스를 확인할 수 있다.
+네임스페이스 대시보드는 네임스페이스에 대한 정보와 시스템 리소스를 확인할 수 있습니다.
 
 ---
 
@@ -36,7 +39,7 @@ Namespace
 ![3_ns_dashboard_main.png](/assets/images/dashboard/3_ns_dashboard_main.png){: width="800" }
 
 ## Namespace Info
-네임스페이스 대시보드는 네임스페이스에 대한 정보와 시스템 리소스를 확인할 수 있다.
+네임스페이스 대시보드는 네임스페이스에 대한 정보와 시스템 리소스를 확인할 수 있습니다.
 
 |항목|설명|
 |--|--|
@@ -53,12 +56,12 @@ Namespace
 ![3_ns_info.png](/assets/images/dashboard/3_ns_info.png){: width="800" }
 
 ## Namespace CPU/Memory Usage Top5
-네임스페이스 내에서 CPU 사용량이 가장 많은 Pod 5개, Memory 사용량이 가장 많은 Pod 5개를 확인할 수 있다.
+네임스페이스 내에서 CPU 사용량이 가장 많은 Pod 5개, Memory 사용량이 가장 많은 Pod 5개를 확인할 수 있습니다.
 
 ![](/assets/images/dashboard/)
 
 ## Pods
-네임스페이스에 생성된 Pod들의 기본 정보들을 확인할 수 있다.
+네임스페이스에 생성된 Pod들의 기본 정보들을 확인할 수 있습니다.
 
 |항목|설명|
 |--|--|

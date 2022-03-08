@@ -48,8 +48,8 @@ Cluster
 11. 알림 규칙 활성화
 12. 알림 규칙 설정 완료
 
-![](/assets/images/setting/)
-![](/assets/images/setting/)
+![node1.png](/assets/images/setting/node1.png)
+![node2.png](/assets/images/setting/node2.png)
 
 ---
 
@@ -62,14 +62,17 @@ Cluster
 5. 알림 정책명: demo-mem-alert 작성
 6. 알림 규칙 추가
 7. 알림 규칙명: demo-mem-alert 작성
-8. 타입을 Node Selector로 지정 acc-node1에서 memory 사용률이 40% 이상일 시 알림 수준을 Info 수준으로 메일 or 슬랙으로 알림 발송, 알림 발송 시간에 대한 설정은 알림 정책 고급옵션 활성화
-9. 발송 받을 슬랙 및 메일 추가,설정
-10. 처음 알림 오기까지 30초 대기(그룹 대기 시간) 후 3분 간격으로 반복 알림(그룹 반복 시간) 후 1시간 후에 다시 알림 발송(알림 반복 시간) 설정, 알림 발송 제한은 am 02 ~ am 08 시로 설정
-11. 알림 규칙 활성화
-12. 알림 규칙 설정 완료
+8. 타입: Node Selector
+9. Node Selector 추가
+10. kubernetes.io/hostname=acc-node1 작성
+11. kubernetes.io/hostname=acc-node1 설정이 있는 deploy에서 memory 사용률이 40% 이상일 시 알림 수준을 Critical 수준으로 메일 or 슬랙으로 알림 발송
+12. 발송 받을 슬랙 및 메일 추가,설정
+13. 알림 발송 시간에 대한 설정은 알림 정책 고급옵션 비활성화로 처음 알림 오기까지 30초 대기(그룹 대기 시간) 후 3분 간격으로 반복 알림(그룹 반복 시간) 후 1시간 후에 다시 알림 발송(알림 반복 시간) 설정, 알림 발송 제한은 am 02 ~ am 08 시로 설정
+14. 알림 설정에 대한 활성화
+15. 알림 정책 설정 완료
 
-![](/assets/images/setting/)
-![](/assets/images/setting/)
+![ns1.png](/assets/images/setting/ns1.png)
+![ns2.png](/assets/images/setting/ns2.png)
 
 ---
 
@@ -84,14 +87,13 @@ Cluster
 7. 알림 규칙명: test-cpu-alert 작성
 8. 타입을 Expresstion으로 지정 클러스터 node에 대한 CPU 사용량이 이상일 시 알림 수준을 critical 수준으로 메일 or 슬랙으로 알림 발송, 알림 발송 시간에 대한 설정은 알림 정책 고급옵션 활성화
 EX) sum(rate(container_cpu_usage_seconds_total{container_name!="POD",namespace!=""}[5m])) by (node)
-
 9. 발송 받을 슬랙 및 메일 추가,설정
 10. 처음 알림 오기까지 30초 대기(그룹 대기 시간) 후 3분 간격으로 반복 알림(그룹 반복 시간) 후 1시간 후에 다시 알림 발송(알림 반복 시간) 설정, 알림 발송 제한은 am 03 ~ am 08 시로 설정
 11. 알림 규칙 활성화
 12. 알림 규칙 설정 완료
 
-![](/assets/images/setting/)
-![](/assets/images/setting/)
+![exp1.png](/assets/images/setting/exp1.png)
+![exp2.png](/assets/images/setting/exp2.png)
 
 ---
 

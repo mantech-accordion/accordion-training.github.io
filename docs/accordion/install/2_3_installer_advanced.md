@@ -26,7 +26,7 @@ grand_parent: 2. Accordion v2
 아코디언 hosts 설정 파일에는 아코디언을 구성할 Node들의 설정이 주로 이루어집니다. 현재 구성된 Master와 Node들의 IP주소를 수정합니다.<br>
 내부 IP가 별도로 있는 경우 내부 IP로 입력하시면 됩니다. 
 
-> 💡 참고 : host-cluster List와 member-cluster List에 입력하는 양식은 동일
+💡 참고 : host-cluster List와 member-cluster List에 입력하는 양식은 동일
 
 ---
 
@@ -94,7 +94,7 @@ acc-member-worker2 ansible_host=10.60.101.72    ansible_connection=ssh   node_ro
 |paramiko_ssh|ansible_connection=paramiko_ssh|	연결을 python으로 구현한 ssh로 사용|
 |winrm|ansible_connection=winrm|연결을 windows의 winrm을 사용|
 
-(참고)다음 명령을 통해 더 많은 연결 옵션을 확인할 수 있습니다.
+💡 참고 : 다음 명령을 통해 더 많은 연결 옵션을 확인할 수 있습니다.
 
 ```bash
 ansible-doc -t connection -l
@@ -147,7 +147,7 @@ acc-worker2
 
 ---
 
-## `/group_vars/hosts.yml` 설정 -> 59가지 옵션 
+## `/group_vars/hosts.yml`
 
 |옵션명|입력값|설명|
 |--|--|--|
@@ -215,7 +215,7 @@ acc-worker2
 
 **💡 참고 : 일반사용자 + sudo 권한을 사용할 경우**
 
-1. hosts 파일에 다음 설정을 변경
+1) hosts 파일에 다음 설정을 변경
 
 ```ini
 [all:vars]
@@ -234,7 +234,7 @@ ansible_ssh_common_args=-oPubkeyAuthentication=yes
 |ansible_password_option=no|ansible_password_option=[yes]|
 |#ansible_ssh_pass=ROOT_PASSWORD|ansible_ssh_pass=[sudo권한 일반유저 비밀번호]|
 
-2. ansible.cfg
+2) ansible.cfg
 
 ```ini
 [defaults]

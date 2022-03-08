@@ -22,22 +22,22 @@ grand_parent: 2. Accordion v2
 ### accordion-installer
 ```bash
 accordion-installer/
-|-- roles           # 디렉토리  
-|-- group_vars      # 디렉토리
-|-- hosts           # cluster구성할 hosts 설정
-|-- install.sh      # 설치 
-|-- uninstall.sh    # 삭제
-|-- status.sh       # 설치 후 상태확인
-|-- add-aks.sh
-|-- add-eks.sh
+|-- roles               # 디렉토리  
+|-- group_vars          # 디렉토리
+|-- hosts               # cluster구성할 hosts 설정
+|-- install.sh          # 설치 
+|-- uninstall.sh        # 삭제
+|-- status.sh           # 설치 후 상태확인
+|-- add-aks.sh          # aks cluster 추가
+|-- add-eks.sh          # eks cluster 추가(eksctl)
 |-- add-kubeconfig.sh
 |-- addaks.yml
 |-- addeks.yml
 |-- addkubeconfig.yml
-|-- addmaster.sh
-|-- addmember.sh
-|-- addmember.yml
-|-- addnode.sh
+|-- addmaster.sh        # master 노드 추가
+|-- addmember.sh        # member cluster 추가
+|-- addmember.yml   
+|-- addnode.sh          # node 추가
 |-- all.retry
 |-- all.yml
 |-- ansible.cfg
@@ -47,14 +47,14 @@ accordion-installer/
 |-- lic.txt
 |-- master.yml
 |-- node.yml
-|-- remove-aks.sh
-|-- remove-eks.sh
+|-- remove-aks.sh       # aks cluster 삭제
+|-- remove-eks.sh       # eks cluster 삭제
 |-- removeaks.yml
 |-- removeeks.yml
-|-- removemember.sh
-|-- removemember.yml
-|-- removenode.sh
-|-- restore.sh
+|-- removemember.sh     # member cluster 삭제
+|-- removemember.yml    
+|-- removenode.sh       # node 삭제
+|-- restore.sh          # 백업/복구 스크립트
 |-- restore.yml
 |-- run_role.yml
 `-- THIRDPARTYLICENSE.txt
@@ -63,14 +63,14 @@ accordion-installer/
 - group_vars
 ```bash
 group_vars/
-|-- host.yml
-|-- all.yml
-|-- config.yml
-|-- aks.yml
-|-- eks.yml
-|-- etcd-master-cluster-manager.yml
-|-- etcd-master-cluster-member.yml
-`-- member.yml
+|-- host.yml                          # 아코디언 설치 구성을 위한 변수
+|-- all.yml                           # 아코디언 설치 구성을 위한 변수
+|-- config.yml                        # registry, config 관련 설정            
+|-- aks.yml                           # aks 클러스터 구성을 위한 변수
+|-- eks.yml                           # eks 클러스터 구성을 위한 변수
+|-- etcd-master-cluster-manager.yml   # host cluster의 etcd 외부 구성
+|-- etcd-master-cluster-member.yml    # member cluster의 etcd 외부 구성
+`-- member.yml                        # member cluster 구성
 ```
 
 - roles

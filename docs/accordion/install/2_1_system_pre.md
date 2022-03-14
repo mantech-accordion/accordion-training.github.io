@@ -20,7 +20,7 @@ grand_parent: 2. Accordion v2
 ## 시스템 요구사항
 - Accordion 서버는 가상 시스템이나 물리 시스템에 설치가 가능합니다.
 - Accordion 서버를 설치하기 위해서는 Master 서버 3대와 서비스를 수행 할 Node 서버 2대 이상 있어야 합니다.
-- Master, Node 서버 간에는 네트워크가 가능해야 하고 인터넷이 가능해야 합니다.(인터넷이 불가한 상황인 경우 별도 설치파일을 다운로드 받아야 합니다.)
+- Master, Node 서버 간에는 네트워크가 가능
 - Master 서버와 Node 서버 간에 ssh 접근이 가능해야 합니다. (root 접속필요)
 - Master/Node 서버 시간은 동일해야 합니다.
 
@@ -39,9 +39,51 @@ grand_parent: 2. Accordion v2
 | Master       | 최소 8core | 최소 16GB  | 최소 500GB |
 | Node(s)      | 최소 8core   | 최소 16GB | 최소 300GB |
 
-**아코디언 사용 Port**
+---
 
-| 구분         | Port     | 용도 |
-|:-------------|:---------|:------|
-| Master       | 30000    | 아코디언 Web Admin |
-| Node(s)      | 80/443   | 애플리케이션 서비스 용도 (http/https) |
+## 아코디언 방화벽(calico v2)
+
+**마스터노드**
+
+| Protocol	| Direction | 	Port Range |	Source	| Destination | Purpose |
+|:----------|:----------|:-------------|:-----------|:------------|:--------|
+| TCP	| Inbound	| 6443	| 워커노드	| 마스터노드	| Kubernetes API server |
+| TCP	| Inbound	| 2379-2380	| 워커노드	| 마스터노드	| etcd server client API |
+| TCP	| Inbound	| 10250	| 워커노드	| 마스터노드	| Kubelet API |
+| TCP	| Inbound	| 10251	| 워커노드	| 마스터노드	| kube-scheduler |
+| TCP	| Inbound	| 10252	| 워커노드	| 마스터노드	| kube-controller-manager |
+| TCP	| Inbound	| 10255	| 워커노드	| 마스터노드	| worker node kubelet healthcheck read only |
+| TCP	| Inbound	| 30000-32767	| 클라이언트	| 마스터노드	| NodePort Services |
+| TCP	| Inbound	| 179	| 모든서버	| 모든서버	| Calico networking (BGP) |
+| UDP	| Inbound	| 4789	| 모든서버	| 모든서버	| Calico networking with VXLAN enabled |
+| Protocol	| Inbound	| 4	| 모든서버	| 모든서버	| Calico networking IP in IP (encapsulation) |
+| TCP	| Inbound	| 5473	| 모든서버	| 모든서버	| Calico networking with Typha enabled |
+| TCP	| Inbound	| 9100	| 모든서버	| 모든서버	| node exporter |
+| TCP	| Inbound	| 8443	| 워커노드	| 마스터노드	| Kubernetes API server(마스터노드 3중화) |
+| TCP	| Inbound	| 5000	| 워커노드	| 마스터노드	| Accordion local Infra-registry |
+					
+**워커노드**
+
+| Protocol	| Direction | 	Port Range |	Source	| Destination | Purpose |
+|:----------|:----------|:-------------|:-----------|:------------|:--------|
+| TCP	| Inbound	| 10250	| 마스터노드	| 워커노드 | Kubelet API | 
+| TCP	| Inbound	| 10255	| 마스터노드	| 워커노드	| worker node kubelet healthcheck read only | 
+| TCP	| Inbound	| 30000-32767	| 클라이언트	| 워커노드	| NodePort Services | 
+| TCP	| Inbound	| 179	| 모든서버	| 모든서버	| Calico networking (BGP) | 
+| Protocol	| Inbound	| 4	| 모든서버	| 모든서버	| Calico networking IP in IP (encapsulation) | 
+| UDP	| Inbound	| 4789	| 모든서버	| 모든서버	| Calico networking with VXLAN enabled | 
+| TCP	| Inbound	| 5473	| 모든서버	| 모든서버	| Calico networking with Typha enabled | 
+| TCP	| Inbound	| 9100	| 모든서버	| 모든서버	| node exporter | 
+| TCP	| Inbound	| 80	| 클라이언트	| 워커노드	| App service(nginx-ingress Hostport) | 
+| TCP	| Inbound	| 443	| 클라이언트	| 워커노드	| App service(nginx-ingress Hostport ) | 
+					
+**아코디언에서 사용하는 NodePort 리스트**					
+
+| Protocol	| Direction | 	Port Range | Purpose |
+|:----------|:----------|:-------------|:--------|
+| TCP	| Inbound	| 30000			| Accordion console |
+| TCP	| Inbound	| 30001			| user-registry |
+| TCP	| Inbound	| 30002			| thanos-store-gateway | 
+| TCP	| Inbound	| 30003			| thanos-sidecar | 
+| TCP	| Inbound	| 30443			| member-agent | 
+

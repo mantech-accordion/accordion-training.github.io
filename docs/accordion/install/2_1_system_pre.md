@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 2-4-1. 시스템 요구사항
+title: 2.4.1 💻시스템 요구사항
 nav_order: 4
-parent: 2-4. Accordion 설치
+parent: 2.4 Accordion 설치
 grand_parent: 2. Accordion v2
 ---
 
-# 2-4-1. 시스템 요구사항
+# 2-4-1 시스템 요구사항
 {: .no_toc }
 
 ## Table of contents
@@ -17,10 +17,10 @@ grand_parent: 2. Accordion v2
 
 ---
 
-## 시스템 요구사항
-- Accordion 서버는 가상 시스템이나 물리 시스템에 설치가 가능합니다.
+## 💻시스템 요구사항
+- Accordion 서버는 가상 시스템 또는 물리 시스템 준비
 - Accordion 서버를 설치하기 위해서는 Master 서버 3대와 서비스를 수행 할 Node 서버 2대 이상 있어야 합니다.
-- Master, Node 서버 간에는 네트워크가 가능
+- Master, Node 서버 간에는 네트워크 사전작업 준비
 - Master 서버와 Node 서버 간에 ssh 접근이 가능해야 합니다. (root 접속필요)
 - Master/Node 서버 시간은 동일해야 합니다.
 
@@ -41,7 +41,7 @@ grand_parent: 2. Accordion v2
 
 ---
 
-## 아코디언 방화벽(calico v2)
+## 📡 아코디언 방화벽(calico v2)
 
 **마스터노드**
 

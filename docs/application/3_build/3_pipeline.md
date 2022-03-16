@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 5-3. 빌드
+title: 5.3 빌드
 nav_order: 3
 has_children: true
 parent: 5. 애플리케이션

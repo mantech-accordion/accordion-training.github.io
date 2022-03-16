@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 5-2. 카탈로그
+title: 5.2 카탈로그
 nav_order: 2
 has_children: true
 parent: 5. 애플리케이션
@@ -56,9 +56,4 @@ Namespace
 ![helm_catalog.png](/assets/images/application/helm/helm_catalog.png){: width="800" }
 
 카탈로그와 카탈로그 템플릿의 관계는 헬름 릴리즈와 헬름 차트의 관계와 유사합니다. 카탈로그 템플릿은 배포에 필요한 쿠버네티스 리소스 정보와 변수 정보같은 카탈로그 스펙을 가지고 있습니다. 사용자가 카탈로그 템플릿으로 카탈로그를 생성하면 시스템이 카탈로그 정보를 이용해 애플리케이션을 배포합니다.
-
----
-
-## 아코디언v2 카탈로그와 아코디언v1 앱의 차이점
-
 

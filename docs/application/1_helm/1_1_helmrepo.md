@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 5-1-1. 헬름 레퍼지토리
+title: 5.1.1 헬름 레퍼지토리
 nav_order: 2
 grand_parent: 5. 애플리케이션
-parent: 5-1. Helm
+parent: 5.1 Helm
 ---
 
-# 5-1. Helm
+# 헬름 레퍼지토리
 {: .no_toc }
 
 ## Table of contents

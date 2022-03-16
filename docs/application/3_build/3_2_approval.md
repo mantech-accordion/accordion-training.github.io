@@ -1,9 +1,9 @@
 ---
 layout: default
-title: 5-3-2. 승인
+title: 5.3.2 승인
 nav_order: 3
 grand_parent: 5. 애플리케이션
-parent: 5-3. 빌드
+parent: 5.3 빌드
 ---
 
 # 승인

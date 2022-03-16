@@ -1,13 +1,13 @@
 ---
 layout: default
-title: 5-1-2. 헬름
+title: 5.1.2 헬름
 nav_order: 3
 has_children: true
 grand_parent: 5. 애플리케이션
-parent: 5-1. Helm
+parent: 5.1 Helm
 ---
 
-# 5-1. 헬름
+# 헬름
 {: .no_toc }
 
 ## Table of contents

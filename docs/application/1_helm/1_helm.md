@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 5-1. Helm
+title: 5.1 Helm
 nav_order: 1
 has_children: true
 parent: 5. 애플리케이션
 ---
 
-# 4-1. Helm
+# Helm
 {: .no_toc }
 
 ## Table of contents

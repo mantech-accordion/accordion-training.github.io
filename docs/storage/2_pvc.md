@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 9-2. 퍼시스턴트볼륨클레임
+title: 9.2 퍼시스턴트볼륨클레임
 nav_order: 2
 parent: 9. 스토리지
 ---

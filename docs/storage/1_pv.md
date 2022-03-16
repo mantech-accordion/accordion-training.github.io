@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 9-1 퍼시스턴트볼륨
+title: 9.1 퍼시스턴트볼륨
 nav_order: 1
 parent: 9. 스토리지
 ---

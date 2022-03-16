@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 9-3. 스토리지클래스
+title: 9.3 스토리지클래스
 nav_order: 3
 parent: 9. 스토리지
 ---

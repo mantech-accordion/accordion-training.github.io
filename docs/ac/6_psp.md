@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 10-6. 파드시큐리티폴리시
+title: 10.6 파드시큐리티폴리시
 nav_order: 6
 parent: 10. 접근제어
 ---

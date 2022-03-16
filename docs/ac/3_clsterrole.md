@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 10-3. 클러스터롤
+title: 10.3 클러스터롤
 nav_order: 3
 parent: 10. 접근제어
 ---

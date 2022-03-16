@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 10-4. 클러스터롤바인딩
+title: 10.4 클러스터롤바인딩
 nav_order: 4
 parent: 10. 접근제어
 ---

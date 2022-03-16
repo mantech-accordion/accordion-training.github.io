@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 10-5. 서비스어카운트
+title: 10.5 서비스어카운트
 nav_order: 5
 parent: 10. 접근제어
 ---

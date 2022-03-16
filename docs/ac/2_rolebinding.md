@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 10-2. 롤바인딩
+title: 10.2 롤바인딩
 nav_order: 2
 parent: 10. 접근제어
 ---

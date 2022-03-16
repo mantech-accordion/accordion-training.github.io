@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 10-1 롤
+title: 10.1 롤
 nav_order: 1
 parent: 10. 접근제어
 ---

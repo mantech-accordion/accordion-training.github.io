@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 8-3. 네트워크폴리시
+title: 8.3 네트워크폴리시
 nav_order: 3
 parent: 8. 네트워크
 ---
@@ -111,3 +111,10 @@ spec:
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 네임스페이스/네트워크폴리시 명 입력 후 `Delete` 버튼 클릭 시 네트워크폴리시가 삭제됩니다.
 
 ![networkpolicy-delete.png](/assets/images/network/networkpolicy-delete.png){: width="800" }
+
+---
+## 연습문제
+
+**1. 예제 yaml을 사용하여 네트워크폴리시를 생성하세요.**
+
+**2. 생성한 네트워크폴리시를 확인하고 삭제하세요.**

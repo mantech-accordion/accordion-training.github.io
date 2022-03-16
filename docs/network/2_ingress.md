@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 8-2 인그레스
+title: 8.2 인그레스
 nav_order: 2
 parent: 8. 네트워크
 ---
@@ -89,3 +89,10 @@ spec:
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 네임스페이스/인그레스 명 입력 후 `Delete` 버튼 클릭 시 인그레스가 삭제됩니다.
 
 ![ingress-delete.png](/assets/images/network/ingress-delete.png){: width="800" }
+
+---
+## 연습문제
+
+**1. 예제 yaml을 사용하여 인그레스를 생성하세요.**
+
+**2. 생성한 인그레스를 확인하고 삭제하세요.**

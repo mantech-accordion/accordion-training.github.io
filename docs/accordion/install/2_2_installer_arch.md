@@ -178,9 +178,9 @@ acc-worker2   ansible_host=10.60.100.72    ansible_connection=ssh   node_role=in
 
 |Hostname|Host IP|사용자 설정|사용자 설정|
 |--|--|--|--|
-|acc-master|ansible_host=10.60.100.70|ansible_connection=ssh|node_role=infra|
-|acc-worker1|ansible_host=10.60.100.71|ansible_connection=ssh|node_role=infra|
-|acc-worker2|ansible_host=10.60.100.72|ansible_connection=ssh|node_role=infra|
+|acc-member-master|ansible_host=10.60.101.70|ansible_connection=ssh|node_role=infra|
+|acc-member-worker1|ansible_host=10.60.101.71|ansible_connection=ssh|node_role=infra|
+|acc-member-worker2|ansible_host=10.60.101.72|ansible_connection=ssh|node_role=infra|
 
 ```yaml
 install-server  ansible_host=127.0.0.1     ansible_connection=local   node_role=infra 
@@ -302,12 +302,12 @@ acc-worker2
 |ceph_fsname|사용자 설정|ceph fsname을 설정합니다|
 |etcd_external|yes<br>no|etcd서버를 외부에 구성할지의 여부를 설정합니다<br>● yes: etcd를 외부에 설정<br>● no: etcd를 포함하여구성(default)|
 |base_registry_option|local external|base_registry의 설치여부를 선택합니다<br>local(default): local에 registry를 설치합니다<br>host(member-cluster 전용옵션): local에 설치하지 않고, external의 registry서버를 바라봅니다<br>(default: local)|
-|base_registry_address|사용자 설정|registry서버의 address를 설정합니다|
+|base_registry_address|사용자 설정|registry서버의 address를 설정합니다. <br> internal 인경우, master vip|
 |base_registry_port|사용자 설정|registry서버의 port를 지정합니다.<br>(default): 5000|
 |base_registry_id|사용자 설정|registry id를 설정합니다<br>(default: accregistry)|
 |base_registry_passwd|사용자 설정|registry pw를 설정합니다<br>(default: accordionadmin)|
 |user_registry_option|registry<br>harbor|user registry서버 option을 설정합니다<br>registry: 기본 user registry로 구성합니다(default)<br>harbor: 기본 user registry를 harbor로 구성합니다|
-|user_registry_address|사용자 설정|user_registry_external이 yes일경우 활성화되며, 외부 레지스트리의 주소를 입력합니다|
+|user_registry_address|사용자 설정|user_registry_external이 yes일경우 활성화되며, 외부 레지스트리의 주소를 입력합니다. <br> internal 인경우, master vip|
 |user_registry_port|사용자 설정|user_registry_external이 yes일경우 활성화되며, 외부 레지스트리의 포트를 입력합니다|
 |user_registry_external|yes<br>no|user_registry의 위치를 설정합니다.<br>● yes: registry가 external에 위치합니다.<br>● no: registry가 local에 위치합니다.(default)|
 |user_registry_id|사용자 설정|user_registry_external이 yes일경우 활성화되며,외부 레지스트리의 계정을 입력합니다<br>(default: accregistry)|

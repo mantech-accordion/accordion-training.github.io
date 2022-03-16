@@ -6,7 +6,7 @@ parent: 2. Accordion v2
 has_children: true
 ---
 
-# 2-4 Accordion 설치
+# 2.4 Accordion 설치
 {: .no_toc }
 
 ## Table of contents

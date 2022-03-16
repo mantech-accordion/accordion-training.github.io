@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 7-4. 리밋레인지
+title: 7.4. 리밋레인지
 nav_order: 4
 parent: 7. 구성
 ---

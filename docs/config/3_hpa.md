@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 7-3. HPA
+title: 7.3. HPA
 nav_order: 3
 parent: 7. 구성
 ---

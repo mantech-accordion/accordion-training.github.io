@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 6-5 데몬셋
+title: 6.5 데몬셋
 nav_order: 5
 parent: 6. 워크로드
 ---

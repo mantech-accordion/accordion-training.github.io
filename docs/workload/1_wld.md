@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 6-1 워크로드대시보드
+title: 6.1 워크로드대시보드
 nav_order: 1
 parent: 6. 워크로드
 ---
@@ -22,7 +22,8 @@ Namespace
 </div>
 
 ## 워크로드
-워크로드는 Kuberenetes에서 구동되는 애플리케이션을 의미합니다. Kuberenetes에서 워크로드는 파드의 집합에서 실행되며 파드는 실행 중인 컨테이너의 집합입니다. 
+워크로드는 Kuberenetes에서 구동되는 애플리케이션을 의미합니다. 
+Kuberenetes에서 워크로드는 파드의 집합에서 실행되며 파드는 실행 중인 컨테이너의 집합입니다. 
 
 **워크로드의 종류**
 

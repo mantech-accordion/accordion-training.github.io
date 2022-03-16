@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 6-2 파드
+title: 6.2 파드
 nav_order: 2
 parent: 6. 워크로드
 ---

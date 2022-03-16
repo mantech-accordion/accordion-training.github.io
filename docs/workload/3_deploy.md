@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 6-3 디플로이먼트
+title: 6.3 디플로이먼트
 nav_order: 3
 parent: 6. 워크로드
 ---

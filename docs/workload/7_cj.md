@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 6-7 크론잡
+title: 6.7 크론잡
 nav_order: 7
 parent: 6. 워크로드
 ---

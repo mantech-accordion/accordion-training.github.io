@@ -190,6 +190,6 @@ APM 설정은 네임스페이스 배포 시 설정한 값을 변경할 수 없�
 
 - 리밋레인지 
   + CPU Request/Limit : 4 core
-  + Memory Request/Limit : 8mi
+  + Memory Request/Limit : 4096mi
 ```
 

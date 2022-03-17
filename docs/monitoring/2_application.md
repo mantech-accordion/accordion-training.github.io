@@ -1,13 +1,12 @@
 ---
 layout: default
-title: 11-2. 애플리케이션
+title: 11.2 애플리케이션
 nav_order: 1
 parent: 11. 모니터링&알림
 ---
 
-# 11-2. 애플리케이션
+# 애플리케이션
 {: .no_toc }
-애플리케이션이란, 실시간으로 모니터링 지표를 제공하여 운영 중인 어플리케이션의 문제점을 빠르게 파악할 수 있도록 합니다.
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -24,6 +23,11 @@ Namespace
 
 ---
 
+## 애플리케이션(APM)
+
+애플리케이션이란, 실시간으로 모니터링 지표를 제공하여 운영 중인 어플리케이션의 문제점을 빠르게 파악할 수 있도록 합니다.
+
+---
 ## 메뉴이동
 `모니터링` ➡ `애플리케이션`
 
@@ -126,26 +130,3 @@ Response time이 일정 시간 이내인 transaction의 경우 특정한 확률�
 | 2~3초 사이 | 20%  |
 | 3초 이상  | 100%  |
 
----
-
-## APM
-
----
-
-**APM Options**
-
-**Elapsed Time**
-
-**Error Rate**
-
-**Heap Used**
-
-**Perm Used**
-
-**Service Count**
-
-**TPS**
-
-**Active Service**
-
-**Xlog**

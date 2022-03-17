@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 11-3. 이벤트 로그
+title: 11.3 이벤트 로그
 nav_order: 1
 parent: 11. 모니터링&알림
 ---
 
-# 11-3. 이벤트 로그
+# 이벤트 로그
 {: .no_toc }
 
 ## Table of contents
@@ -26,6 +26,12 @@ Namespace
 
 ---
 
+
+## 이벤트 로그
+cluster 내의 이벤트 로그를 제공합니다. 범위설정에서 설정한 간격으로 통계를 나타내며 개수와 총 개수를 나타내며 Time, Namespace, Name, Count, Kind, Type, Reason, Message 를 제공합니다.
+
+---
+
 ## 메뉴이동
 `모니터링` ➡ `이벤트 로그`
 
@@ -33,12 +39,7 @@ Namespace
 
 ---
 
-## 이벤트 로그
-cluster 내의 이벤트 로그를 제공합니다. 범위설정에서 설정한 간격으로 통계를 나타내며 개수와 총 개수를 나타내며 Time, Namespace, Name, Count, Kind, Type, Reason, Message 를 제공합니다.
-
----
-
-[모니터링] - [이벤트 로그] 클릭시 확인할 수 있습니다.
+## 화면 구성
 
 ![event_log.png](/assets/images/monitoring/event_log.png){: width="800" }
 

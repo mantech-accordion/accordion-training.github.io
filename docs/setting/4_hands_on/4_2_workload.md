@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 12-4-2. 실습2.네임스페이스
+title: 12.4.2 네임스페이스
 nav_order: 1
-parent: 12-4. 실습
+parent: 12.4 실습
 grand_parent: 12. 설정
 ---
 
-# 12-4-2. 실습2. 네임스페이스
+# 네임스페이스
 {: .no_toc }
 
 ## Table of contents
@@ -28,7 +28,7 @@ Namespace
 
 ---
 
-### 1) 타입 : 워크로드(Workload)
+## 1) 타입 : 워크로드(Workload)
 
 1. 알림을 받고자 하는 클러스터 노드 선택
 2. 알림 받기 위해 워크로드를 관리하고 있는 네임스페이스 선택
@@ -49,7 +49,7 @@ Namespace
 
 ---
 
-### 2) 타입 : 노드 셀렉터(Node Selector)
+## 2) 타입 : 노드 셀렉터(Node Selector)
 
 타입 Workload Selector 설정 전 사용자가 원하는 label를 설정
 
@@ -76,7 +76,7 @@ Namespace
 
 ---
 
-### 3) 타입 : 표현식(Expression)
+## 3) 타입 : 표현식(Expression)
 
 1. 알림을 받고자 하는 클러스터 노드 선택
 2. 알림 받기 위해 워크로드를 관리하고 있는 네임스페이스 선택

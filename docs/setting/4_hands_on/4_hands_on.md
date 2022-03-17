@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 12-4. 실습
+title: 12.4 실습
 nav_order: 4
 parent: 12. 설정
 has_children: true
 ---
 
-# 12-4. 실습
+# 실습
 {: .no_toc }
 
 ## Table of contents

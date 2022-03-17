@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 4-3-2. 클러스터 권한
+title: 4.3.2 클러스터 권한
 nav_order: 4
 grand_parent: 4. 계정
-parent: 4-3. 권한
+parent: 4.3 권한
 ---
 
-# 4-3-2. 클러스터 권한
+# 클러스터 권한
 {: .no_toc }
 
 ## Table of contents

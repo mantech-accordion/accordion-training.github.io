@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 4-1. 사용자
+title: 4.1 사용자
 nav_order: 4
 parent: 4. 계정
 ---
@@ -39,6 +39,8 @@ Global
 
 ![4_user-list.png](/assets/images/auth/4_user-list.png){: width="800" }
 
+---
+
 **사용자 생성**
 
 [생성]을 클릭 후 내용을 입력하여 사용자를 생성할 수 있습니다.
@@ -66,9 +68,22 @@ Global
 
 ![4_user-update.png](/assets/images/auth/4_user-update.png){: width="800" }
 
+---
+
 **사용자 삭제**
 
 [삭제] 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 사용자 명 입력 후 [Delete] 버튼 클릭 시 사용자가 삭제됩니다.
 
 
 ![4_user-delete.png](/assets/images/auth/4_user-delete.png){: width="800" }
+
+---
+
+## 연습문제
+
+**1. 사용자를 생성하세요.**
+
+```
+Active : Enable
+Group : 미선택
+```

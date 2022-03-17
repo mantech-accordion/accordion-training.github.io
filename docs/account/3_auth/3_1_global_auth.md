@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 4-3-1. 글로벌 권한
+title: 4.3.1 글로벌 권한
 nav_order: 4
 grand_parent: 4. 계정
-parent: 4-3. 권한
+parent: 4.3 권한
 ---
 
-# 4-3-1. 글로벌 권한
+# 글로벌 권한
 {: .no_toc }
 
 ## Table of contents
@@ -42,6 +42,8 @@ Global
 
 ![4_account-auth-global.png](/assets/images/auth/4_account-auth-global.png){: width="800" }
 
+---
+
 **글로벌 권한 생성**
 
 [생성]을 클릭 후 내용을 입력하여 글로벌 권한을 생성할 수 있습니다. [추가]를 클릭하여 메뉴와 메뉴에 대한 권한을 추가할 수 있습니다.
@@ -50,11 +52,15 @@ Global
 
 ![4_account-auth-global-create-success.png](/assets/images/auth/4_account-auth-global-create-success.png){: width="800" }
 
+---
+
 **생성된 글로벌 권한 확인**
 
 글로벌 권한 목록에서 생성한 권한이름으로 생성 된 것을 확인할 수 있으며, 입력 정보를 수정하거나 추가 후에 [수정]버튼을 클릭하여 수정할 수 있습니다.
 
 ![4_account-auth-global-create-success.png](/assets/images/auth/4_account-auth-global-create-success.png){: width="800" }
+
+---
 
 **글로벌 권한 삭제**
 

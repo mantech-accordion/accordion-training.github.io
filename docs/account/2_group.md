@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 4-2. 그룹
+title: 4.2 그룹
 nav_order: 4
 parent: 4. 계정
 ---
@@ -34,6 +34,8 @@ parent: 4. 계정
 
 ![4_group-create.png](/assets/images/auth/4_group-create.png){: width="800" }
 
+---
+
 **그룹에 사용자 추가**
 
 그룹은 사용자 집합으로 사용자 목록을 관리합니다.
@@ -52,6 +54,8 @@ parent: 4. 계정
 | UID  | 그룹 고유한 ID  |
 | 사용자 목록   | 그룹의 사용자 목록  |
 
+---
+
 **그룹에 글로벌 권한 부여**
 
 권한 부여는 멤버를 통해서만 권한을 부여할 수 있습니다.
@@ -68,9 +72,22 @@ parent: 4. 계정
 
 ![4_group-global-member.png](/assets/images/auth/4_group-global-member.png){: width="800" }
 
+---
+
 **그룹 삭제**
 
 [삭제] 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 그룹 명 입력 후 [Delete] 버튼 클릭 시 그룹이 삭제됩니다.
 
 ![4_group-delete.png](/assets/images/auth/4_group-delete.png){: width="800" }
 
+
+---
+
+## 연습문제
+
+**1. 그룹을 생성하세요.**
+```
+그룹 이름 : mantech
+```
+
+**2. 사용자 메뉴에서 방금 생성한 그룹(mantech)으로 지정하세요.**

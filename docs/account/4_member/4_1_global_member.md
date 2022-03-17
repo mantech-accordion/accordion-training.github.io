@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 4-4-1. 글로벌 멤버
+title: 4.4.1 글로벌 멤버
 nav_order: 4
 grand_parent: 4. 계정
-parent: 4-4. 멤버
+parent: 4.4 멤버
 ---
 
-# 4-4-1. 글로벌 멤버
+# 글로벌 멤버
 {: .no_toc }
 
 ## Table of contents
@@ -39,6 +39,8 @@ parent: 4-4. 멤버
 
 ![4_account-global-member.png](/assets/images/auth/4_account-global-member.png){: width="800" }
 
+---
+
 **글로벌 멤버 Users 생성**
 
 Users에서 [추가]를 클릭하면 확인할 수 있습니다.
@@ -48,22 +50,30 @@ Users에서 [추가]를 클릭하면 확인할 수 있습니다.
 
 ![4_account-global-member-create.png](/assets/images/auth/4_account-global-member-create.png){: width="800" }
 
+---
+
 **생성된 글로벌 멤버 Users 확인**
 
 Users 목록에서 생성 된 것을 확인할 수 있습니다.
 ![4_account-global-member-create-success.png](/assets/images/auth/4_account-global-member-create-success.png){: width="800" }
+
+---
 
 **글로벌 멤버 Users 수정**
 
 Users 목록에서 [수정]을 클릭하면 Authority를 변경할 수 있습니다.
 ![4_account-global-member-create-update.png](/assets/images/auth/4_account-global-member-create-update.png){: width="800" }
 
+---
+
 **글로벌 멤버 Users 삭제**
 
 Users 목록에서 [삭제]를 클릭하면 별다른 팝업창 없이 삭제가 됩니다.
 
+---
 
-**글로벌 멤버 Group 생성**
+
+## 글로벌 멤버 Group 생성
 
 Group에서 [추가]를 클릭하면 확인할 수 있습니다.
 
@@ -72,16 +82,24 @@ Group에서 [추가]를 클릭하면 확인할 수 있습니다.
 
 ![4_account-global-member-group-create.png](/assets/images/auth/4_account-global-member-group-create.png){: width="800" }
 
+---
+
 **생성된 Group 확인**
 
 Group 목록에서 생성 된 것을 확인할 수 있습니다.
 ![4_account-global-member-group-create-success.png](/assets/images/auth/4_account-global-member-group-create-success.png){: width="800" }
 
-**글로벌 멤버 Group 수정**
+---
+
+## 글로벌 멤버 Group 수정
 
 Group 목록에서 [수정]을 클릭하면 Authority를 변경할 수 있습니다.
 ![4_account-global-member-group-update.png](/assets/images/auth/4_account-global-member-group-update.png){: width="800" }
 
-**글로벌 멤버 Group 삭제**
+---
+
+## 글로벌 멤버 Group 삭제
 
 Group 목록에서 [삭제]를 클릭하면 별다른 팝업창 없이 삭제가 됩니다.
+
+

@@ -283,14 +283,14 @@ acc-worker2
 |master3_hostname|사용자 설정|master3 서버 hostname|
 |L4_mode|L4<br>haproxy|L4 haproxy 사용여부<br>● L4로 설정 시 L4장비를 사용, 사전작업 필요<br>● haproxy 설정 시 haproxy pod를 띄워 구성함<br>(default: haproxy)|
 |haproxy_port|사용자 설정|apiserver 6443 port로 넘겨주는 port구성<br>(default: 8443)|
-|keep_vip|사용자 설정|master서버 vip설정입니다.|
+|keep_vip|사용자 설정| ✋ master서버 vip설정입니다.|
 |keep_interface|사용자 설정|master서버 OS의 network interface name을 입력|
 |single_option|사용자 설정|master서버 1대로 설치 후 나중에 2대를 붙여 3중화를 구성할 수 있도록 설정하는 옵션 입니다.<br>(권장: 사전에 3중화 설정정보를 기입해야함)|
 |container_option|containerd<br>cri-o|컨테이너 런타임을 설정합니다.<br>(default: containerd)|
 |selinux_enable|no|selinux 활성화 옵션입니다.<br>(default: no)|
 |crio_interface|사용자 인터페이스 입력|ifconfig 입력 후 ens 값을 넣어줍니다.|
 |storage_option|nfs<br>ceph|스토리지 타입을 선택합니다<br>● nfs: nfs 사용<br>● ceph: ceph 사용|
-|nfs_setup|internal external|nfs의 설치 방식을 선택합니다<br>● internal: master서버에 nfs를 설치 후 사용<br>● external: 외부에 마운트된 nfs를 사용|
+|nfs_setup|internal external|nfs의 설치 방식을 선택합니다<br> ✋ internal: master서버에 nfs를 설치 후 사용<br> ✋ external: 외부에 마운트된 nfs를 사용|
 |nfs_server_ip|사용자 설정|nfs서버의 ip를 설정합니다<br>● nfs_setup이 internal일 경우 masterIP 입력<br>● nfs_setup이 external일 경우 외부 nfs서버 IP 입력|
 |accordion_nfs_path|사용자 설정|nfs_setup이 internal일 경우 원하는 nfs경로를 입력<br>nfs_setup이 external일 경우 마운트된 nfs경로를 입력<br>(default 경로: nfs/data)|
 |ceph_option|cephfs rbd|Ceph type을 설정합니다<br>(default: cephfs)|
@@ -302,12 +302,12 @@ acc-worker2
 |ceph_fsname|사용자 설정|ceph fsname을 설정합니다|
 |etcd_external|yes<br>no|etcd서버를 외부에 구성할지의 여부를 설정합니다<br>● yes: etcd를 외부에 설정<br>● no: etcd를 포함하여구성(default)|
 |base_registry_option|local external|base_registry의 설치여부를 선택합니다<br>local(default): local에 registry를 설치합니다<br>host(member-cluster 전용옵션): local에 설치하지 않고, external의 registry서버를 바라봅니다<br>(default: local)|
-|base_registry_address|사용자 설정|registry서버의 address를 설정합니다. <br> internal 인경우, master vip|
+|base_registry_address|사용자 설정|registry서버의 address를 설정합니다. <br> ✋ internal 인경우, master vip|
 |base_registry_port|사용자 설정|registry서버의 port를 지정합니다.<br>(default): 5000|
 |base_registry_id|사용자 설정|registry id를 설정합니다<br>(default: accregistry)|
 |base_registry_passwd|사용자 설정|registry pw를 설정합니다<br>(default: accordionadmin)|
 |user_registry_option|registry<br>harbor|user registry서버 option을 설정합니다<br>registry: 기본 user registry로 구성합니다(default)<br>harbor: 기본 user registry를 harbor로 구성합니다|
-|user_registry_address|사용자 설정|user_registry_external이 yes일경우 활성화되며, 외부 레지스트리의 주소를 입력합니다. <br> internal 인경우, master vip|
+|user_registry_address|사용자 설정|user_registry_external이 yes일경우 활성화되며, 외부 레지스트리의 주소를 입력합니다. <br> ✋ internal 인경우, master vip|
 |user_registry_port|사용자 설정|user_registry_external이 yes일경우 활성화되며, 외부 레지스트리의 포트를 입력합니다|
 |user_registry_external|yes<br>no|user_registry의 위치를 설정합니다.<br>● yes: registry가 external에 위치합니다.<br>● no: registry가 local에 위치합니다.(default)|
 |user_registry_id|사용자 설정|user_registry_external이 yes일경우 활성화되며,외부 레지스트리의 계정을 입력합니다<br>(default: accregistry)|
@@ -326,7 +326,7 @@ acc-worker2
 |kubelet_root_dir|사용자 설정|kubernetes Root 디렉토리를 지정합니다<br>(default: /var/lib)|
 |kube_addon_dir|사용자 설정|배포되는 yaml들의 저장경로를 설정합니다<br>(default: /etck/kubernetes/addon)|
 |docker_rpm_dir|사용자 설정|각 서버에 필요한 파일을 배포하는 경로를 설정합니다<br>(default: /tmp)|
-|master_external_ip|사용자 설정|public ip를 설정합니다<br>(master ip와 접근경로가 다른경우 설정)|
+|master_external_ip|사용자 설정|public ip를 설정합니다<br> ✋ master ip와 접근경로가 다른경우 설정 |
 |noschedule|yes<br>no|노드를 추가합니다.<br>(default: no)|
 |gpu_server|사용자 설정|GPU 모니터링을 사용합니다.<br>(default: no)|
 |external_prometheus|yes<br>no|yes: 외부 prometheus를 사용할 경우(prometheus가 설치되지 않음)<br>no: 내부 prometheus를 사용|

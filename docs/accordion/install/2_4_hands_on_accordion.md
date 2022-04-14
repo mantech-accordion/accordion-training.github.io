@@ -20,13 +20,89 @@ grand_parent: 2. Accordion v2
 
 
 ## 📖 설치 준비사항
-- ssh key 생성, 복사, 접속 확인
-- Ansible 설치 (아코디언 설치 패키지에 포함)
-- /etc/hosts 파일 수정
+
+<details>
+<summary>ssh key 생성, 복사, 접속 확인</summary>
+  
+{% highlight bash %}
+
+
+Ansible script 수행을 위해 각 노드에서 ssh로 root 로그인이 가능하도록 설정 변경합니다. (Master&node 서버) 
+$ vi /etc/ssh/sshd_config
+…
+PasswordAuthentication yes
+PermitRootLogin yes
+…
+$ systemctl restart sshd
+
+master서버에서 ssh key를 생성합니다. (Master 서버) (Master서버를 포함하여 적용해야합니다.)
+$ ssh-copy-id -i /root/.ssh/id_rsa.pub [노드IP]
+The authenticity of host '10.140.0.3 (10.140.0.3)' can’t be established.
+ECDSA key fingerprint is 34:b2:38:b8:be:1b:dd:f1:44:d8:ba:ec:92:d1:d6:dc.
+Are you sure you want to continue connecting (yes/no)? yes
+/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed — if you are prompted now it is to install the new keys
+root@10.140.0.3’s password:
+Number of key(s) added: 1
+Now try logging into the machine, with: "ssh '10.140.0.3'"
+and check to make sure that only the key(s) you wanted were added.
+(cluster의 구성서버 모두 등록할 때까지 반복해야 합니다.)
+
+SSH Key 설정이 정상적인 확인합니다. (Master 서버) (Master서버를 포함하여 적용해야합니다.)
+$ ssh [노드IP]
+The authenticity of host 'acc-node1 (10.140.0.3)' can’t be established.
+ECDSA key fingerprint is 34:b2:38:b8:be:1b:dd:f1:44:d8:ba:ec:92:d1:d6:dc.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'acc-node1' (ECDSA) to the list of known hosts.
+Last failed login: Mon Sep 4 08:17:06 UTC 2017 from 59.49.38.210 on ssh:notty
+There was 1 failed login attempt since the last successful login.
+Last login: Mon Sep 4 07:18:33 2017
+[root@acc-node1 ~] (패스워드 없이 로그인이 가능하면 정상입니다.)
+
+{% endhighlight %}
+   
+</details>
+
+
+<details>
+<summary>Ansible 설치 (아코디언 설치 패키지에 포함)</summary>
+  
+{% highlight bash %}
+# 각 OS에 맞도록 접속
+$ /rpms/rpm_redhat7/0_ansible/install.sh # Redhat 계열 7버전
+$ /rpms/rpm_redhat8/0_ansible/install.sh # Redhat 계열 8버전
+$ /rpms/rpm_dpkg/0_ansible/install.sh # ubuntu 18버전
+
+{% endhighlight %}
+   
+</details>
+
+<details>
+<summary>/etc/hosts 파일 수정</summary>
+  
+{% highlight bash %}
+
+$ vi /etc/hosts
+10.140.0.2
+acc-master
+10.140.0.3
+acc-node1
+10.140.0.4
+acc-node2
+10.140.0.5
+acc-master2
+10.140.0.6
+acc-master3
+…
+{% endhighlight %}
+   
+</details>
+
 
 **아코디언 설치 설정**
 - accordion-installer/hosts 수정
 - accordion-installer/group_vars/host.yml 수정
+
 
 **아코디언 설치 및 확인**
 - accordion-installer/install.sh

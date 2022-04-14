@@ -78,11 +78,11 @@ cluster 내의 이벤트 로그를 제공합니다. 범위설정에서 설정한
 
 ![container_reload.png](/assets/images/monitoring/container_reload.png)
 
+---
+
 **검색 입력 방법**
 
 검색어에 포함되는 내용을 조회합니다.
 
 검색어 검색 시 여러개의 조건에 맞는 검색을 할 수 있습니다.
 검색조건 입력하면 검색창 하단의 검색조건이 나타납니다. 검색 조건을 선택하고 검색 조건의 검색어를 입력하여 검색합니다. 또는 검색조건과 검색어를 직접 입력하여 검색합니다.
-
-![2_app_overview.png](/assets/images/monitoring/2_app_overview.png){: width="800" }

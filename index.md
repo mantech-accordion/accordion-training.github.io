@@ -8,6 +8,8 @@ permalink: /
 
 # Accordion v2 
 
+![mantech-accordion.svg](/assets/images/mantech-accordion.svg)
+
 Accordion
 {: .label .label-purple }
 

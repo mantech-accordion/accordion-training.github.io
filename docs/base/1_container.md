@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 1-2. Container
+title: 1-1. Container
 nav_order: 1
 parent: 1. Container & Kubernetes
 ---
 
-# 1-2. Container
+# 1-1. Container
 {: .no_toc }
 
 ## Table of contents

@@ -52,7 +52,7 @@ Worker Node가 종료되거나 충돌이 나면 해당 노드에 있는 모든 �
 
 `메뉴 → 노드`
 
-![node_status.jpg](/assets/images/troubleshoot/node_status.jpg){: width="800" }
+![5_nodenotready_node_status.jpg](/assets/images/troubleshoot/5_nodenotready_node_status.jpg){: width="800" }
 
 - 노드의 상세 상태 확인
 
@@ -76,7 +76,7 @@ Conditions:
 
 `메뉴 → 하단 이벤트 검색`
 
-![node_event.jpg](/assets/images/troubleshoot/node_event.jpg){: width="800" }
+![5_nodenotready_node_event.jpg](/assets/images/troubleshoot/5_nodenotready_node_event.jpg){: width="800" }
 
 ---
 
@@ -150,7 +150,7 @@ Conditions:
   Ready                Unknown   Fri, 05 Nov 2021 13:28:10 +0900   Fri, 05 Nov 2021 13:29:33 +0900   NodeStatusUnknown   Kubelet stopped posting node status.
 ```
 
-![node_high_memory_usage.jpg](/assets/images/troubleshoot/node_high_memory_usage.jpg){: width="800" }
+![5_nodenotready_node_high_memory_usage.jpg](/assets/images/troubleshoot/5_nodenotready_node_high_memory_usage.jpg){: width="800" }
 
 ---
 

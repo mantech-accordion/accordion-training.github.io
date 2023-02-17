@@ -26,7 +26,7 @@ Cluster
 Node의 자원부족 등 기타문제로 인하여  NotReady상태가 되면 노드에 호스팅된 Pod들이 축출(eviction)되기 시작합니다.
 이러한 경우 어떻게 확인하고 조치하는지 확인합니다.
 
-![pod_evicted_diagram.jpg](/assets/images/troubleshoot/pod_evicted_diagram.jpg){: width="800" }
+![6_pod_evicted_diagram.jpg](/assets/images/troubleshoot/6_pod_evicted_diagram.jpg){: width="800" }
 
 ---
 

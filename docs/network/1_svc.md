@@ -26,27 +26,6 @@ Namespace
 
 Kubernetes를 사용하면 익숙하지 않은 서비스 디스커버리 메커니즘을 사용하기 위해 애플리케이션을 수정할 필요가 없습니다. Kubernetes를는 파드에게 고유한 IP 주소와 파드 집합에 대한 단일 DNS 명을 부여하고, 그것들 간에 로드밸런스를 수행할 수 있습니다.
 
-<details>
-<summary>예제 Yaml</summary>
-  
-{% highlight yaml %}
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: my-service
-spec:
-  selector:
-    app: MyApp
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 9376
-
-{% endhighlight %}
-   
-</details>
-
 ---
 
 ## 메뉴이동
@@ -98,6 +77,104 @@ spec:
 ---
 ## 연습문제
 
-**1. 예제 yaml을 사용하여 서비스를 생성하세요.**
 
-**2. 생성한 서비스를 확인하고 삭제하세요.**
+<details>
+<summary>예제1 Yaml</summary>
+  
+{% highlight yaml %}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-success-apache
+  labels:
+    app: demo-success-apache
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-success-apache
+  template:
+    metadata:
+      labels:
+        app: demo-success-apache
+    spec:
+      containers:
+      - name: apache
+        image: httpd:2.4
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+   name: demo-success-apache
+spec:
+  selector:
+    app: demo-success-apache
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  type: NodePort
+
+{% endhighlight %}
+   
+</details>
+
+<details>
+<summary>예제2 Yaml</summary>
+  
+{% highlight yaml %}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-failed-apache
+  labels:
+    app: demo-failed-apache
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-failed-apache
+  template:
+    metadata:
+      labels:
+        app: demo-failed-apache
+    spec:
+      containers:
+      - name: apache
+        image: httpd:2.4
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+   name: demo-failed-apache
+spec:
+  selector:
+    app: wrong-label-apache
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  type: NodePort
+
+{% endhighlight %}
+   
+</details>
+
+
+**1. 예제1 yaml을 사용하여 Deployment 및 Service를 생성하세요.**
+
+**2. 생성한 서비스를 NodePort로 접근하여 확인하세요.**
+
+**3. 예제2 yaml을 사용하여 Deployment 및 Service를 생성하세요.**
+
+**4. 생성한 서비스를 NodePort로 접근하여 확인하세요.**
+
+**5. Pod의 label을 확인해보세요.**
+
+**6. 생성한 deployment 및 Service를 모두 삭제하세요.**

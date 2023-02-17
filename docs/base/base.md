@@ -7,5 +7,3 @@ permalink: /docs/base
 ---
 
 # 1. Container & Kubernetes 이론
-
-test line

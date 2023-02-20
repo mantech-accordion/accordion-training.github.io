@@ -26,5 +26,3 @@ permalink: /docs/workload
 - `DaemonSet`은 노드-로컬 기능(node-local facilities)을 제공하는 Pods 를 정의한다. 이러한 기능들은 클러스터를 운용하는 데 기본적인 것일 것이다. 예를 들면, 네트워킹 지원 도구 또는 add-on 등이 있다. DaemonSet 의 명세에 맞는 노드를 클러스터에 추가할 때마다, 컨트롤 플레인은 해당 신규 노드에 DaemonSet 을 위한 Pod 를 스케줄합니다.
 
 - `Job` 및 `CronJob`은 실행 완료 후 중단되는 작업을 정의한다. CronJobs 이 스케줄에 따라 반복되는 반면, 잡은 단 한 번의 작업을 나타냅니다.
-
-

@@ -128,22 +128,18 @@ spec:
 ---
 ## 연습문제
 
-**1. 클러스터에 몇 개의 시크릿이 있습니까?**
+**1. 아래 속성으로 시크릿과 파드를 생성하고 생성한 시크릿을 파드 환경변수로 사용하세요.**
 
-<input />
-
-**2. 아래 속성으로 시크릿과 파드를 생성하고 생성한 시크릿을 파드 환경변수로 사용하세요.**
+[mysql.yaml](/assets/manifests/config/mysql.yaml).
 
 ```
-- Secret Name: db-secret
-- Secret 1: DB_Host=sql01
-- Secret 2: DB_User=root
-- Secret 3: DB_Password=password123
+- Secret Name: mysql-root-password
+- key: ROOT_PASSWORD
+- value: mantechaccordion
 ---
-Pod name: webapp-pod
-Image name: mysql:5.7.37
-Env From: Secret=db-secret
+StatefulSet 이름: mysql
+이미지 이름: mysql:5.6
+Env From: Secret=mysql-root-password
 ```
 
-
-**4. 생성한 파드와 시크릿을 삭제하세요.**
+**2. 생성한 파드와 시크릿을 삭제하세요.**

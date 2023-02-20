@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 5.2.1 카탈로그 배포
-nav_order: 2
+nav_order: 1
 grand_parent: 5. 애플리케이션
 parent: 5.2 카탈로그
 ---

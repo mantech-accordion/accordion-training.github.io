@@ -105,29 +105,47 @@ spec:
       labels:
         app: practice-trb-1-2
     spec:
-      volumes:
-      - name: logs
-        emptyDir: {}
-      initContainers:
-      - name: init
-        image: bash:5.0.11
-        command: ['bash','-c','echo init > /var/log/cleaner/cleaner.log']
-        volumeMounts:
-        - name: logs
-          mountPath: /var/log/cleaner
       containers:
-      - name: cleaner-con
-        image: bash:5.0.11
-        args: ['bash','-c','while true; do echo `date`: "remove random file" >> /var/log/cleaner/cleaner.log; sleep 1; done']
+      - env:
+        - name: JAVA_OPTS
+          value: -XX:+UseParallelGC -XX:+UseParallelOldGC -XX:+PrintGCDetails -XX:+HeapDumpOnOutOfMemoryError
+            -XX:HeapDumpPath=$CATALINA_HOME/logs/$HOSTNAME/heapdump -verbose:gc -Xloggc:$CATALINA_HOME/logs/$HOSTNAME/gclog/gc-%t.log
+            -Djava.security.egd=file:/dev/./urandom -Duser.timezone=GMT+09:00 -Dcatalina.host=$HOSTNAME
+            -Dcatalina.logdir=$CATALINA_HOME/logs/$HOSTNAME -Xms1024m -Xmx1024m -Catalina
+        image: docker.io/library/tomcat:9.0.70-jdk8
+        imagePullPolicy: Always
+        lifecycle:
+          preStop:
+            exec:
+              command:
+              - /usr/local/tomcat/bin/shutdown.sh
+        name: tomcat
+        ports:
+        - containerPort: 8080
+          name: http-port
+          protocol: TCP
+        resources:
+          limits:
+            cpu: "0"
+            memory: "0"
+          requests:
+            cpu: "0"
+            memory: "0"
         volumeMounts:
-        - name: logs
-          mountPath: /var/log/cleaner
-      - name: logger-con
-        image: busybox:1.31.0
-        command: ["sh","-c","tail -f /var/log/cleaner/cleaner"]
-        volumeMounts:
-        - name: logs
-          mountPath: /var/log/cleaner
+        - mountPath: /etc/localtime
+          name: localtime
+          readOnly: true
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - hostPath:
+          path: /etc/localtime
+          type: ""
+        name: localtime
+
 {% endhighlight %}
    
 </details>

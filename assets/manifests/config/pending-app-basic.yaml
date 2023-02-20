@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pending-app-basic
+  labels:
+    app: pending-app-basic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pending-app-basic
+  template:
+    metadata:
+      labels:
+        app: pending-app-basic
+    spec:
+      nodeSelector:
+        accordion-role: "test"
+      containers:
+      - name: nginx
+        image: nginx:latest
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+   name: pending-app-basic
+spec:
+  selector:
+    app: pending-app-basic
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  type: ClusterIP

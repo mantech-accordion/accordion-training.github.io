@@ -130,3 +130,115 @@ Response time이 일정 시간 이내인 transaction의 경우 특정한 확률�
 | 2~3초 사이 | 20%  |
 | 3초 이상  | 100%  |
 
+---
+## 연습문제
+**1. 다음 링크의 이미지 tar 파일을 다운로드 받아 유저 레지스트리에 푸시합니다.**
+```
+https://mantechosstech-my.sharepoint.com/:u:/g/personal/om-support_mantechosstech_onmicrosoft_com/EeNGLkJ_l4hBkYgi-I94JbMBVdgiYD6NuaO6wKxt7WSjmg?e=3qLdnf
+```
+
+**2. 다음 변수의 설명을 읽고, jmeter.yaml 내 매개변수를 환경에 맞게 변경 후 pod를 생성하세요.**
+
+```
+Master_ip : 클러스터 내 마스터 노드의 IP
+user_registry_address : 클러스터 내 유저 레지스트리 주소
+user_registry_port : 클러스터 내 유저 레지스트리 접근 포트
+jmeter_target_ip : jmeter로 부하를 줄 웹 서비스 주소 
+jemter_terget_port :  jmeter로 부하를 줄 웹 서비스 접근 포트
+
+```
+
+jmeter.yaml
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: jmeter
+  name: jmeter-server
+  namespace: jmeter
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: jmeter-server
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: jmeter-server
+      name: jmeter-server
+    spec:
+      containers:
+      - env:
+        - name: JMETER_HOST
+          value: {{ Master_ip }}
+        image: {{ user_registry_address }}:{{ user_registry_port }}/jmeter:demo
+        imagePullPolicy: Always
+        name: jmeter-server
+        ports:
+        - containerPort: 1099
+          hostPort: 1099
+          name: rmi-serverport
+          protocol: TCP
+        - containerPort: 50000
+          hostPort: 50000
+          name: rmi-localport
+          protocol: TCP
+        resources:
+          limits:
+            cpu: "0"
+            memory: "0"
+          requests:
+            cpu: "0"
+            memory: "0"
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /etc/localtime
+          name: timezone
+      - args:
+        - -c
+        - /init.sh
+        command:
+        - /bin/sh
+        env:
+        - name: JMETER_HOST
+          value: {{ Master_ip }}
+        - name: WAS_IP
+          value: {{ jmeter_target_ip }}
+        - name: WAS_PORT
+          value: "{{ jmeter_target_port }}"
+        - name: THREAD_COUNT
+          value: "10"
+        image: {{ user_registry_address }}:{{ user_registry_port }}/jmeter:demo
+        imagePullPolicy: Always
+        name: jmeter-apm
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirstWithHostNet
+      hostNetwork: true
+      nodeSelector:
+        kubernetes.io/hostname: acc-master
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - hostPath:
+          path: /etc/localtime
+          type: ""
+        name: timezone
+```
+
+
+
+**2. 애플리케이션 Overview에서 상태를 확인하세요.**

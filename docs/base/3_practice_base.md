@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 1-3. 실습
-nav_order: 3
+title: 1.4. 실습
+nav_order: 4
 parent: 1. Container & Kubernetes
 ---
 

@@ -26,6 +26,8 @@ Namespace
 
 Kubernetes를 사용하면 익숙하지 않은 서비스 디스커버리 메커니즘을 사용하기 위해 애플리케이션을 수정할 필요가 없습니다. Kubernetes를는 파드에게 고유한 IP 주소와 파드 집합에 대한 단일 DNS 명을 부여하고, 그것들 간에 로드밸런스를 수행할 수 있습니다.
 
+![k8s_svc_diagram.png](/assets/images/network/k8s_svc_diagram.png)
+
 ---
 
 ## 메뉴이동

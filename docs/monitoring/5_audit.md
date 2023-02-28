@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 11.5 감사 로그
-nav_order: 1
+nav_order: 5
 parent: 11. 모니터링&알림
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.2 그룹
-nav_order: 4
+nav_order: 2
 parent: 4. 계정
 ---
 

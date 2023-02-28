@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 11.2 애플리케이션
-nav_order: 1
+nav_order: 2
 parent: 11. 모니터링&알림
 ---
 

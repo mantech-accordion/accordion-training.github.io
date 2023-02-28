@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 12.4.2 네임스페이스
-nav_order: 1
+nav_order: 2
 parent: 12.4 실습
 grand_parent: 12. 설정
 ---

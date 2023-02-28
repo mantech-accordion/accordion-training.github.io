@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 5. 애플리케이션
-nav_order: 5
+nav_order: 6
 has_children: true
 permalink: /docs/application
 ---

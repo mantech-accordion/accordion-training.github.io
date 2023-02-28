@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 5.1.2 헬름
-nav_order: 3
+nav_order: 2
 has_children: true
 grand_parent: 5. 애플리케이션
 parent: 5.1 Helm

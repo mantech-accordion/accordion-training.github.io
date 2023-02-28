@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.3.3 네임스페이스 권한
-nav_order: 4
+nav_order: 3
 grand_parent: 4. 계정
 parent: 4.3 권한
 ---

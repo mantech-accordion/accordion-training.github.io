@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 5.3.3 테스크템플릿
-nav_order: 4
+nav_order: 3
 grand_parent: 5. 애플리케이션
 parent: 5.3 빌드
 ---

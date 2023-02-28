@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.3 권한
-nav_order: 4
+nav_order: 3
 has_children: true
 parent: 4. 계정
 

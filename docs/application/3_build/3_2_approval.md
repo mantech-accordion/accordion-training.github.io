@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 5.3.2 승인
-nav_order: 3
+nav_order: 2
 grand_parent: 5. 애플리케이션
 parent: 5.3 빌드
 ---

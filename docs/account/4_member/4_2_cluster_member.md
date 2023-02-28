@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.4.2 클러스터 멤버
-nav_order: 4
+nav_order: 2
 grand_parent: 4. 계정
 parent: 4.4 멤버
 ---

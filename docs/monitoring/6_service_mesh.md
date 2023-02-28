@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 11.6 서비스 메시
-nav_order: 1
+nav_order: 6
 parent: 11. 모니터링&알림
 ---
 

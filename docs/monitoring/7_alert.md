@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 11.7 알림
-nav_order: 1
+nav_order: 7
 parent: 11. 모니터링&알림
 ---
 

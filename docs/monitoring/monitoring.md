@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 11. 모니터링&알림
-nav_order: 11
+nav_order: 12
 has_children: true
 permalink: /docs/monitoring
 ---

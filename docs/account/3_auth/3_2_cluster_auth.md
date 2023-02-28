@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.3.2 클러스터 권한
-nav_order: 4
+nav_order: 2
 grand_parent: 4. 계정
 parent: 4.3 권한
 ---

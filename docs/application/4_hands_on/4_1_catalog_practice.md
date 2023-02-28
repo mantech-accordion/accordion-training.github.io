@@ -1,9 +1,9 @@
 ---
 layout: default
-title: 5.2.2 카탈로그 실습
-nav_order: 2
+title: 5.4.1 카탈로그 실습
+nav_order: 1
+parent: 5.4 실습
 grand_parent: 5. 애플리케이션
-parent: 5.2 카탈로그
 ---
 
 # 카탈로그 

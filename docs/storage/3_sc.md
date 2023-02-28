@@ -80,3 +80,39 @@ volumeBindingMode: Immediate
 ![storageclass-delete.png](/assets/images/storage/storageclass-delete.png){: width="800" }
 
 
+---
+## 연습문제
+
+**1. 예제yaml을 사용하여 PersistentVolumeClaim을 생성하세요.**
+
+```
+- name: dynamic-pvc
+  accessMode: ReadWriteMany
+  capacity: 1Gi
+  volumeMode: Filesystem
+  storageClassName: nfs-csi
+```
+
+<details>
+<summary>예제Yaml</summary>
+  
+{% highlight yaml %}
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: dynamic-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+  volumeMode: Filesystem
+  storageClassName: nfs-csi
+
+{% endhighlight %}
+   
+</details>
+
+**2. 새로 생성되는 PV와 PVC의 상태를 확인하세요.**

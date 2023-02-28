@@ -104,18 +104,43 @@ spec:
 ---
 ## 연습문제
 
-**1. 클러스터에 몇 개의 파드가 있습니까?**
-
-<input />
-
-**2. 아래 속성으로 새 파드를 만드세요. 생성한 파드의 상태와 로그를 확인하세요.**
+**1. 아래 예제YAML를 참고하여 주어진 정보대로 새 파드를 만드세요. 생성한 파드의 상태와 로그를 확인하세요.**
 
 ```
-- image: nginx
+- image: nginx:latest
+  name: workload-lab-nginx
 ```
 
-**3. 파드가 어떤 노드에 위치했는지 확인하세요.**
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
 
-<input />
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: workload-lab-nginx
+  name: workload-lab-nginx
+spec:
+  containers:
+  - image: nginx:latest
+    name: nginx
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
 
-**4. 생성한 파드를 삭제하세요.**
+{% endhighlight %}
+   
+</details>
+
+**2. 파드가 어떤 노드에 위치했는지 확인하세요.**
+
+```
+HINT:
+  - [워크로드] -> [워크로드 대시보드]
+  - [워크로드] -> [파드]
+```
+
+**3. 생성한 파드를 삭제하세요.**

@@ -175,6 +175,8 @@ spec:
           restartPolicy: OnFailure
     
 {% endhighlight %}
+
+</details>
    
 **2. 생성한 크론잡의 결과 값을 무엇입니까?**
 

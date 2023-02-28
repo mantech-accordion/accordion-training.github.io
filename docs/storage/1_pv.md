@@ -124,3 +124,46 @@ spec:
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 퍼시스턴트볼륨 명 입력 후 `Delete` 버튼 클릭 시 퍼시스턴트볼륨이 삭제됩니다.
 
 ![pv-delete.png](/assets/images/storage/pv-delete.png){: width="800" }
+
+---
+## 연습문제
+
+**1. 예제yaml을 사용하여 PersistentVolume을 생성하세요.**
+
+```
+- name: static-pv
+  NFS:
+    IP: 10.10.0.85
+    PATH: /volume1/tech
+```
+
+<details>
+<summary>예제Yaml</summary>
+  
+{% highlight yaml %}
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: static-pv
+spec:
+  capacity:
+    storage: 1Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Delete
+  mountOptions:
+    - nfsvers=4
+  nfs:
+    path: /volume1/tech
+    server: 10.10.0.85
+  claimRef:
+    name: static-pvc
+    namespace: sykim
+
+{% endhighlight %}
+   
+</details>
+
+**2. 생성한 PV를 확인하세요.**

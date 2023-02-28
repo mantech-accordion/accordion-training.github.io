@@ -97,3 +97,41 @@ spec:
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 네임스페이스/퍼시스턴트볼륨클레임 명 입력 후 `Delete` 버튼 클릭 시 퍼시스턴트볼륨클레임이 삭제됩니다.
 
 ![pvc-delete.png](/assets/images/storage/pvc-delete.png){: width="800" }
+
+---
+## 연습문제
+
+**1. 예제yaml을 사용하여 PersistentVolumeClaim을 생성하세요.**
+
+```
+- name: static-pvc
+  accessMode: ReadWriteMany
+  capacity: 1Gi
+  volumeName: static-pv
+  volumeMode: Filesystem
+```
+
+<details>
+<summary>예제Yaml</summary>
+  
+{% highlight yaml %}
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: static-pvc
+  namespace: sykim
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+  volumeName: static-pv
+  volumeMode: Filesystem
+
+{% endhighlight %}
+   
+</details>
+
+**2. 앞서 생성한 PV와, 1번을 통해 생성한 PVC의 상태를 확인하세요.**

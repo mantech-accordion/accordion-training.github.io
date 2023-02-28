@@ -24,7 +24,10 @@ Namespace
 
 ## 실습 문제
 
-**required)사전에 [실습] 아코디언 카탈로그 & 파이프라인이 선행되어야 합니다.**
+```
+(required) 사전에 [실습] 아코디언 카탈로그 & 파이프라인이 선행되어야 합니다.
+사전 수행해야하는 실습 자료 : https://training.accordions.co.kr/docs/application/4_hands_on/4_1_catalog_practice/
+```
 
 **1. 생성한 devsecops 디플로이먼트에 아래 설정대로 오토스케일을 설정합니다.**
 

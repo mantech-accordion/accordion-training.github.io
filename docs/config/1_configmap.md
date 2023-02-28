@@ -109,75 +109,73 @@ spec:
 ---
 ## 연습문제
 
-**1. 아래 속성으로 새 컨피그맵과 파드를 생성하고, 생성한 컨피그맵을 파드 환경변수로 사용하세요.**
+---
+## 연습문제
 
-(참고 링크 : https://kubernetes.io/ko/docs/concepts/configuration/configmap)
+**1. 아래 속성으로 시크릿과 파드를 생성하고 생성한 시크릿을 파드 환경변수로 사용하세요.**
 
 ```
-- 컨피그맵 이름 : game-demo
-  Pod name: demo-env-pod
-  Image name: nginx:latest
-```
+- Configmap
+  Name: mysql-root-password
+  key: ROOT_PASSWORD
+  value: mantechaccordion
 
 ---
-
-```
-(참고)
-
-data:
-  # 속성과 비슷한 키; 각 키는 간단한 값으로 매핑됨
-  player_initial_lives: "3"
-  ui_properties_file_name: "user-interface.properties"
-
-  # 파일과 비슷한 키
-  game.properties: |
-    enemy.types=aliens,monsters
-    player.maximum-lives=5    
-  user-interface.properties: |
-    color.good=purple
-    color.bad=yellow
-    allow.textmode=true 
-```
----
-
-```
-(참고)
-env: 
-  - name: PLAYER_INITAL_LIVES
-    valueFrom: 
-      configMapKeyRef:
-        name: game-demo
-        key: player_initial_lives
-  - name: UI_PROPERTIES_FILE_NAME
-    valueFrom:
-      configMapKeyRef:
-        name: game-demo
-        key: ui_properties_file_name
+StatefulSet 이름: mysql
+이미지 이름: mysql:5.6
+Env From: Configmap=mysql-root-password
 ```
 
-**2. 1번에서 생성한 컨피그맵을 이용하여 새로운 파드에 마운트하여 사용하세요.**
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
 
-```
-- Pod name: demo-mount-pod
- Image name: nginx
-```
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mysql
+spec:
+  replicas: 1
+  serviceName: mysql
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+        - name: mysql
+          image: mysql:5.6
+          ports:
+            - name: tcp
+              protocol: TCP
+              containerPort: 3306
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                configmapKeyRef:
+                  key: ROOT_PASSWORD
+                  name: mysql-root-password
+          volumeMounts:
+            - name: mysql-data
+              mountPath: /var/lib/mysql
+  volumeClaimTemplates:
+    - metadata:
+        name: mysql-data
+      spec:
+        storageClassName: accordion-storage
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 10Gi
 
----
+{% endhighlight %}
+   
+</details>
 
-```
-  volumeMounts:
-    - name: config
-      mountPath: "/config"
-      readOnly: true
-volumes:
-  - name: config
-    configMap:
-      name: game-demo
-      items:
-      - key: "game.properties"
-        path: "game.properties"
-      - key: "user-interface.properties"
-        path: "user-interface.properties"
-```
-
-**3. 생성한 파드와 컨피그맵을 삭제하세요.**
+**2. 생성한 파드와 컨피그맵을 삭제하세요.**

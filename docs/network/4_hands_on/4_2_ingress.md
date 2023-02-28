@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 8.4.2 Service 실습
+title: 8.4.2 ingress 실습
 nav_order: 2
 parent: 8.4 실습
 grand_parent: 8. 네트워크

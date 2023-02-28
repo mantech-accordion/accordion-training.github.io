@@ -65,11 +65,20 @@ Namespace
 ---
 ## 연습문제
 
+**1. 예제 yaml을 참고하여 demo-apache를 배포하고, 아코디언 콘솔에서 다음 정보대로 인그레스를 생성하세요.**
+- 이름 : network-lab-ingress
+- 인그레스 클래스명 : user-ingress-class
+- 도메인 주소: 'demo-apache.example.com'
+- 프로토콜 : HTTP
+- 경로 : /
+- 서비스 : demo-apache
+- 포트 : 80
+
+
 <details>
 <summary>예제 Yaml</summary>
 
 {% highlight yaml %}
-
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -109,7 +118,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: demo-ingress
+  name: ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/use-regex: "true"
@@ -117,12 +126,12 @@ metadata:
 spec:
   ingressClassName: user-ingress-class
   rules:
-  - host: '*.nip.io'
+  - host: 'example.com'
     http:
       paths:
       - backend:
           service:
-            name: demo-apache
+            name: app
             port:
               number: 80
         path: /
@@ -132,16 +141,4 @@ spec:
    
 </details>
 
-
-**1. 예제 yaml을 참고하여 demo-apache를 배포하고, 아코디언 콘솔에서 다음 정보대로 인그레스를 생성하세요.**
-- 이름 : demo-ingress
-- 인그레스 클래스명 : user-ingress-class
-- 도메인 주소: '*.nip.io'
-- 프로토콜 : HTTP
-- 경로 : /
-- 서비스 : demo-apache
-- 포트 : 80
-
-**2. /etc/hosts 혹은 window hosts 파일에 demo-apache.nip.io를 저장한 뒤, 생성한 인그레스에 접속해보세요.**
-
-**3. 생성한 인그레스를 확인하고 삭제하세요.**
+**2. 생성한 인그레스를 확인하고 삭제하세요.**

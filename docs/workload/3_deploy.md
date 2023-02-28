@@ -153,20 +153,52 @@ spec:
 ---
 ## 연습문제
 
-**1. 클러스터에 몇 개의 파드가 있습니까?**
-
-<input />
-
-**2. 클러스터에 몇 개의 디플로이먼트가 있습니까?**
-
-<input />
-
-**3. 아래 속성으로 새 디플로이먼트를 만드세요.**
+**1. 아래 예제YAML을 참고하여 아래 속성으로 새 디플로이먼트를 만드세요.**
 
 ```
-- name: httpd-frontend; 
-- replicas: 3; 
-- image: httpd:2.4-alpine
+- name: httpd-frontend
+  replicas: 3
+  image: httpd:2.4-alpine
 ```
 
-**4. 생성한 디플로이먼트를 삭제하세요.**
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd-frontend
+  labels:
+    app: httpd
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: httpd-frontend
+  template:
+    metadata:
+      labels:
+        app: httpd-frontend
+    spec:
+      containers:
+      - name: httpd
+        image: httpd:2.4-alpine
+        ports:
+        - containerPort: 80
+
+{% endhighlight %}
+   
+</details>
+
+**2. 생성한 디플로이먼트를 확인하세요.**
+
+```
+HINT:
+  - [워크로드] -> [디플로이먼트]
+  - [워크로드] -> [파드]
+  - [워크로드] -> [레플리카셋]
+```
+
+**3. 생성한 디플로이먼트를 삭제하세요.**

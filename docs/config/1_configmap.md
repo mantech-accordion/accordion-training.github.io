@@ -154,7 +154,7 @@ spec:
           env:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
-                configmapKeyRef:
+                configMapKeyRef:
                   key: ROOT_PASSWORD
                   name: mysql-root-password
           volumeMounts:

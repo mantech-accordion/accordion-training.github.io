@@ -130,16 +130,67 @@ spec:
 
 **1. 아래 속성으로 시크릿과 파드를 생성하고 생성한 시크릿을 파드 환경변수로 사용하세요.**
 
-[mysql.yaml](/assets/manifests/config/mysql.yaml).
-
 ```
 - Secret Name: mysql-root-password
 - key: ROOT_PASSWORD
 - value: mantechaccordion
+
 ---
 StatefulSet 이름: mysql
 이미지 이름: mysql:5.6
 Env From: Secret=mysql-root-password
 ```
+
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
+
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mysql
+spec:
+  replicas: 1
+  serviceName: mysql
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+        - name: mysql
+          image: mysql:5.6
+          ports:
+            - name: tcp
+              protocol: TCP
+              containerPort: 3306
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+               secretKeyRef:
+                key: ROOT_PASSWORD
+                name: mysql-root-password
+          volumeMounts:
+            - name: mysql-data
+              mountPath: /var/lib/mysql
+  volumeClaimTemplates:
+    - metadata:
+        name: mysql-data
+      spec:
+        storageClassName: accordion-storage
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 10Gi
+
+{% endhighlight %}
+   
+</details>
 
 **2. 생성한 파드와 시크릿을 삭제하세요.**

@@ -79,28 +79,42 @@ Kubernetes를 사용하면 익숙하지 않은 서비스 디스커버리 메커�
 ---
 ## 연습문제
 
+**1. 예제1 yaml을 참고하여 아래 내용에 맞는 Deployment 및 Service를 생성하세요.**
+
+```
+- 디플로이먼트
+  name: demo-apache
+  image: httpd:2.4
+  replicas: 1
+
+- 서비스
+  name: demo-apache
+  port: 80
+  target port: 80
+  type: ClusterIP
+  protocol: TCP
+```
 
 <details>
-<summary>예제1 Yaml</summary>
+<summary>예제Yaml</summary>
   
 {% highlight yaml %}
-
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-success-apache
+  name: apache
   labels:
-    app: demo-success-apache
+    app: apache
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demo-success-apache
+      app: apache
   template:
     metadata:
       labels:
-        app: demo-success-apache
+        app: apache
     spec:
       containers:
       - name: apache
@@ -110,73 +124,20 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-   name: demo-success-apache
+   name: apache
 spec:
   selector:
-    app: demo-success-apache
+    app: apache
   ports:
-  - port: 80
+  - port: 8888
     protocol: TCP
-    targetPort: 80
-  type: NodePort
+    targetPort: 8087
+  type: ClusterIP
 
 {% endhighlight %}
    
 </details>
-
-<details>
-<summary>예제2 Yaml</summary>
-  
-{% highlight yaml %}
-
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: demo-failed-apache
-  labels:
-    app: demo-failed-apache
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: demo-failed-apache
-  template:
-    metadata:
-      labels:
-        app: demo-failed-apache
-    spec:
-      containers:
-      - name: apache
-        image: httpd:2.4
-
----
-apiVersion: v1
-kind: Service
-metadata:
-   name: demo-failed-apache
-spec:
-  selector:
-    app: wrong-label-apache
-  ports:
-  - port: 80
-    protocol: TCP
-    targetPort: 80
-  type: NodePort
-
-{% endhighlight %}
-   
-</details>
-
-
-**1. 예제1 yaml을 사용하여 Deployment 및 Service를 생성하세요.**
 
 **2. 생성한 서비스를 NodePort로 접근하여 확인하세요.**
 
-**3. 예제2 yaml을 사용하여 Deployment 및 Service를 생성하세요.**
-
-**4. 생성한 서비스를 NodePort로 접근하여 확인하세요.**
-
-**5. Pod의 label을 확인해보세요.**
-
-**6. 생성한 deployment 및 Service를 모두 삭제하세요.**
+**3. 생성한 deployment 및 Service를 모두 삭제하세요.**

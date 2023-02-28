@@ -140,20 +140,42 @@ spec:
 ---
 ## 연습문제
 
-**1. 클러스터에 몇 개의 크론잡이 있습니까?**
-<input />
-
-**2. 아래 속성으로 새 크론잡을 만드세요.**
+**1. 아래 예제 YAML을 참고하여 새 크론잡을 만드세요.**
 
 ```
-- name: hello; 
-- image: busybox
+- name: hello
+- image: busybox:1.28
 - schedule: "*/1 * * * *"
 - command: ["/bin/sh", "-c", "date; echo Hello from the Kubernetes cluster"]
 ```
 
-**3. 생성한 크론잡의 결과 값을 무엇입니까?**
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
 
-<input />
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: hello
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: busybox
+            image: busybox:1.28
+            imagePullPolicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            - date; echo Hello from the Kubernetes cluster
+          restartPolicy: OnFailure
+    
+{% endhighlight %}
+   
+**2. 생성한 크론잡의 결과 값을 무엇입니까?**
 
-**4. 생성한 크론잡잡을 삭제하세요.**
+**3. 생성한 크론잡잡을 삭제하세요.**

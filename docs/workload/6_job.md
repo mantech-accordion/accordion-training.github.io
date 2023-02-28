@@ -107,20 +107,37 @@ spec:
 ---
 ## 연습문제
 
-**1. 클러스터에 몇 개의 잡이 있습니까?**
-
-<input />
-
-**2. 아래 속성으로 새 잡을 만드세요.**
+**1. 아래 예제YAML을 참고하여 새 잡을 만드세요.**
 
 ```
-- name: pi
-- image: perl
+- name: workload-lab-job
+- image: perl:5.34.0
 - command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
 ```
 
-**3. 생성한 잡의 결과 값을 무엇입니까?**
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
 
-<input />
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pi
+spec:
+  template:
+    spec:
+      containers:
+      - name: pi
+        image: perl:5.34.0
+        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
+      restartPolicy: Never
+  backoffLimit: 4
 
-**4. 생성한 잡을 삭제하세요.**
+{% endhighlight %}
+   
+</details>
+
+**2. 생성한 잡의 결과 값을 무엇입니까?**
+
+**3. 생성한 잡을 삭제하세요.**

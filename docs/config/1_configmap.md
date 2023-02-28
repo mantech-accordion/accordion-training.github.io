@@ -113,9 +113,12 @@ spec:
 
 (참고 링크 : https://kubernetes.io/ko/docs/concepts/configuration/configmap)
 
+```
 - 컨피그맵 이름 : game-demo
-- Pod name: demo-env-pod
-- Image name: nginx:latest
+  Pod name: demo-env-pod
+  Image name: nginx:latest
+```
+
 ---
 
 ```
@@ -154,8 +157,11 @@ env:
 
 **2. 1번에서 생성한 컨피그맵을 이용하여 새로운 파드에 마운트하여 사용하세요.**
 
+```
 - Pod name: demo-mount-pod
-- Image name: nginx
+ Image name: nginx
+```
+
 ---
 
 ```
@@ -173,6 +179,5 @@ volumes:
       - key: "user-interface.properties"
         path: "user-interface.properties"
 ```
-
 
 **3. 생성한 파드와 컨피그맵을 삭제하세요.**

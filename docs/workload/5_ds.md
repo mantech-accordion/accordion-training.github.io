@@ -126,22 +126,56 @@ spec:
 ---
 ## 연습문제
 
-**1. 클러스터에 몇 개의 데몬셋이 있습니까?**
-
-<input />
-
-**2. 아래 속성으로 새 데몬셋을 만드세요.**
+**1. 아래 예제YAML을 참고하여 새 데몬셋을 만드세요.**
 
 ```
-- Name: elasticsearch
-- Namespace: demo
-- Image: k8s.gcr.io/fluentd-elasticsearch:1.20
+- Name: workload-lab-daemonset
+  Image: k8s.gcr.io/fluentd-elasticsearch:1.20
 ```
 
-**3. 새롭게 생성한 데몬셋의 포드가 어떤 노드에 위치해있습니까?**
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
 
-<input />
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: fluentd-elasticsearch
+  labels:
+    k8s-app: fluentd-logging
+spec:
+  selector:
+    matchLabels:
+      name: fluentd-elasticsearch
+  template:
+    metadata:
+      labels:
+        name: fluentd-elasticsearch
+    spec:
+      tolerations:
+      containers:
+      - name: fluentd-elasticsearch
+        image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2
+        resources:
+          limits:
+            memory: 200Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
+        volumeMounts:
+        - name: varlog
+          mountPath: /var/log
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: varlog
+        hostPath:
+          path: /var/log
+    
+{% endhighlight %}
+   
+</details>
 
+**2. 새롭게 생성한 데몬셋의 포드가 어떤 노드에 위치해있습니까?**
 
-**4. 생성한 데몬셋을 삭제하세요.**
-
+**3. 생성한 데몬셋을 삭제하세요.**

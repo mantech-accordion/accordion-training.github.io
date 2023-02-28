@@ -120,8 +120,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    app: workload-lab-nginx
-  name: workload-lab-nginx
+    app: nginx
+  name: nginx
 spec:
   containers:
   - image: nginx:latest

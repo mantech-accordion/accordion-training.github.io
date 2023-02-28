@@ -169,18 +169,18 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: httpd-frontend
+  name: httpd
   labels:
     app: httpd
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: httpd-frontend
+      app: httpd
   template:
     metadata:
       labels:
-        app: httpd-frontend
+        app: httpd
     spec:
       containers:
       - name: httpd
@@ -196,9 +196,11 @@ spec:
 
 ```
 HINT:
-  - [워크로드] -> [디플로이먼트]
-  - [워크로드] -> [파드]
-  - [워크로드] -> [레플리카셋]
+  - 디플로이먼트 상태
+  - 파드 개수 및 상태
+  - 레플리카셋 상태
+  - 생성된 Pod를 삭제 후 다시 생성되는 Pod의 호스트네임
+  - 생성된 레플리카셋을 삭제 후 상태
 ```
 
 **3. 생성한 디플로이먼트를 삭제하세요.**

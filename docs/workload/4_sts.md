@@ -116,16 +116,65 @@ spec:
 ---
 ## 연습문제
 
-**1. 클러스터에 몇 개의 스테이트풀셋이 있습니까?**
-
-<input />
-
-**2. 아래 속성으로 새 스테이트풀셋을 만드세요.**
+**1. 아래 예제YAML을 참고하여, 새 속성으로 새 스테이트풀셋을 만드세요.**
 
 ```
-- name: mysql; 
-- replicas: 1; 
-- image: mysql:5.7.37
+- name: workload-lab-web
+  replicas: 1
+  image: nginx:latest
+```
+
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: nginx
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  serviceName: "nginx"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: nginx
+        image: k8s.gcr.io/nginx-slim:0.8
+        ports:
+        - containerPort: 80
+          name: web
+        volumeMounts:
+        - name: nginx-data
+          mountPath: /usr/share/nginx/html
+  volumeClaimTemplates:
+  - metadata:
+      name: nginx-data
+    spec:
+      accessModes: [ "ReadWriteMany" ]
+      storageClassName: accordion-storage
+      resources:
+        requests:
+          storage: 1Gi
+    
+{% endhighlight %}
+   
+</details>
+
+**2. 생성한 스테이트풀셋을 확인하세요.**
+
+```
+HINT:
+  - Pod의 호스트네임
+  - PV / PVC
+  - 생성한 Pod를 삭제 후 다시 생성되는 Pod의 호스트네임
 ```
 
 **3. 생성한 스테이트풀셋을 삭제하세요.**

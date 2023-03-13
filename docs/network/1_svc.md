@@ -77,18 +77,19 @@ Kubernetes를 사용하면 익숙하지 않은 서비스 디스커버리 메커�
 ![service-delete.png](/assets/images/network/service-delete.png){: width="800" }
 
 ---
+
 ## 연습문제
 
 **1. 예제1 yaml을 참고하여 아래 내용에 맞는 Deployment 및 Service를 생성하세요.**
 
 ```
 - 디플로이먼트
-  name: demo-apache
+  name: lab-network-svc-apache
   image: httpd:2.4
   replicas: 1
 
 - 서비스
-  name: demo-apache
+  name: lab-network-svc-apache
   port: 80
   target port: 80
   type: ClusterIP

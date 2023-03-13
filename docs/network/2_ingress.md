@@ -63,16 +63,20 @@ Namespace
 ![ingress-delete.png](/assets/images/network/ingress-delete.png){: width="800" }
 
 ---
+
 ## 연습문제
 
 **1. 예제 yaml을 참고하여 demo-apache를 배포하고, 아코디언 콘솔에서 다음 정보대로 인그레스를 생성하세요.**
-- 이름 : network-lab-ingress
+
+```
+- 이름 : lab-network-ingress-apache
 - 인그레스 클래스명 : user-ingress-class
 - 도메인 주소: 'demo-apache.example.com'
 - 프로토콜 : HTTP
 - 경로 : /
 - 서비스 : demo-apache
 - 포트 : 80
+```
 
 
 <details>

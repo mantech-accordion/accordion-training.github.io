@@ -131,14 +131,18 @@ spec:
 **1. 아래 속성으로 시크릿과 파드를 생성하고 생성한 시크릿을 파드 환경변수로 사용하세요.**
 
 ```
-- Secret Name: mysql-root-password
-- key: ROOT_PASSWORD
-- value: mantechaccordion
+1. 시크릿
+- name: mysql-root-password
+  key: ROOT_PASSWORD
+  value: mantechaccordion
 
----
-StatefulSet 이름: mysql
-이미지 이름: mysql:5.6
-Env From: Secret=mysql-root-password
+2. 스테이트풀셋
+- name: lab-config-secret-mysql
+  image: mysql:5.6
+  Env From: Secret=mysql-root-password
+
+
+(참고URL: https://kubernetes.io/docs/concepts/configuration/secret)
 ```
 
 <details>
@@ -193,4 +197,6 @@ spec:
    
 </details>
 
-**2. 생성한 파드와 시크릿을 삭제하세요.**
+**2. 생성한 Secret을 확인하고, Pod에서 환경 변수를 확인하세요.**
+
+**3. 생성한 파드와 시크릿을 삭제하세요.**

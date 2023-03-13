@@ -128,13 +128,13 @@ spec:
 ---
 ## 연습문제
 
-**1. 예제yaml을 사용하여 PersistentVolume을 생성하세요.**
+**1. 예제 YAML을 활용하여 아래 정보대로 PersistentVolume을 생성하세요.**
 
 ```
 - name: static-pv
   NFS:
-    IP: 10.10.0.85
-    PATH: /volume1/tech
+    IP: <NAS IP>
+    PATH: <NAS PATH>
 ```
 
 <details>
@@ -156,11 +156,11 @@ spec:
   mountOptions:
     - nfsvers=4
   nfs:
-    path: /volume1/tech
-    server: 10.10.0.85
+    path: <NAS PATH>
+    server: <NAS IP>
   claimRef:
     name: static-pvc
-    namespace: sykim
+    namespace: <네임스페이스>
 
 {% endhighlight %}
    

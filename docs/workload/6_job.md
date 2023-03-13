@@ -110,7 +110,7 @@ spec:
 **1. 아래 예제YAML을 참고하여 새 잡을 만드세요.**
 
 ```
-- name: workload-lab-job
+- name: lab-workload-job-perl
 - image: perl:5.34.0
 - command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
 ```

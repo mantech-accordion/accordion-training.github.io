@@ -119,7 +119,7 @@ spec:
 **1. 아래 예제YAML을 참고하여, 새 속성으로 새 스테이트풀셋을 만드세요.**
 
 ```
-- name: workload-lab-web
+- name: lab-workload-sts-nginx
   replicas: 1
   image: nginx:latest
 ```

@@ -120,7 +120,6 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: static-pvc
-  namespace: sykim
 spec:
   accessModes:
     - ReadWriteMany

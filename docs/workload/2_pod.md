@@ -108,7 +108,7 @@ spec:
 
 ```
 - image: nginx:latest
-  name: workload-lab-nginx
+  name: lab-workload-pod-nginx
 ```
 
 <details>
@@ -143,4 +143,6 @@ HINT:
   - [워크로드] -> [파드]
 ```
 
-**3. 생성한 파드를 삭제하세요.**
+**3. 생성한 파드의 로그를 확인하세요.**
+
+**4. 생성한 파드를 삭제하세요.**

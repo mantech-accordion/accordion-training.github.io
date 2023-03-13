@@ -64,3 +64,24 @@ Accordion
   - [실습]알림 설정
   - 서포트 사이트 사용방법 공유
 
+---
+
+## 실습 문제 링크 정리
+
++ **1일차 실습 문제 정리**
+  - 네임스페이스
+    - [https://training.accordions.co.kr/docs/dashboard/4_ns](https://training.accordions.co.kr/docs/dashboard/4_ns/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+  - 구성
+    - ConfigMap 생성/삭제: [https://training.accordions.co.kr/docs/config/1_configmap](https://training.accordions.co.kr/docs/config/1_configmap/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - Secret 생성/삭제: [https://training.accordions.co.kr/docs/config/2_secret](https://training.accordions.co.kr/docs/config/2_secret/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+  - 스토리지
+    - PV : [https://training.accordions.co.kr/docs/storage/1_pv](https://training.accordions.co.kr/docs/storage/1_pv/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - PVC : [https://training.accordions.co.kr/docs/storage/2_pvc](https://training.accordions.co.kr/docs/storage/2_pvc/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - 스토리지클래스: [https://training.accordions.co.kr/docs/storage/3_sc](https://training.accordions.co.kr/docs/storage/3_sc/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+  - 워크로드
+    - Pod 생성/삭제: [https://training.accordions.co.kr/docs/workload/2_pod](https://training.accordions.co.kr/docs/workload/2_pod/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - Deployment 생성/삭제: [https://training.accordions.co.kr/docs/workload/3_deploy](https://training.accordions.co.kr/docs/workload/3_deploy/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - StatefulSet 생성/삭제: [https://training.accordions.co.kr/docs/workload/4_sts](https://training.accordions.co.kr/docs/workload/4_sts/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - DaemonSet 생성/삭제: [https://training.accordions.co.kr/docs/workload/5_ds](https://training.accordions.co.kr/docs/workload/5_ds/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - Job 생성/삭제: [https://training.accordions.co.kr/docs/workload/6_job](https://training.accordions.co.kr/docs/workload/6_job/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - CronJob 생성/삭제: [https://training.accordions.co.kr/docs/workload/7_cj](https://training.accordions.co.kr/docs/workload/7_cj/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)

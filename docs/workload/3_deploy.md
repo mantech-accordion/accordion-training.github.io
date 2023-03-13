@@ -156,7 +156,7 @@ spec:
 **1. 아래 예제YAML을 참고하여 아래 속성으로 새 디플로이먼트를 만드세요.**
 
 ```
-- name: httpd-frontend
+- name: lab-workload-deployment-httpd
   replicas: 3
   image: httpd:2.4-alpine
 ```
@@ -199,7 +199,7 @@ HINT:
   - 디플로이먼트 상태
   - 파드 개수 및 상태
   - 레플리카셋 상태
-  - 생성된 Pod를 삭제 후 다시 생성되는 Pod의 호스트네임
+  - 생성된 Pod를 삭제 후 다시 생성되는 Pod의 IP, HOSTNAME
   - 생성된 레플리카셋을 삭제 후 상태
 ```
 

@@ -109,18 +109,21 @@ spec:
 ---
 ## 연습문제
 
-**1. 아래 속성으로 시크릿과 파드를 생성하고 생성한 시크릿을 파드 환경변수로 사용하세요.**
+**1. 아래 속성으로 컨피그맵과 파드를 생성하고 생성한 시크릿을 파드 환경변수로 사용하세요.**
 
 ```
-- Configmap
-  Name: mysql-root-password
-  key: ROOT_PASSWORD
-  value: mantechaccordion
+1. 컨피그맵
+- Name: mysql-root-password
+- key: ROOT_PASSWORD
+- value: mantechaccordion
 
----
-StatefulSet 이름: mysql
-이미지 이름: mysql:5.6
-Env From: Configmap=mysql-root-password
+2. 스테이트풀셋
+- name: lab-config-cm-mysql
+- image: mysql:5.6
+- Env From: configmap=mysql-root-password
+
+
+(참고URL: https://kubernetes.io/docs/concepts/configuration/configmap)
 ```
 
 <details>
@@ -175,4 +178,6 @@ spec:
    
 </details>
 
-**2. 생성한 파드와 컨피그맵을 삭제하세요.**
+**2. 생성한 컨피그맵을 확인하고, Pod에서 환경변수를 확인하세요.**
+
+**3. 생성한 파드와 컨피그맵을 삭제하세요.**

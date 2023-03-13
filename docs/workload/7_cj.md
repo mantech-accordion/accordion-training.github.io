@@ -143,7 +143,7 @@ spec:
 **1. 아래 예제 YAML을 참고하여 새 크론잡을 만드세요.**
 
 ```
-- name: hello
+- name: lab-workload-cronjob-busybox
 - image: busybox:1.28
 - schedule: "*/1 * * * *"
 - command: ["/bin/sh", "-c", "date; echo Hello from the Kubernetes cluster"]

@@ -129,7 +129,7 @@ spec:
 **1. 아래 예제YAML을 참고하여 새 데몬셋을 만드세요.**
 
 ```
-- Name: workload-lab-daemonset
+- Name: lab-workload-ds-fluentd
   Image: k8s.gcr.io/fluentd-elasticsearch:1.20
 ```
 

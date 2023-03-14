@@ -68,41 +68,40 @@ Accordion
 
 ## 실습 문제 링크 정리
 
-+ **1일차 연습 문제 정리**
-  - 네임스페이스: [https://training.accordions.co.kr/docs/dashboard/4_ns](https://training.accordions.co.kr/docs/dashboard/4_ns/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-  - 구성
-    - 컨피그맵: [https://training.accordions.co.kr/docs/config/1_configmap](https://training.accordions.co.kr/docs/config/1_configmap/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-    - 시크릿: [https://training.accordions.co.kr/docs/config/2_secret](https://training.accordions.co.kr/docs/config/2_secret/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-  - 스토리지
-    - 퍼시스턴트볼륨: [https://training.accordions.co.kr/docs/storage/1_pv](https://training.accordions.co.kr/docs/storage/1_pv/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-    - 퍼시스턴트볼륨클레임: [https://training.accordions.co.kr/docs/storage/2_pvc](https://training.accordions.co.kr/docs/storage/2_pvc/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-    - 스토리지클래스: [https://training.accordions.co.kr/docs/storage/3_sc](https://training.accordions.co.kr/docs/storage/3_sc/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-  - 워크로드
-    - 파드: [https://training.accordions.co.kr/docs/workload/2_pod](https://training.accordions.co.kr/docs/workload/2_pod/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-    - 디플로이먼트: [https://training.accordions.co.kr/docs/workload/3_deploy](https://training.accordions.co.kr/docs/workload/3_deploy/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-    - 스테이트풀셋: [https://training.accordions.co.kr/docs/workload/4_sts](https://training.accordions.co.kr/docs/workload/4_sts/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-    - 데몬셋: [https://training.accordions.co.kr/docs/workload/5_ds](https://training.accordions.co.kr/docs/workload/5_ds/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-    - 잡: [https://training.accordions.co.kr/docs/workload/6_job](https://training.accordions.co.kr/docs/workload/6_job/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-    - 크론잡: [https://training.accordions.co.kr/docs/workload/7_cj](https://training.accordions.co.kr/docs/workload/7_cj/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-  - 네트워크
-    - 서비스: [https://training.accordions.co.kr/docs/network/1_svc](https://training.accordions.co.kr/docs/network/1_svc/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-    - 인그레스: [https://training.accordions.co.kr/docs/network/2_ingress](https://training.accordions.co.kr/docs/network/2_ingress/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-  - 카탈로그: [https://training.accordions.co.kr/docs/application/2_catalog/2_1_catalog](https://training.accordions.co.kr/docs/application/2_catalog/2_1_catalog/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
++ **1일차 실습 문제 정리**
+  - "1. 네임스페이스"
+    - [실습 문제 1-1 - 네임스페이스](https://training.accordions.co.kr/docs/dashboard/4_ns/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+  - "2. 구성"
+    - [실습 문제 2-1 - 컨피그맵](https://training.accordions.co.kr/docs/config/1_configmap/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - [실습 문제 2-2 - 시크릿](https://training.accordions.co.kr/docs/config/2_secret/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+  - "3. 스토리지"
+    - [실습 문제 3-1 - 퍼시스턴트볼륨](https://training.accordions.co.kr/docs/storage/1_pv/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - [실습 문제 3-2 - 퍼시스턴트볼륨클레임](https://training.accordions.co.kr/docs/storage/2_pvc/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - [실습 문제 3-3 - 스토리지클래스](https://training.accordions.co.kr/docs/storage/3_sc/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+  - "4. 워크로드"
+    - [실습 문제 4-1 - 파드](https://training.accordions.co.kr/docs/workload/2_pod/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - [실습 문제 4-2 - 디플로이먼트](https://training.accordions.co.kr/docs/workload/3_deploy/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - [실습 문제 4-3 - 스테이트풀셋](https://training.accordions.co.kr/docs/workload/4_sts/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - [실습 문제 4-4 - 데몬셋](https://training.accordions.co.kr/docs/workload/5_ds/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - [실습 문제 4-5 - 잡](https://training.accordions.co.kr/docs/workload/6_job/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - [실습 문제 4-6 - 크론잡](https://training.accordions.co.kr/docs/workload/7_cj/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+  - "5. 네트워크"
+    - [실습 문제 5-1 - 서비스](https://training.accordions.co.kr/docs/network/1_svc/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - [실습 문제 5-2 - 인그레스](https://training.accordions.co.kr/docs/network/2_ingress/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+  - "6. 카탈로그"
+    - [실습 문제 6-1 - 카탈로그](https://training.accordions.co.kr/docs/application/2_catalog/2_1_catalog/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
 
 
 + **2일차 실습 문제 정리**
-  - 워크로/구성/네트워크 실습
-    - 시크릿 생성/컨피그맵 활용: [https://training.accordions.co.kr/docs/config/5_hands_on/5_1_config](https://training.accordions.co.kr/docs/config/5_hands_on/5_1_config)
-    - 네트워크 활용: [https://training.accordions.co.kr/docs/network/4_hands_on/4_1_service](https://training.accordions.co.kr/docs/network/4_hands_on/4_1_service)
-  - 카탈로그/파이프라인 실습: [https://training.accordions.co.kr/docs/application/4_hands_on/4_1_catalog_practice](https://training.accordions.co.kr/docs/application/4_hands_on/4_1_catalog_practice)
-  - 오토스케일
-    - Time-Based: [https://training.accordions.co.kr/docs/workload/8_hands_on/8_1_time_based_autoscale](https://training.accordions.co.kr/docs/workload/8_hands_on/8_1_time_based_autoscale)
-    - APM Based: [https://training.accordions.co.kr/docs/workload/8_hands_on/8_2_apm_autoscale](https://training.accordions.co.kr/docs/workload/8_hands_on/8_2_apm_autoscale)
-
-+ **2일차 트러블슈팅 실습 문제 정리**
-  - Case 1
-    - CrashLoopBackOff 예제: [https://training.accordions.co.kr/docs/troubleshoot/8_hands_on/8_1_hands_on_crashloopbackoff](https://training.accordions.co.kr/docs/troubleshoot/8_hands_on/8_1_hands_on_crashloopbackoff)
-  - Case 2
-    - Pending 예제: [https://training.accordions.co.kr/docs/troubleshoot/8_hands_on/8_2_hands_on_pending](https://training.accordions.co.kr/docs/troubleshoot/8_hands_on/8_2_hands_on_pending)
-  - Case 3
-    - ImagePullError 예제: [https://training.accordions.co.kr/docs/troubleshoot/8_hands_on/8_3_hands_on_image_pull_error](https://training.accordions.co.kr/docs/troubleshoot/8_hands_on/8_3_hands_on_image_pull_error)
+  - "7. 워크로드/구성/네트워크"
+    - [실습 문제 7-1 - 시크릿/컨피그맵 활용](https://training.accordions.co.kr/docs/config/5_hands_on/5_1_config)
+    - [실습 문제 7-2 - 네트워크 활용](https://training.accordions.co.kr/docs/network/4_hands_on/4_1_service)
+  - "8. 카탈로그/파이프라인"
+    - [실습 문제 8-1 - 카탈로그/파이프라인](https://training.accordions.co.kr/docs/application/4_hands_on/4_1_catalog_practice)
+  - "9. 오토스케일"
+    - [실습 문제 9-1 - Time-Based 오토스케일](https://training.accordions.co.kr/docs/workload/8_hands_on/8_1_time_based_autoscale)
+    - [실습 문제 9-2 - APM Based 오토스케일](https://training.accordions.co.kr/docs/workload/8_hands_on/8_2_apm_autoscale)
+  - "apx. 트러블슈팅"
+    - [Case 1 - CrashLoopBackOff 트러블슈팅](https://training.accordions.co.kr/docs/troubleshoot/8_hands_on/8_1_hands_on_crashloopbackoff)
+    - [Case 2 - Pending 트러블슈팅](https://training.accordions.co.kr/docs/troubleshoot/8_hands_on/8_2_hands_on_pending)
+    - [Case 3 - ImagePullError 트러블슈팅](https://training.accordions.co.kr/docs/troubleshoot/8_hands_on/8_3_hands_on_image_pull_error)

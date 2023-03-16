@@ -124,12 +124,12 @@ spec:
       env:
         - name: upper-case-secret-key-1
           valueFrom:
-            configMapKeyRef:
+            secretKeyRef:
               name: secret-name
               key: secret-key-1
         - name: upper-case-secret-key-2
           valueFrom:
-            configMapKeyRef:
+            secretKeyRef:
               name: secret-name
               key: secret-key-2
   

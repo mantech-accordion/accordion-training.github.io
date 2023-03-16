@@ -70,14 +70,11 @@ Accordion
 
 + **1일차 실습 문제 정리**
   - "1. 네임스페이스"
-    - [실습 문제 1-1 - 네임스페이스](https://training.accordions.co.kr/docs/dashboard/4_ns/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
   - "2. 구성"
     - [실습 문제 2-1 - 컨피그맵](https://training.accordions.co.kr/docs/config/1_configmap/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
     - [실습 문제 2-2 - 시크릿](https://training.accordions.co.kr/docs/config/2_secret/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
   - "3. 스토리지"
-    - [실습 문제 3-1 - 퍼시스턴트볼륨](https://training.accordions.co.kr/docs/storage/1_pv/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-    - [실습 문제 3-2 - 퍼시스턴트볼륨클레임](https://training.accordions.co.kr/docs/storage/2_pvc/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
-    - [실습 문제 3-3 - 스토리지클래스](https://training.accordions.co.kr/docs/storage/3_sc/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
+    - [실습 문제 3-1 - 스토리지클래스](https://training.accordions.co.kr/docs/storage/3_sc/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
   - "4. 워크로드"
     - [실습 문제 4-1 - 파드](https://training.accordions.co.kr/docs/workload/2_pod/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)
     - [실습 문제 4-2 - 디플로이먼트](https://training.accordions.co.kr/docs/workload/3_deploy/#%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C)

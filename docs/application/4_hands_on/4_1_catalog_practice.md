@@ -33,13 +33,12 @@ Namespace
 - name: catalog-practice
 - 카탈로그 : acc-tomcat
 - 상세설명 : 카탈로그 생성
-- 고급설정 : 배포 클러스터(host-cluster), 네임스페이스(mantech) 선택
-- 컨테이너 이미지 정책 : 레지스트리 user-registry, 보관개수 5
+- 고급설정 : 배포 클러스터(host-cluster), 네임스페이스 선택
+- 컨테이너 이미지 정책 : 레지스트리 user-registry, 보관개수 3
 ```
 
 배포 리소스 설정
 ```
-- 리소스그룹 1.deploy.env.컨테이너변수 : JAVA_OPTS value(-Duser.timezone=GMT+09:00 -Djava.security.egd=file:/dev/./urandom -XX:+UseParallelGC -XX:+UseParallelOldGC -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=$JBOSS_HOME/standalone/log/$HOSTNAME/heapdump -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Xms1536m -Xmx1536m) 
 - 레플리카 파드 수 : 2
 - resource.limits.cpu : 1
 - resource.limits.memory : 2Gi
@@ -63,30 +62,22 @@ Namespace
 - 다른 테스크 템플릿 불러오기 : acc-image-vulnerability-scanning
 - 테스크 이름 : image-scanning
 - 테스크 연관 관계 : image-build.Succeeded
+- auth:
+    - basic auth -> user-registry 선택
+- trivyExitCriteria: CRITICAL
+- trivyInsecure: true
+- trivyNonSsl: false
+- trivyOfflineScan: true
+- trivyRemote: http://trivy.accordion-edu:4954
 
 
 4. 이미지 서명 테스크 추가
 - 다른 테스크 템플릿 불러오기 : image-sign
 - 테스크 이름 : image-sign
 - 테스크 연관 관계 : image-scanning.Succeeded
-
-
-5. 승인 테스크 추가
-- 다른 테스크 템플릿 불러오기 : approve
-- 테스크 이름 : approve
-- 테스크 연관 관계 : image-sign.Succeeded
-
-
-6. 메일 발송 테스크 추가
-- 다른 테스크 템플릿 불러오기 : sendmail
-- 테스크 이름 : sendmail
-- 테스크 연관 관계 : approve.Succeeded
-
 ```
 
-
 **2. 생성된 카탈로그의 배포를 실행하세요.**
-
 
 
 **3. 배포된 워크로드 상태를 워크로드 대시보드에서 확인하세요.**

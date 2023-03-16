@@ -35,46 +35,6 @@ Namespace
 - Docker Registry
 - SSH 키
 
-
-<details>
-<summary>예제 Yaml</summary>
-  
-{% highlight yaml %}
-
-apiVersion: v1
-kind: Secret
-metadata:
-  name: mysecret
-type: Opaque
-data:
-  USER_NAME: YWRtaW4=
-  PASSWORD: MWYyZDFlMmU2N2Rm
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: secret-env-pod
-spec:
-  containers:
-  - name: mycontainer
-    image: redis
-    env:
-      - name: SECRET_USERNAME
-        valueFrom:
-          secretKeyRef:
-            name: mysecret
-            key: username
-      - name: SECRET_PASSWORD
-        valueFrom:
-          secretKeyRef:
-            name: mysecret
-            key: password
-  restartPolicy: Never
-
-{% endhighlight %}
-   
-</details>
-
 ---
 
 ## 메뉴이동
@@ -130,71 +90,50 @@ spec:
 
 **1. 아래 속성으로 시크릿과 파드를 생성하고 생성한 시크릿을 파드 환경변수로 사용하세요.**
 
+(참고URL: https://kubernetes.io/docs/concepts/configuration/secret)
+
 ```
 1. 시크릿
-- name: mysql-root-password
-  key: ROOT_PASSWORD
-  value: mantechaccordion
+- Name: 2-2-lab-secret
+- key: player_initial_lives
+  value: "3"
+- key: ui_properties_file_name
+  value: "user-interface.properties"
 
-2. 스테이트풀셋
-- name: lab-config-secret-mysql
-  image: mysql:5.6
-  Env From: Secret=mysql-root-password
-
-
-(참고URL: https://kubernetes.io/docs/concepts/configuration/secret)
+2. Pod
+- name: 2-2-lab-secret
+- image: alpine
+- Secret을 Pod의 환경변수로 사용
+  (TIP: env의 valueFrom)
 ```
 
 <details>
 <summary>예제 Yaml</summary>
-  
+
 {% highlight yaml %}
-
-apiVersion: apps/v1
-kind: StatefulSet
+---
+apiVersion: v1
+kind: Pod
 metadata:
-  name: mysql
+  name: secret-demo-pod
 spec:
-  replicas: 1
-  serviceName: mysql
-  selector:
-    matchLabels:
-      app: mysql
-  template:
-    metadata:
-      labels:
-        app: mysql
-    spec:
-      terminationGracePeriodSeconds: 10
-      containers:
-        - name: mysql
-          image: mysql:5.6
-          ports:
-            - name: tcp
-              protocol: TCP
-              containerPort: 3306
-          env:
-            - name: MYSQL_ROOT_PASSWORD
-              valueFrom:
-               secretKeyRef:
-                key: ROOT_PASSWORD
-                name: mysql-root-password
-          volumeMounts:
-            - name: mysql-data
-              mountPath: /var/lib/mysql
-  volumeClaimTemplates:
-    - metadata:
-        name: mysql-data
-      spec:
-        storageClassName: accordion-storage
-        accessModes:
-          - ReadWriteOnce
-        resources:
-          requests:
-            storage: 10Gi
-
+  containers:
+    - name: alpine
+      image: alpine
+      command: ["sleep", "3600"]
+      env:
+        - name: upper-case-secret-key-1
+          valueFrom:
+            configMapKeyRef:
+              name: secret-name
+              key: secret-key-1
+        - name: upper-case-secret-key-2
+          valueFrom:
+            configMapKeyRef:
+              name: secret-name
+              key: secret-key-2
+  
 {% endhighlight %}
-   
 </details>
 
 **2. 생성한 Secret을 확인하고, Pod에서 환경 변수를 확인하세요.**

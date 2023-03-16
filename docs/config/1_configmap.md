@@ -24,58 +24,8 @@ Namespace
 ## 컨피그맵(Configmap)
 컨피그맵은 키-값 쌍으로 민감한 정보가 아닌 데이터를 저장하는 데 사용하는 API 오브젝트입니다. 파드는 볼륨에서 환경 변수, 커맨드-라인 인수 또는 구성 파일로 컨피그맵을 사용할 수 있습니다.
 
-
-<details>
-<summary>예제 Yaml</summary>
-  
-{% highlight yaml %}
-
-apiVersion: v1
-kind: Pod
-metadata:
-  name: configmap-demo-pod
-spec:
-  containers:
-    - name: demo
-      image: alpine
-      command: ["sleep", "3600"]
-      env:
-        # 환경 변수 정의
-        - name: PLAYER_INITIAL_LIVES # 참고로 여기서는 컨피그맵의 키 이름과
-                                     # 대소문자가 다르다.
-          valueFrom:
-            configMapKeyRef:
-              name: game-demo           # 이 값의 컨피그맵.
-              key: player_initial_lives # 가져올 키.
-        - name: UI_PROPERTIES_FILE_NAME
-          valueFrom:
-            configMapKeyRef:
-              name: game-demo
-              key: ui_properties_file_name
-      volumeMounts:
-      - name: config
-        mountPath: "/config"
-        readOnly: true
-  volumes:
-    # 파드 레벨에서 볼륨을 설정한 다음, 해당 파드 내의 컨테이너에 마운트한다.
-    - name: config
-      configMap:
-        # 마운트하려는 컨피그맵의 이름을 제공한다.
-        name: game-demo
-        # 컨피그맵에서 파일로 생성할 키 배열
-        items:
-        - key: "game.properties"
-          path: "game.properties"
-        - key: "user-interface.properties"
-
-{% endhighlight %}
-   
-</details>
-
 ---
 
-
----
 ## 메뉴이동
 `구성` ➡ `컨피그맵`
 
@@ -109,73 +59,52 @@ spec:
 ---
 ## 연습문제
 
-**1. 아래 속성으로 컨피그맵과 파드를 생성하고 생성한 시크릿을 파드 환경변수로 사용하세요.**
+**1. 아래 속성으로 컨피그맵과 파드를 생성하고 생성한 컨피그맵을 파드 환경변수로 사용하세요.**
+
+(참고URL: https://kubernetes.io/docs/concepts/configuration/configmap)
 
 ```
 1. 컨피그맵
-- Name: mysql-root-password
-- key: ROOT_PASSWORD
-- value: mantechaccordion
+- Name: 2-1-lab-configmap
+- key: player_initial_lives
+  value: "3"
+- key: ui_properties_file_name
+  value: "user-interface.properties"
 
-2. 스테이트풀셋
-- name: lab-config-cm-mysql
-- image: mysql:5.6
-- Env From: configmap=mysql-root-password
-
-
-(참고URL: https://kubernetes.io/docs/concepts/configuration/configmap)
+2. Pod
+- name: 2-1-lab-configmap
+- image: alpine
+- ConfigMap을 Pod의 환경변수로 사용
+  (TIP: env의 valueFrom)
 ```
 
 <details>
 <summary>예제 Yaml</summary>
-  
+
 {% highlight yaml %}
-
-apiVersion: apps/v1
-kind: StatefulSet
+---
+apiVersion: v1
+kind: Pod
 metadata:
-  name: mysql
+  name: configmap-demo-pod
 spec:
-  replicas: 1
-  serviceName: mysql
-  selector:
-    matchLabels:
-      app: mysql
-  template:
-    metadata:
-      labels:
-        app: mysql
-    spec:
-      terminationGracePeriodSeconds: 10
-      containers:
-        - name: mysql
-          image: mysql:5.6
-          ports:
-            - name: tcp
-              protocol: TCP
-              containerPort: 3306
-          env:
-            - name: MYSQL_ROOT_PASSWORD
-              valueFrom:
-                configMapKeyRef:
-                  key: ROOT_PASSWORD
-                  name: mysql-root-password
-          volumeMounts:
-            - name: mysql-data
-              mountPath: /var/lib/mysql
-  volumeClaimTemplates:
-    - metadata:
-        name: mysql-data
-      spec:
-        storageClassName: accordion-storage
-        accessModes:
-          - ReadWriteOnce
-        resources:
-          requests:
-            storage: 10Gi
-
+  containers:
+    - name: alpine
+      image: alpine
+      command: ["sleep", "3600"]
+      env:
+        - name: upper-case-configmap-key-1
+          valueFrom:
+            configMapKeyRef:
+              name: configmap-name
+              key: configmap-key-1
+        - name: upper-case-configmap-key-2
+          valueFrom:
+            configMapKeyRef:
+              name: configmap-name
+              key: configmap-key-2
+  
 {% endhighlight %}
-   
 </details>
 
 **2. 생성한 컨피그맵을 확인하고, Pod에서 환경변수를 확인하세요.**

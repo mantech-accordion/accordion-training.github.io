@@ -90,7 +90,7 @@ volumeBindingMode: Immediate
   accessMode: ReadWriteMany
   capacity: 1Gi
   volumeMode: Filesystem
-  storageClassName: nfs-csi
+  storageClassName: nfs-sc
 ```
 
 <details>
@@ -109,7 +109,7 @@ spec:
     requests:
       storage: 1Gi
   volumeMode: Filesystem
-  storageClassName: nfs-csi
+  storageClassName: nfs-sc
 
 {% endhighlight %}
    

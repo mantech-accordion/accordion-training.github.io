@@ -25,65 +25,88 @@ Namespace
 ---
 ## 연습문제
 
-**1. 아래 속성으로 새 컨피그맵과 시크릿을 생성하고, 생성한 컨피그맵과 시크릿을 Pod에 사용하세요.**
+**1. 아래 속성으로 새 시크릿과 컨피그맵을 생성하고, 생성한 시크릿과 컨피그맵을 Pod에 사용하세요.**
+- 단, 컨피그맵은 Pod에 볼륨 마운트하고, 시크릿은 Pod에 환경변수로 사용하세요.
+
+- Pod
 
 ```
-- 컨피그맵 이름 : game-demo
-  Pod name: demo-env-pod
-  Image name: nginx:latest
+- Pod name: lab-config-demo-pod
+  image name: nginx:latest
 ```
 
+- 시크릿
+
+```
+- 시크릿 이름: lab-config-demo-secret
+- key1: player_initial_lives
+  value1: "3"
+
+- key2: ui_properties_file_name
+  value2: "user-interface.properties"
+```
+
+- 컨피그맵
+
+```
+- 컨피그맵 이름: lab-config-demo-configmap
+key: nginx.conf
+value:
+  user  nginx;
+  worker_processes  auto;
+  error_log  /var/log/nginx/error.log notice;
+  pid        /var/run/nginx.pid;
+
+  events {
+      worker_connections  1024;
+  }
+
+
+  http {
+      include       /etc/nginx/mime.types;
+      default_type  application/octet-stream;
+
+      log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                        '$status $body_bytes_sent "$http_referer" '
+                        '"$http_user_agent" "$http_x_forwarded_for"';
+      access_log  /var/log/nginx/access.log  main;
+      sendfile        on;
+      #tcp_nopush     on;
+      keepalive_timeout  65;
+      #gzip  on;
+      include /etc/nginx/conf.d/*.conf;
+  }
+```
+
+<details>
+<summary>예제 Yaml</summary>
+
+{% highlight yaml %}
 ---
-
-```
-(참고)
-
-data:
-  # 속성과 비슷한 키; 각 키는 간단한 값으로 매핑됨
-  player_initial_lives: "3"
-  ui_properties_file_name: "user-interface.properties"
-
-  # 파일과 비슷한 키
-  game.properties: |
-    enemy.types=aliens,monsters
-    player.maximum-lives=5    
-  user-interface.properties: |
-    color.good=purple
-    color.bad=yellow
-    allow.textmode=true 
-```
----
-
-```
-(참고)
-env: 
-  - name: PLAYER_INITAL_LIVES
-    valueFrom: 
-      configMapKeyRef:
-        name: game-demo
-        key: player_initial_lives
-  - name: UI_PROPERTIES_FILE_NAME
-    valueFrom:
-      configMapKeyRef:
-        name: game-demo
-        key: ui_properties_file_name
-```
-
-**2. 1번에서 생성한 컨피그맵을 이용하여 새로운 파드에 마운트하여 사용하세요.**
-
-```
-- Pod name: demo-mount-pod
- Image name: nginx
-```
-
----
-
-```
-  volumeMounts:
-    - name: config
-      mountPath: "/config"
-      readOnly: true
-volumes:
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      env:
+        - name: PLAYER_INITIAL_LIVES
+          valueFrom:
+            configMapKeyRef:
+              name: game-demo
+              key: player_initial_lives
+        - name: UI_PROPERTIES_FILE_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: game-demo
+              key: ui_properties_file_name
+      volumeMounts:
+      - name: config
+        mountPath: "/config"
+        readOnly: true
+  volumes:
   - name: config
     configMap:
       name: game-demo
@@ -92,6 +115,11 @@ volumes:
         path: "game.properties"
       - key: "user-interface.properties"
         path: "user-interface.properties"
-```
 
-**3. 생성한 리소스들을 삭제하세요.**
+{% endhighlight %}
+</details>
+
+
+**3. Pod에 터미널 접근하여 환경 변수 및 volumeMount한 설정 파일을 확인하세요.**
+
+**4. 생성한 리소스들을 삭제하세요.**

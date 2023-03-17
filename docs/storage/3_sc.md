@@ -116,3 +116,37 @@ spec:
 </details>
 
 **2. 새로 생성되는 PV와 PVC의 상태를 확인하세요.**
+
+**3. 생성한 PVC를 아래 예제 YAML을 활용하여 volumtMount 하세요.**
+
+<details>
+<summary>예제Yaml</summary>
+  
+{% highlight yaml %}
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: nginx
+  name: nginx
+spec:
+  containers:
+  - image: nginx:latest
+    imagePullPolicy: Always
+    name: nginx
+    resources: {}
+    volumeMounts:
+    - name: nginx-data
+      mountPath: /usr/share/nginx/html
+  volumes:
+  - name: nginx-data
+    persistentVolumeClaim:
+      claimName: dynamic-pvc
+
+{% endhighlight %}
+   
+</details>
+
+
+**4. 생성한 리소스를 모두 삭제하세요.**

@@ -58,7 +58,13 @@ Namespace
 - 테스크 연관 관계 : src-build.Succeeded
 
 
-3. 이미지 스캐닝 테스크 추가
+3. 레지스트리 푸시 장소 변경
+- additionalCreds: user-registry
+- regcred
+  - 푸시 레지스트리: user-registry
+
+
+4. 이미지 스캐닝 테스크 추가
 - 다른 테스크 템플릿 불러오기 : acc-image-vulnerability-scanning
 - 테스크 이름 : image-scanning
 - 테스크 연관 관계 : image-build.Succeeded
@@ -71,7 +77,7 @@ Namespace
 - trivyRemote: http://trivy.accordion-edu:4954
 
 
-4. 이미지 서명 테스크 추가
+5. 이미지 서명 테스크 추가
 - 다른 테스크 템플릿 불러오기 : image-sign
 - 테스크 이름 : image-sign
 - 테스크 연관 관계 : image-scanning.Succeeded

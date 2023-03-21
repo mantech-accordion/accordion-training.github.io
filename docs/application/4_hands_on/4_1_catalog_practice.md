@@ -67,7 +67,7 @@ Namespace
 4. 이미지 서명 테스크 추가
 - 다른 테스크 템플릿 불러오기 : image-sign
 - 테스크 이름 : image-sign
-- 테스크 연관 관계 : image-scanning.Succeeded
+- 테스크 연관 관계 : image-build.Succeeded
 ```
 
 **2. 생성된 카탈로그의 배포를 실행하세요.**

@@ -18,11 +18,12 @@ grand_parent: 2. Accordion v2
 ---
 
 ## 💻시스템 요구사항
-- Accordion 서버는 가상 시스템 또는 물리 시스템 준비
-- Accordion 서버를 설치하기 위해서는 Master 서버 3대와 서비스를 수행 할 Node 서버 2대 이상 있어야 합니다.
-- Master, Node 서버 간에는 네트워크 사전작업 준비
-- Master 서버와 Node 서버 간에 ssh 접근이 가능해야 합니다. (root 접속필요)
-- Master/Node 서버 시간은 동일해야 합니다.
+- Accordion 서버는 가상머신(VM) 또는 물리머신(Baremetal) 준비
+- Accordion 서버를 설치하기 위해서는 Master Node 3대와 서비스를 수행 할 Worker Node 2대 이상 있어야 합니다.
+    - Infra Node는 선택사항
+- Master Node, Infra Node, Worker Node 간에는 통신이 가능해야합니다.(네트워크 사전작업 필요)
+- Master Node, Infra Node, Worker Node 간에 SSH 접근이 가능해야 합니다. (root 권한 필요)
+- 모든 노드의 서버 시간은 반드시 동일하게 동기화가 되어야합니다.
 
 
 **OS 운영체제**
@@ -30,14 +31,19 @@ grand_parent: 2. Accordion v2
 - RHEL : 7.4 또는 8.4 이상
 - Ubuntu: 18.04 이상
 - OracleLinux: 7.4 또는 8.4 이상
-- RHCK 커널 지원, UEK 커널 미지원
+    - RHCK 커널 지원
+    - UEK 커널 미지원
 
 **노드별 시스템 요구사항**
 
-| 구분        | CPU | MEMORY | DISK |
-|:-------------|:------------------|:------|:------|:------|
-| Master       | 최소 8core | 최소 16GB  | 최소 500GB |
-| Node(s)      | 최소 8core   | 최소 16GB | 최소 300GB |
+| 구분      | CPU           | MEMORY     | DISK       |
+|:----------|:-------------|:-----------|:-----------|:------|
+| Master    | 최소 4core    | 최소 16GB  | 최소 300GB |
+|           | 권장 8core    | 권장 32GB  | 권장 500GB |
+| Infra(s)  | 최소 4core    | 최소 16GB  | 최소 300GB |
+|           | 권장 8core    | 권장 32GB  | 권장 500GB |
+| Node(s)   | 최소 4core    | 최소 16GB  | 최소 300GB |
+|           | 권장 8core    | 권장 64GB  | 권장 300GB |
 
 ---
 
@@ -86,4 +92,3 @@ grand_parent: 2. Accordion v2
 | TCP	| Inbound	| 30002			| thanos-store-gateway | 
 | TCP	| Inbound	| 30003			| thanos-sidecar | 
 | TCP	| Inbound	| 30443			| member-agent | 
-

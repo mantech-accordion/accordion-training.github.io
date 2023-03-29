@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 6.3 디플로이먼트
-nav_order: 3
+title: 6.4 디플로이먼트
+nav_order: 4
 parent: 6. 워크로드
 ---
 

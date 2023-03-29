@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 6.4 스테이트풀셋
-nav_order: 4
+title: 6.5 스테이트풀셋
+nav_order: 5
 parent: 6. 워크로드
 ---
 

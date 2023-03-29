@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 6.8 실습
-nav_order: 8
+title: 6.9 실습
+nav_order: 9
 parent: 6. 워크로드
 has_children: true
 ---

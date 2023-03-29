@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 6.6 잡
-nav_order: 6
+title: 6.7 잡
+nav_order: 7
 parent: 6. 워크로드
 ---
 

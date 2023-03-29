@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 6.8.1 Time-based 오토스케일
+title: 6.9.1 Time-based 오토스케일
 nav_order: 1
-parent: 6.8 실습
+parent: 6.9 실습
 grand_parent: 6. 워크로드
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 6.8.2 APM-based 오토스케일
+title: 6.9.2 APM-based 오토스케일
 nav_order: 2
-parent: 6.8 실습
+parent: 6.9 실습
 grand_parent: 6. 워크로드
 ---
 

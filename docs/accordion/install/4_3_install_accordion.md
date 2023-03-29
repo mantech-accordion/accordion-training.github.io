@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 2.4.4 👨‍💻 실습
-nav_order: 5
+title: 2.4.3 👨아코디언v2 설치
+nav_order: 3
 parent: 2.4 Accordion 설치
 grand_parent: 2. Accordion v2
 ---
 
-# 2.4.4 👨‍💻 [실습]아코디언v2 인스톨
+# 2.4.3 아코디언v2 설치
 {: .no_toc }
 
 ## Table of contents

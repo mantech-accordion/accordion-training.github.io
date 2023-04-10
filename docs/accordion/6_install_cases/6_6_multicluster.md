@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 2.6.3 Case 3 - Multiple NIC
-nav_order: 3
+title: 2.6.6 Case 6 - 멀티클러스터
+nav_order: 6
 parent: 2.6 설치 케이스 모음
 grand_parent: 2. Accordion v2
 ---
 
-# Case 3
+# Case 6
 {: .no_toc }
 
 ## Table of contents
@@ -17,4 +17,4 @@ grand_parent: 2. Accordion v2
 
 ---
 
-## Multiple NIC 환경
+## 멀티클러스터 구조

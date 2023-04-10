@@ -17,4 +17,4 @@ grand_parent: 2. Accordion v2
 
 ---
 
-## NAS 이외의 별도 스토리지를 사용하는 케이스
+## NAS 이외의 별도 스토리지 사용

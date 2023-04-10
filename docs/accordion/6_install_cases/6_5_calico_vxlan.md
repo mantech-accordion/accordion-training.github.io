@@ -17,4 +17,4 @@ grand_parent: 2. Accordion v2
 
 ---
 
-## Calico Backend를 vxlan을 사용하는 케이스
+## Calico Backend를 vxlan을 사용

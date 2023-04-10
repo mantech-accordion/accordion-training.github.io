@@ -17,10 +17,4 @@ grand_parent: 2. Accordion v2
 
 ---
 
-<div class="code-example" markdown="1">
-Namespace
-{: .label .label-green }
-</div>
-
----
-## 실습 문제
+## Case 3

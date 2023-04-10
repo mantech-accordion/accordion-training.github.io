@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 2.5.2 Case 2
-nav_order: 2
+title: 2.5.5 Case 5
+nav_order: 5
 parent: 2.5 설치 이슈 모음
 grand_parent: 2. Accordion v2
 ---
 
-# Case 2
+# Case 5
 {: .no_toc }
 
 ## Table of contents
@@ -17,10 +17,4 @@ grand_parent: 2. Accordion v2
 
 ---
 
-<div class="code-example" markdown="1">
-Namespace
-{: .label .label-green }
-</div>
-
----
-## 실습 문제
+## Case 5

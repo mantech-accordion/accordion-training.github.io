@@ -25,24 +25,27 @@ grand_parent: 2. Accordion v2
 
 
 ---
-**목적**
+## 목적
+
+해당 케이스는 다양한 네트워크 설계가 가능하며 네트워크 목적별로 구분하여 성능 향상을 기대할 수 있습니다.
 
 
 ---
-**아키텍처**
+## 아키텍처
 
-![acc-5.png](/assets/images/accordion/acc-5.png)
-
-
----
-**인스톨 프로세스**
-
-![acc-5.png](/assets/images/accordion/acc-5.png)
+![6_3_multiple_nic_arch](/assets/images/accordion/6_3_multiple_nic_arch.png)
 
 
 ---
-**주의 사항**
+## 인스톨 프로세스
 
-- Calico 설정
+- **acc_interface 옵션에 Cluster Network로 사용할 NIC 이름을 적고, 클러스터를 설치합니다.**
 
-![acc-5.png](/assets/images/accordion/acc-5.png)
+![6_3_multiple_nic_install_process](/assets/images/accordion/6_3_multiple_nic_install_process.png)
+
+
+---
+## 주의 사항
+
+- K8s 클러스터 SDN 네트워크로 사용할 대역 선정이 필요합니다. 즉, Cluster Network로 지정할 NIC으로 Calico의 설정이 필요합니다.
+- 다수의 네트워크 인터페이스 카드가 존재하기 때문에, 노드에서 적절한 라우팅 테이블 설정이 선행되어야 합니다.

@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 2.6.8 Case 8 - 외부 ETCD
-nav_order: 8
+title: 2.6.7 Case 7 - 외부 ETCD
+nav_order: 7
 parent: 2.6 설치 케이스 모음
 grand_parent: 2. Accordion v2
 ---
 
-# Case 8
+# Case 7
 {: .no_toc }
 
 ## Table of contents
@@ -21,24 +21,22 @@ grand_parent: 2. Accordion v2
 아코디언 클러스터에 포함되는 ETCD key-value DB를 별도 노드로 구성하는 예시입니다.
 
 ---
-**목적**
+## 목적
 
 
 ---
-**아키텍처**
+## 아키텍처
 
 ![acc-5.png](/assets/images/accordion/acc-5.png)
 
 
 ---
-**인스톨 프로세스**
+## 인스톨 프로세스
 
 ![acc-5.png](/assets/images/accordion/acc-5.png)
 
 
 ---
-**주의 사항**
+## 주의 사항
 
 - 클러스터간 방화벽
-
-![acc-5.png](/assets/images/accordion/acc-5.png)

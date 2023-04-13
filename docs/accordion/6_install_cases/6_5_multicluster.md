@@ -20,10 +20,8 @@ grand_parent: 2. Accordion v2
 
 아코디언은 온프레미스, 혹은 다양한 클라우드 환경에 배포된 K8s를 한번에 관리하는 멀티클러스터 관리 기능을 제공합니다.
 
-![6_5_multicluster_intro_1](/assets/images/accordion/6_5_multicluster_intro_1.png)
-
-![6_5_multicluster_intro_2](/assets/images/accordion/6_5_multicluster_intro_2.png)
-
+![6_5_multicluster_intro_1](/assets/images/accordion/6_5_multicluster_intro_1.png){: width="600" }
+![6_5_multicluster_intro_2](/assets/images/accordion/6_5_multicluster_intro_2.png){: width="700" }
 
 ---
 ## 목적
@@ -33,25 +31,25 @@ grand_parent: 2. Accordion v2
 ---
 ## 아키텍처
 
-![6_5_multicluster_arch](/assets/images/accordion/6_5_multicluster_arch.png)
+![6_5_multicluster_arch](/assets/images/accordion/6_5_multicluster_arch.png){: width="1000" }
 
 
 ---
 ## 인스톨 프로세스
 
-![6_5_multicluster_install_process](/assets/images/accordion/6_5_multicluster_install_process.png)
+![6_5_multicluster_install_process](/assets/images/accordion/6_5_multicluster_install_process.png){: width="600" }
 
 - **적절하게 accordion-installer/hosts를 작성합니다.**
 
-![6_5_multicluster_install_hosts_1](/assets/images/accordion/6_5_multicluster_install_hosts_1.png)
+![6_5_multicluster_install_hosts_1](/assets/images/accordion/6_5_multicluster_install_hosts_1.png){: width="500" }
 
-![6_5_multicluster_install_hosts_2](/assets/images/accordion/6_5_multicluster_install_hosts_2.png)
+![6_5_multicluster_install_hosts_2](/assets/images/accordion/6_5_multicluster_install_hosts_2.png){: width="500" }
 
 - **적절하게 accordion-installer/group_vars를 작성합니다.**
   + host cluster 관련한 클러스터 설정은 group_vars/host.yml을 작성합니다.
   + member cluster 관련한 클러스터 설정은 group_vars/member.yml을 작성합니다.
 
-![6_5_multicluster_install_groupvars](/assets/images/accordion/6_5_multicluster_install_groupvars.png)
+![6_5_multicluster_install_groupvars](/assets/images/accordion/6_5_multicluster_install_groupvars.png){: width="300" }
 
 
 ---

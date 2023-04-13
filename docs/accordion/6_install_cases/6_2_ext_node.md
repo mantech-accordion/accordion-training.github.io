@@ -35,7 +35,7 @@ grand_parent: 2. Accordion v2
 ---
 ## 아키텍처
 
-![6_2_ext_node_arch](/assets/images/accordion/6_2_ext_node_arch.png)
+![6_2_ext_node_arch](/assets/images/accordion/6_2_ext_node_arch.png){: width="1000" }
 
 
 ---
@@ -44,13 +44,13 @@ grand_parent: 2. Accordion v2
 - **1~8. 아코디언 인스톨러를 알맞게 설정하고 설치합니다.**
 - **9. 아코디언 클러스터에 외부망 노드를 추가합니다.**
 
-![6_2_ext_node_addnode_process](/assets/images/accordion/6_2_ext_node_addnode_process.png)
+![6_2_ext_node_addnode_process](/assets/images/accordion/6_2_ext_node_addnode_process.png){: width="800" }
 
 
 ---
 ## 주의 사항
 
-- 내부망/외부망에 적절하게 Pod가 배치될 수 있도록 적절한 Affinity 설정이 필요합니다.
+- 내부망/외부망에 적절하게 Pod가 배치될 수 있도록 적절한 Affinity 혹은 NodeSelector 설정이 필요합니다.
 - Nginx Ingress Controller의 구분이 필요합니다.
-- 외부망 워커 노드에도 스토리지를 연결해야할 경우, 내부망 스토리지를 연결할 수 없다면 별도의 스토리지클래스 및 NFS 프로비저너 설정이 필요합니다.
+- 외부망 워커 노드에도 스토리지를 연결해야하고 내부망 스토리지에는 네트워크 설계상 연결할 수 없는 환경이라면, 별도의 스토리지클래스 및 NFS 프로비저너 설정이 필요합니다.
 - 외부망 워커 노드와 내부망 노드간 NIC 이름이 다를 경우, Calico IP_AUTODETECTION_METHOD를 CIDR로 변경하거나, Interface를 추가해주어야 합니다.

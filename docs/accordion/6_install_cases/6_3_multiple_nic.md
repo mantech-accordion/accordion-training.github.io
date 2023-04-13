@@ -39,12 +39,12 @@ grand_parent: 2. Accordion v2
 ---
 ## 인스톨 프로세스
 
-![6_3_multiple_nic_install_process](/assets/images/accordion/6_3_multiple_nic_install_process.png)
+![6_3_multiple_nic_install_process](/assets/images/accordion/6_3_multiple_nic_install_process.png){: width="500" }
 
 - **group_vars/host.yml 파일 내용을 수정합니다. (멤버 클러스터인 경우 member.yml을 수정합니다.)
   + acc_interface 옵션에 Cluster Network로 사용할 NIC 이름을 적고, 클러스터를 설치합니다.**
 
-![6_3_multiple_nic_install_option](/assets/images/accordion/6_3_multiple_nic_install_option.png)
+![6_3_multiple_nic_install_option](/assets/images/accordion/6_3_multiple_nic_install_option.png){: width="400" }
 
 
 ---

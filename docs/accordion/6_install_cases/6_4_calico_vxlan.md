@@ -23,6 +23,7 @@ grand_parent: 2. Accordion v2
 - IPIP = 4
 - TCP = 6
 - UDP = 17
+
 위 ICMP/TCP/UDP를 제외한 다른 프로토콜을 정책상 허용할 수 없는 환경에서는 IPIP를 통한 encapsulation을 할 수가 없습니다.
 따라서, Calico에서 IPIP가 아닌 다른 프로토콜을 사용하여야하는데, 이때 vxlan을 사용할 수 있습니다.
 

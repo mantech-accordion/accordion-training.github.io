@@ -30,16 +30,27 @@ Managed Kubernetes 환경에서 아코디언을 설치하여 다양한 클라우
 ---
 ## 아키텍처
 
-![acc-5.png](/assets/images/accordion/acc-5.png)
+- **EKS 아키텍처**
+
+![6_8_managed_k8s_arch_eks](/assets/images/accordion/6_8_managed_k8s_arch_eks.png){: width="800" }
+
+- **AKS 아키텍처**
+
+![6_8_managed_k8s_arch_aks](/assets/images/accordion/6_8_managed_k8s_arch_aks.png){: width="800" }
+
+- **NKS 아키텍처**
+
+![6_8_managed_k8s_arch_nks](/assets/images/accordion/6_8_managed_k8s_arch_nks.png){: width="800" }
 
 
 ---
 ## 인스톨 프로세스
 
-![acc-5.png](/assets/images/accordion/acc-5.png)
+- 현재 아코디언 인스톨러에서는 멤버클러스터로의 Join 과정만 지원하고 있습니다.
+- 추후 클러스터 프로비저닝 단계부터 설치하는 것도 지원 예정에 있습니다.
 
 
 ---
 ## 주의 사항
 
-- 클러스터간 방화벽
+- 호스트 클러스터와 멤버클러스터 조인하는 Managed K8s 클러스터간 방화벽이 오픈되어야 합니다.

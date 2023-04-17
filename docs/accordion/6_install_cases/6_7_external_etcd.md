@@ -35,13 +35,22 @@ Etcd가 다운된다면 K8s 클러스터는 정상 동작을 하지 않게 됩�
 ---
 ## 아키텍처
 
-![acc-5.png](/assets/images/accordion/acc-5.png)
+![6_7_external_etcd_arch](/assets/images/accordion/6_7_external_etcd_arch.png){: width="1000" }
 
 
 ---
 ## 인스톨 프로세스
 
-![acc-5.png](/assets/images/accordion/acc-5.png)
+- hosts 파일 수정
+  + etcd host 추가
+  + host-etcd 그룹에 추가
+
+- group_vars/host.yml 파일 수정
+  + etcd_external  “yes”로 수정
+  + group_vars/etcd-master-cluster-host.yml 수정 (host etcd external설정 시)
+  + etcd_count : etcd 서버의 개수 설정
+  + etcd_hostname : etcd hostname
+  + etcd_ip: etcd ip
 
 
 ---

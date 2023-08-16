@@ -102,7 +102,7 @@ Namespace
 
 2. Pod
 - name: 2-2-lab-secret
-- image: alpine
+- image: proxy.accordions.co.kr/alpine
 - Secret을 Pod의 환경변수로 사용
   (TIP: env의 valueFrom)
 ```
@@ -119,7 +119,7 @@ metadata:
 spec:
   containers:
     - name: alpine
-      image: alpine
+      image: proxy.accordions.co.kr/alpine
       command: ["sleep", "3600"]
       env:
         - name: upper-case-secret-key-1

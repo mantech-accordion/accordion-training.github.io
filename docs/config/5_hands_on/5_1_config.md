@@ -32,7 +32,7 @@ Namespace
 
 ```
 - Pod name: lab-config-demo-pod
-  image name: nginx:latest
+  image name: proxy.accordions.co.kr/nginx:latest
 ```
 
 - 시크릿
@@ -90,7 +90,7 @@ metadata:
 spec:
   containers:
     - name: nginx
-      image: nginx:latest
+      image: proxy.accordions.co.kr/nginx:latest
       env:
         - name: PLAYER_INITIAL_LIVES
           valueFrom:

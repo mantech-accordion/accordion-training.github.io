@@ -132,7 +132,7 @@ metadata:
   name: nginx
 spec:
   containers:
-  - image: nginx:latest
+  - image: base.registry.accordions.co.kr:5000/nginx:1.20.1-alpine
     imagePullPolicy: Always
     name: nginx
     resources: {}

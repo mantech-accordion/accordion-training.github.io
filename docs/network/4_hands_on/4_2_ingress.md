@@ -60,7 +60,7 @@ spec:
     spec:
       containers:
       - name: apache
-        image: httpd:2.4
+        image: base.registry.accordions.co.kr:5000/httpd-24-rhel7:2.4-146
 
 ---
 apiVersion: apps/v1
@@ -81,7 +81,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: base.registry.accordions.co.kr:5000/nginx:1.20.1-alpine
 
 ---
 apiVersion: v1

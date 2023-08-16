@@ -85,7 +85,7 @@ Kubernetes를 사용하면 익숙하지 않은 서비스 디스커버리 메커�
 ```
 - 디플로이먼트
   name: lab-network-svc-apache
-  image: httpd:2.4
+  image: base.registry.accordions.co.kr:5000/httpd-24-rhel7:2.4-146
   replicas: 1
 
 - 서비스
@@ -119,7 +119,7 @@ spec:
     spec:
       containers:
       - name: apache
-        image: httpd:2.4
+        image: base.registry.accordions.co.kr:5000/httpd-24-rhel7:2.4-146
 
 ---
 apiVersion: v1

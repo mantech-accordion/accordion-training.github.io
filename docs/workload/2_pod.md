@@ -107,7 +107,7 @@ spec:
 **1. 아래 예제YAML를 참고하여 주어진 정보대로 새 파드를 만드세요. 생성한 파드의 상태와 로그를 확인하세요.**
 
 ```
-- image: nginx:latest
+- image: base.registry.accordions.co.kr:5000/nginx:1.20.1-alpine
   name: lab-workload-pod-nginx
 ```
 
@@ -124,7 +124,7 @@ metadata:
   name: nginx
 spec:
   containers:
-  - image: nginx:latest
+  - image: base.registry.accordions.co.kr:5000/nginx:1.20.1-alpine
     name: nginx
     resources: {}
   dnsPolicy: ClusterFirst

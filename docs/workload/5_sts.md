@@ -121,7 +121,7 @@ spec:
 ```
 - name: lab-workload-sts-nginx
   replicas: 1
-  image: nginx:latest
+  image: base.registry.accordions.co.kr:5000/nginx:1.20.1-alpine
 ```
 
 <details>
@@ -147,7 +147,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: nginx
-        image: k8s.gcr.io/nginx-slim:0.8
+        image: base.registry.accordions.co.kr:5000/nginx:1.20.1-alpine
         ports:
         - containerPort: 80
           name: web

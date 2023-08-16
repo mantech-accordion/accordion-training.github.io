@@ -29,7 +29,7 @@ Namespace
 ```
 - name: workload-lab-tb-autoscale
   replicas: 2
-  image: nginx:latest
+  image: base.registry.accordions.co.kr:5000/nginx:1.20.1-alpine
 ```
 
 <details>
@@ -55,7 +55,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.20-alpine
+        image: base.registry.accordions.co.kr:5000/nginx:1.20.1-alpine
         ports:
         - containerPort: 80
 

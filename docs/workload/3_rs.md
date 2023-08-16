@@ -64,7 +64,7 @@ Namespace
 ```
 - name: lab-workload-rs-httpd
   replicas: 3
-  image: httpd:2.4-alpine
+  image: base.registry.accordions.co.kr:5000/httpd-24-rhel7:2.4-146
 ```
 
 <details>
@@ -91,7 +91,7 @@ spec:
     spec:
       containers:
       - name: php-redis
-        image: gcr.io/google_samples/gb-frontend:v3
+        image: base.registry.accordions.co.kr:5000/httpd-24-rhel7:2.4-146
 
 {% endhighlight %}
    

@@ -158,7 +158,7 @@ spec:
 ```
 - name: lab-workload-deployment-httpd
   replicas: 3
-  image: httpd:2.4-alpine
+  image: base.registry.accordions.co.kr:5000/httpd-24-rhel7:2.4-146
 ```
 
 <details>
@@ -184,7 +184,7 @@ spec:
     spec:
       containers:
       - name: httpd
-        image: httpd:2.4-alpine
+        image: base.registry.accordions.co.kr:5000/httpd-24-rhel7:2.4-146
         ports:
         - containerPort: 80
 

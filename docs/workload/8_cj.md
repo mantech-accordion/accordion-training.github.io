@@ -144,7 +144,7 @@ spec:
 
 ```
 - name: lab-workload-cronjob-busybox
-- image: busybox:1.28
+- image: base.registry.accordions.co.kr:5000/busybox:1.28
 - schedule: "*/1 * * * *"
 - command: ["/bin/sh", "-c", "date; echo Hello from the Kubernetes cluster"]
 ```
@@ -166,7 +166,7 @@ spec:
         spec:
           containers:
           - name: busybox
-            image: busybox:1.28
+            image: base.registry.accordions.co.kr:5000/busybox:1.28
             imagePullPolicy: IfNotPresent
             command:
             - /bin/sh

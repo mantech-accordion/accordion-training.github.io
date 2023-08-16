@@ -111,7 +111,7 @@ spec:
 
 ```
 - name: lab-workload-job-perl
-- image: perl:5.34.0
+- image: proxy.accordions.co.kr/perl:5.34.0
 - command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
 ```
 
@@ -129,7 +129,7 @@ spec:
     spec:
       containers:
       - name: pi
-        image: perl:5.34.0
+        image: proxy.accordions.co.kr/perl:5.34.0
         command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
       restartPolicy: Never
   backoffLimit: 4

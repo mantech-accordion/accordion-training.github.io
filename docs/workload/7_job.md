@@ -66,21 +66,21 @@ spec:
 
 배포된 잡 정보를 제공합니다.
 
-![wl-017.png](/assets/images/workload/wl-017.png){: width="800" }
+![wl-017.png](/assets/images/workload/wl-017.png){: width="1200" }
 
 ---
 
 ## 잡 생성
 `+생성`을 선택하면 나타나는 모달에서 쿠버네티스 잡 리소스 정보를 입력하여 생성할 수 있습니다.
 
-![wl-018.png](/assets/images/workload/wl-018.png){: width="800" }
+![wl-018.png](/assets/images/workload/wl-018.png){: width="1200" }
 
 
 **잡 실행이력**
 
 잡이 생성되면 우측 영역에 `파드` 탭의 `Pod History`에 생성된 잡 파드를 확인할 수 있습니다.
 
-![wl-019.png](/assets/images/workload/wl-019.png){: width="800" }
+![wl-019.png](/assets/images/workload/wl-019.png){: width="1200" }
 
 잡 실행이력에서는 다음 정보를 제공합니다.
 
@@ -102,7 +102,7 @@ spec:
 삭제하려는 잡을 선택하고 우측의 삭제 버튼을 선택합니다.
 모달에서 네임스페이스와 잡 이름을 입력하여 삭제합니다.
 
-![job-delete.png](/assets/images/workload/job-delete.png){: width="800" }
+![job-delete.png](/assets/images/workload/job-delete.png){: width="1200" }
 
 ---
 ## 연습문제

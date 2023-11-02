@@ -91,13 +91,13 @@ spec:
 ## 화면구성
 배포된 스테이트풀셋 정보를 제공합니다.
 
-![wl-015.png](/assets/images/workload/wl-015.png){: width="800" }
+![wl-015.png](/assets/images/workload/wl-015.png){: width="1200" }
 
 ---
 
 ## 스테이트풀셋 생성
 `+생성` 을 선택하면 나타나는 모달에서 쿠버네티스 스테이트풀셋 리소스 정보를 입력하여 생성할 수 있습니다.
-![statefulset-create.png](/assets/images/workload/statefulset-create.png){: width="800" }
+![statefulset-create.png](/assets/images/workload/statefulset-create.png){: width="1200" }
 
 ---
 
@@ -111,7 +111,7 @@ spec:
 
 삭제하려는 스테이트풀셋을 선택하고 우측의 삭제 버튼을 선택합니다.
 
-![statefulset-delete.png](/assets/images/workload/statefulset-delete.png){: width="800" }
+![statefulset-delete.png](/assets/images/workload/statefulset-delete.png){: width="1200" }
 
 ---
 ## 연습문제

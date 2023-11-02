@@ -78,7 +78,7 @@ spec:
 ## 화면구성
 배포된 크론잡 정보를 제공합니다.
 
-![wl-021.png](/assets/images/workload/wl-021.png){: width="800" }
+![wl-021.png](/assets/images/workload/wl-021.png){: width="1200" }
 
 ---
 
@@ -97,7 +97,7 @@ spec:
   + OnFailure
   + Never
 
-![wl-022.png](/assets/images/workload/wl-022.png){: width="800" }
+![wl-022.png](/assets/images/workload/wl-022.png){: width="1200" }
 
 
 **크론 스케줄 문법**
@@ -122,7 +122,7 @@ spec:
 - 이미지
 - arg 또는 command
 
-![wl-023.png](/assets/images/workload/wl-023.png){: width="800" }
+![wl-023.png](/assets/images/workload/wl-023.png){: width="1200" }
 
 ---
 ## 크론잡 수정
@@ -134,7 +134,7 @@ spec:
 삭제하려는 크론잡을 선택하고 우측의 삭제 버튼을 선택합니다.
 모달에서 네임스페이스와 크론잡 이름을 입력하여 삭제합니다.
 
-![cronjob-delete.png](/assets/images/workload/cronjob-delete.png){: width="800" }
+![cronjob-delete.png](/assets/images/workload/cronjob-delete.png){: width="1200" }
 
 
 ---

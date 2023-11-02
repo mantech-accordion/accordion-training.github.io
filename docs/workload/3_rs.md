@@ -39,21 +39,21 @@ Namespace
 ## 화면구성
 배포된 디플로이먼트 정보를 제공합니다.
 
-![rs-002.png](/assets/images/workload/rs-002.png){: width="1000" }
+![rs-002.png](/assets/images/workload/rs-002.png){: width="1200" }
 
 ---
 
 ## 레플리카셋 생성
 `+생성` 을 선택하면 나타나는 모달에서 레플리카셋 리소스 정보를 YAML 형태로 입력하여 생성할 수 있습니다.
 
-![rs-003.png](/assets/images/workload/rs-003.png){: width="800" }
+![rs-003.png](/assets/images/workload/rs-003.png){: width="1200" }
 
 ---
 
 ## 레플리카셋 삭제
 삭제하려는 레플리카셋을 선택하고 우측의 삭제 버튼을 선택합니다.
 
-![rs-004.png](/assets/images/workload/rs-004.png){: width="800" }
+![rs-004.png](/assets/images/workload/rs-004.png){: width="1200" }
 
 ---
 

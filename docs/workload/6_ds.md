@@ -100,13 +100,13 @@ spec:
 ## 화면구성
 배포된 데몬셋 정보를 제공합니다.
 
-![wl-016.png](/assets/images/workload/wl-016.png){: width="800" }
+![wl-016.png](/assets/images/workload/wl-016.png){: width="1200" }
 
 
 ## 데몬셋 생성
 `+생성` 을 선택하면 나타나는 모달에서 쿠버네티스 데몬셋 리소스 정보를 입력하여 생성할 수 있습니다.
 
-![daemonset-create.png](/assets/images/workload/daemonset-create.png){: width="800" }
+![daemonset-create.png](/assets/images/workload/daemonset-create.png){: width="1200" }
 
 ---
 
@@ -120,7 +120,7 @@ spec:
 ## 데몬셋 삭제
 삭제하려는 데몬셋을 선택하고 우측의 삭제 버튼을 선택한다.모달에서 네임스페이스와 데몬셋 이름을 입력하여 삭제합니다.
 
-![daemonset-delete.png](/assets/images/workload/daemonset-delete.png){: width="800" }
+![daemonset-delete.png](/assets/images/workload/daemonset-delete.png){: width="1200" }
 
 
 ---

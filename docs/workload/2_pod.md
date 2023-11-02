@@ -27,7 +27,7 @@ Kubernetes와 Pod는 한 개 또는 여러 개의 컨테이너를 포함합니�
 파드는 하나 이상의 컨테이너의 그룹이며 스토리지 및 네트워크를 공유하고, 해당 컨테이너를 구동하는 방식에 대한 명세를 갖습니다. 
 
 
-![](https://d33wubrfki0l68.cloudfront.net/aecab1f649bc640ebef1f05581bfcc91a48038c4/728d6/images/docs/pod.svg){: width="600" }
+![](https://d33wubrfki0l68.cloudfront.net/aecab1f649bc640ebef1f05581bfcc91a48038c4/728d6/images/docs/pod.svg){: width="500" }
 
 <details>
 <summary>예제 Yaml</summary>
@@ -64,23 +64,23 @@ spec:
 탭을 이용해 파드에 대한 쿠버네티스 리소스 정보, 컨테이너 로그 조회 및 터미널 접속이 가능합니다. 
 컨테이너 로그 조회와 터미널 접속은 파드의 컨테이너 별로 가능합니다.
 
-![wl-004.png](/assets/images/workload/wl-004.png){: width="800" }
+![wl-004.png](/assets/images/workload/wl-004.png){: width="1200" }
 
 **파드 터미널**
 
 탭영역에서 파드 선택 후, `TERMINAL` 탭을 선택하면 파드 터미널 접근 가능합니다.
 
-![wl-006.png](/assets/images/workload/wl-006.png){: width="800" }
+![wl-006.png](/assets/images/workload/wl-006.png){: width="1200" }
 
 우측상단 `새창열기` 버튼을 클릭하면 터미널 새창이 열리게 됩니다.
 
-![wl-007.png](/assets/images/workload/wl-007.png){: width="800" }
+![wl-007.png](/assets/images/workload/wl-007.png){: width="1200" }
 
 **파드 로그**
 
 탭영역에서 파드 선택 후, `LOG` 탭을 선택하면 파드 로그를 확인할 수 있습니다.
 
-![wl-005.png](/assets/images/workload/wl-005.png){: width="800" }
+![wl-005.png](/assets/images/workload/wl-005.png){: width="1200" }
 
 
 ---
@@ -88,7 +88,7 @@ spec:
 ## 파드 생성
 `+생성` 을 선택하면 나타나는 모달에서 쿠버네티스 파드 리소스 정보를 입력하여 생성할 수 있습니다.
 
-![wl-008.png](/assets/images/workload/wl-008.png){: width="800" }
+![wl-008.png](/assets/images/workload/wl-008.png){: width="1200" }
 
 ---
 ## 파드 수정
@@ -99,7 +99,7 @@ spec:
 삭제하려는 파드를 선택하고 우측의 삭제 버튼을 선택합니다.
 모달에서 네임스페이스와 파드 이름을 입력하여 삭제합니다.
 
-![pod-delete.png](/assets/images/workload/pod-delete.png){: width="800" }
+![pod-delete.png](/assets/images/workload/pod-delete.png){: width="1200" }
 
 ---
 ## 연습문제

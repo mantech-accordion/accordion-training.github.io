@@ -54,11 +54,11 @@ Kuberenetes에서 워크로드는 파드의 집합에서 실행되며 파드는 
 
 ![wld-status.png](/assets/images/workload/wld-status.png)
 
-![wl-002.png](/assets/images/workload/wl-002.png){: width="800" }
+![wl-002.png](/assets/images/workload/wl-002.png){: width="1200" }
 
 **워크로드 상세정보**
 
-![wl-003.png](/assets/images/workload/wl-003.png){: width="800" }
+![wl-003.png](/assets/images/workload/wl-003.png){: width="1200" }
 
 
 차트에서 워크로드를 선택하면 해당 워크로드에 대한 상세 정보를 조회할 수 있습니다.

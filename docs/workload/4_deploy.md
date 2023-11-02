@@ -67,14 +67,14 @@ spec:
 ## 화면구성
 배포된 디플로이먼트 정보를 제공합니다.
 
-![wl-009.png](/assets/images/workload/wl-009.png){: width="800" }
+![wl-009.png](/assets/images/workload/wl-009.png){: width="1200" }
 
 ---
 
 ## 디플로이먼트 생성
 `+생성` 을 선택하면 나타나는 모달에서 쿠버네티스 디플로이먼트 리소스 정보를 입력하여 생성할 수 있습니다.
 
-![wl-010.png](/assets/images/workload/wl-010.png){: width="800" }
+![wl-010.png](/assets/images/workload/wl-010.png){: width="1200" }
 
 ---
 
@@ -82,7 +82,7 @@ spec:
 `Autoscale` 버튼으로 디플로이먼트에 대한 오토스케일 설정이 가능합니다. 
 오토스케일은 발생 기준에 따라 `Resource(메트릭 기준의 오토스케일)`과 `Time Based(시간 기준의 오토스케일)`로 나눌 수 있습니다.
 
-![wl-011.png](/assets/images/workload/wl-011.png){: width="800" }
+![wl-011.png](/assets/images/workload/wl-011.png){: width="1200" }
 
 ---
 
@@ -93,7 +93,7 @@ spec:
 - 종료 Schedule: 스케일링 종료 시간 설정
 - 종료 Target Pods: 스케일링 종료 시 목표 파드 개수
 
-![wl-013.png](/assets/images/workload/wl-013.png){: width="800" }
+![wl-013.png](/assets/images/workload/wl-013.png){: width="600" }
 
 시간 기준 오토스케일 설정 시 아래와 같이 크론 스케줄 포맷에 의해 작성합니다.
 
@@ -125,7 +125,7 @@ spec:
 - 오토스케일 기준: 스케일링 기준이 되는 메트릭
 - 설정값: 스케일링이 발생하는 임계치
 
-![wl-012.png](/assets/images/workload/wl-012.png){: width="800" }
+![wl-012.png](/assets/images/workload/wl-012.png){: width="600" }
 
 **오토스케일기준**
 - CPU
@@ -148,7 +148,7 @@ spec:
 ## 디플로이먼트 삭제
 삭제하려는 디플로이먼트를 선택하고 우측의 삭제 버튼을 선택합니다.
 
-![deployment-delete.png](/assets/images/workload/deployment-delete.png){: width="800" }
+![deployment-delete.png](/assets/images/workload/deployment-delete.png){: width="1200" }
 
 ---
 ## 연습문제

@@ -62,14 +62,14 @@ spec:
 ## 화면구성
 생성된 퍼시스턴트볼륨클레임 정보를 제공합니다.
 
-![storage-006.png](/assets/images/storage/storage-006.png){: width="800" }
+![storage-006.png](/assets/images/storage/storage-006.png){: width="1200" }
 
 ---
 
 ## 퍼시스턴트볼륨클레임 생성
 `+생성`을 클릭 후 내용을 입력하여 퍼시스턴트볼륨클레임를 생성할 수 있다. 퍼시스턴트볼륨클레임는 YAML로 입력할 수 있다.
 
-![storage-007.png](/assets/images/storage/storage-007.png){: width="800" }
+![storage-007.png](/assets/images/storage/storage-007.png){: width="1200" }
 
 
 **퍼시스턴트볼륨클레임 입력값**
@@ -96,7 +96,7 @@ spec:
 ## 퍼시스턴트볼륨클레임 삭제
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 네임스페이스/퍼시스턴트볼륨클레임 명 입력 후 `Delete` 버튼 클릭 시 퍼시스턴트볼륨클레임이 삭제됩니다.
 
-![pvc-delete.png](/assets/images/storage/pvc-delete.png){: width="800" }
+![pvc-delete.png](/assets/images/storage/pvc-delete.png){: width="1200" }
 
 ---
 ## 연습문제

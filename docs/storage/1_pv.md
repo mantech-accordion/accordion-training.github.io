@@ -104,14 +104,14 @@ spec:
 ## 화면구성
 생성된 네트워크폴리시 정보를 제공합니다.
 
-![storage-004.png](/assets/images/storage/storage-004.png){: width="800" }
+![storage-004.png](/assets/images/storage/storage-004.png){: width="1200" }
 
 ---
 
 ## 퍼시스턴트볼륨 생성
 `+생성`을 클릭 후 내용을 입력하여 퍼시스턴트볼륨을 생성할 수 있습니다. 퍼시스턴트볼륨은 YAML로 입력할 수 있습니다.
 
-![storage-005.png](/assets/images/storage/storage-005.png){: width="800" }
+![storage-005.png](/assets/images/storage/storage-005.png){: width="1200" }
 
 ---
 
@@ -123,7 +123,7 @@ spec:
 ## 퍼시스턴트볼륨 삭제
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 퍼시스턴트볼륨 명 입력 후 `Delete` 버튼 클릭 시 퍼시스턴트볼륨이 삭제됩니다.
 
-![pv-delete.png](/assets/images/storage/pv-delete.png){: width="800" }
+![pv-delete.png](/assets/images/storage/pv-delete.png){: width="1200" }
 
 ---
 ## 연습문제

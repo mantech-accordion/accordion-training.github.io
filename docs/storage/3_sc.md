@@ -58,14 +58,14 @@ volumeBindingMode: Immediate
 ## 화면구성
 생성된 스토리지클래스 정보를 제공합니다.
 
-![storage-008.png](/assets/images/storage/storage-008.png){: width="800" }
+![storage-008.png](/assets/images/storage/storage-008.png){: width="1200" }
 
 ---
 
 ## 스토리지클래스 생성
 `+생성`을 클릭 후 내용을 입력하여 스토리지클래스를 생성할 수 있다. 스토리지클래스는 YAML로 입력할 수 있습니다.
 
-![storage-009.png](/assets/images/storage/storage-009.png){: width="800" }
+![storage-009.png](/assets/images/storage/storage-009.png){: width="1200" }
 
 ---
 
@@ -77,7 +77,7 @@ volumeBindingMode: Immediate
 ## 스토리지클래스 삭제
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 스토리지클래스 명 입력 후 `Delete` 버튼 클릭 시 스토리지클래스가 삭제됩니다.
 
-![storageclass-delete.png](/assets/images/storage/storageclass-delete.png){: width="800" }
+![storageclass-delete.png](/assets/images/storage/storageclass-delete.png){: width="1200" }
 
 
 ---

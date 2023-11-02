@@ -49,14 +49,14 @@ secrets:
 ---
 ## 화면구성
 생성된 서비스어카운트 정보를 제공합니다.
-![ac-015.png](/assets/images/ac/ac-015.png){: width="800" }
+![ac-015.png](/assets/images/ac/ac-015.png){: width="1200" }
 
 ---
 
 ## 서비스어카운트 생성
 `+생성`을 클릭 후 내용을 입력하여 서비스어카운트를 생성할 수 있다. 서비스어카운트는 YAML로 입력할 수 있다.
 
-![ac-016.png](/assets/images/ac/ac-016.png){: width="800" }
+![ac-016.png](/assets/images/ac/ac-016.png){: width="1000" }
 
 ---
 ## 서비스어카운트 수정
@@ -67,4 +67,4 @@ secrets:
 ## 서비스어카운트 삭제
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 네임스페이스/서비스어카운트 명 입력 후 `Delete` 버튼 클릭 시 서비스어카운트가 삭제된다.
 
-![serviceaccount-delete.png](/assets/images/ac/serviceaccount-delete.png){: width="800" }
+![serviceaccount-delete.png](/assets/images/ac/serviceaccount-delete.png){: width="1200" }

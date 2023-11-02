@@ -67,14 +67,14 @@ roleRef:
 ## 화면구성
 생성된 롤바인딩 정보를 제공합니다.
 
-![ac-009.png](/assets/images/ac/ac-009.png){: width="800" }
+![ac-009.png](/assets/images/ac/ac-009.png){: width="1200" }
 
 ---
 
 ## 롤바인딩 생성
 `+생성`을 클릭 후 내용을 입력하여 롤바인딩을 생성할 수 있습니다.
 
-![ac-010.png](/assets/images/ac/ac-010.png){: width="800" }
+![ac-010.png](/assets/images/ac/ac-010.png){: width="1000" }
 
 ---
 
@@ -86,4 +86,4 @@ roleRef:
 ## 롤바인딩 삭제
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 롤바인딩 이름을 입력 후 `Delete` 버튼 클릭 시 롤바인딩이 삭제됩니다.
 
-![rolebinding-delete.png](/assets/images/ac/rolebinding-delete.png){: width="800" }
+![rolebinding-delete.png](/assets/images/ac/rolebinding-delete.png){: width="1200" }

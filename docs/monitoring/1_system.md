@@ -58,7 +58,7 @@ Cluster에서는 Overview/Pods/Nodes/Namespaces/Deployments/Statefulsets/GPU 모
 
 CPU/Memory/Network 사용량 차트와 네임스페이스별 CPU/Memory/Network 사용량을 테이블로 보여줍니다.
 
-![system_overview.png](/assets/images/monitoring/system_overview.png){: width="800" }
+![system_overview.png](/assets/images/monitoring/system_overview.png){: width="1200" }
 
 
 | 항목  | 설명 |
@@ -80,7 +80,7 @@ CPU/Memory/Network 사용량 차트와 네임스페이스별 CPU/Memory/Network 
 
 Node/Namespace 를 선택하여 Node/Namespace 별로 Pod 정보를 확인할 수 있습니다.
 
-![system_pods.png](/assets/images/monitoring/system_pods.png){: width="800" }
+![system_pods.png](/assets/images/monitoring/system_pods.png){: width="1200" }
 
 
 | 항목  | 설명 |
@@ -106,13 +106,15 @@ Node/Namespace 를 선택하여 Node/Namespace 별로 Pod 정보를 확인할 �
 
 Node를 다중 선택하여 검색 가능하며 선택된 Node 목록의 CPU/Memory/Disk/Network Received/Network Transmitted 모니터링 차트를 제공합니다.
 
-![system_nodes.png](/assets/images/monitoring/system_nodes.png){: width="800" }
+![system_nodes.png](/assets/images/monitoring/system_nodes.png){: width="1200" }
 
 ---
 
 ## Namespaces 
 
 Namespace 를 선택하여 Namespace 별로 CPU 사용량과 상세 정보 및 Memory 사용량과 상세 정보를 확인할 수 있습니다.
+
+![system_namespaces.png](/assets/images/monitoring/system_namespaces.png){: width="1200" }
 
 - CPU
 
@@ -149,7 +151,7 @@ Namespace/Deployment를 선택하여 Namespace/Deployment의 Pod들을 시스템
 
 특정 파드 선택시 특정 파드의 모니터링 정보만 확인할 수도 있습니다.
 
-![system_deployments.png](/assets/images/monitoring/system_deployments.png){: width="800" }
+![system_deployments.png](/assets/images/monitoring/system_deployments.png){: width="1200" }
 
 ---
 
@@ -164,7 +166,7 @@ Namespace/Statefulset를 선택하여 Namespace/Statefulset의 Pod들을 시스�
 
 특정 파드 선택시 특정 파드의 모니터링 정보만 확인할 수도 있습니다.
 
-![system_statefulsets.png](/assets/images/monitoring/system_statefulsets.png){: width="800" }
+![system_statefulsets.png](/assets/images/monitoring/system_statefulsets.png){: width="1200" }
 
 ---
 

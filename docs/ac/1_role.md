@@ -57,7 +57,7 @@ rules:
 ## 화면구성
 생성된 롤 정보를 제공합니다.
 
-![ac-007.png](/assets/images/ac/ac-007.png){: width="800" }
+![ac-007.png](/assets/images/ac/ac-007.png){: width="1200" }
 
 ---
 
@@ -76,4 +76,4 @@ rules:
 ## 롤 삭제
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 네임스페이스/롤 이름을 입력 후 `Delete` 버튼 클릭 시 롤이 삭제됩니다.
 
-![role-delete.png](/assets/images/ac/role-delete.png){: width="800" }
+![role-delete.png](/assets/images/ac/role-delete.png){: width="1200" }

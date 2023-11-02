@@ -39,7 +39,7 @@ Namespace
 - 서비스 : Active Service Total EQ, Active Service EQ, TPS, 금일 TPS, 방문자수, 응답시간, XLog
 - 시스템 : CPU, Memory
 
-![2_app_overview.png](/assets/images/monitoring/2_app_overview.png){: width="800" }
+![2_app_overview.png](/assets/images/monitoring/2_app_overview.png){: width="1200" }
 
 
 **Active Service**
@@ -50,35 +50,35 @@ Namespace
 - 우측의 Active Services는 현재 처리중인 개별 인스턴스 상태를 표시합니다.
 처리중인 Request들이 표시될 때, BAR를 클릭하면 현재 진행중인 Request에 대한 정보를 얻기 위해 Thread 분석 페이지로 이동합니다.
 
-![2_active_service.png](/assets/images/monitoring/2_active_service.png){: width="800" }
+![2_active_service.png](/assets/images/monitoring/2_active_service.png){: width="1200" }
 
 **Active Service Info**
 
 Active Services에서 Bar 클릭하면 아래와 같은 뷰가 나옵니다. 상단에 Thread에 대한 메타데이터가 나오고 하단에 현재 진행중인 스택을 볼 수 있습니다. Thread가 지연되고 있다면 하단에 나온 스택에서 지연되고 있을 확률이 높기 때문에 해당 스택의 작업을 분석해 볼 필요가 있습니다.
 
 
-![2_active_service_detail.png](/assets/images/monitoring/2_active_service_detail.png){: width="800" }
+![2_active_service_detail.png](/assets/images/monitoring/2_active_service_detail.png){: width="1200" }
 
 **TPS, Today TPS**
 
 - TPS : 초당 처리량을 표현한 차트
 - Today TPS : 당일 초당 처리량을 표현한 차트
 
-![2_tps_todaytps.png](/assets/images/monitoring/2_tps_todaytps.png){: width="800" }
+![2_tps_todaytps.png](/assets/images/monitoring/2_tps_todaytps.png){: width="1000" }
 
 **Visitors, Response Time**
 
 - 5분간 방문한 유니크한 방문자 수를 표현한 차트
 - 애플리케이션 응답 시간 분포 그래프
 
-![2_visitors_responsetime.png](/assets/images/monitoring/2_visitors_responsetime.png){: width="800" }
+![2_visitors_responsetime.png](/assets/images/monitoring/2_visitors_responsetime.png){: width="1000" }
 
 **CPU, Memory**
 
 - CPU 사용량을 표현한 차트
 - Memory 사용량을 표현한 차트
 
-![2_cpu_memory.png](/assets/images/monitoring/2_cpu_memory.png){: width="800" }
+![2_cpu_memory.png](/assets/images/monitoring/2_cpu_memory.png){: width="1000" }
 
 **XLog**
 
@@ -88,7 +88,7 @@ HTTP Status 코드로 500 오류가 발생하면 주황색으로 표시합니다
 
 XLog 차트에 마우스로 드래그하여 사각형을 그리면, 해당 영역에서 처리된 Request들에 대한 상세 트랜잭션을 Profile View에서 메소드 단위로 분석할 수 있습니다.
 
-![2_xlog_scatter.png](/assets/images/monitoring/2_xlog_scatter.png){: width="800" }
+![2_xlog_scatter.png](/assets/images/monitoring/2_xlog_scatter.png){: width="1000" }
 
 **XLog Info**
 
@@ -111,13 +111,13 @@ XLog 차트에 마우스로 드래그하여 사각형을 그리면, 해당 영�
 | API Count  | 서비스에서 API 수행 횟수  |
 | API Time  | 서비스에서 소용된 API 시간의 합  |
 
-![2_xlog_details_info_header.png](/assets/images/monitoring/2_xlog_details_info_header.png){: width="800" }
+![2_xlog_details_info_header.png](/assets/images/monitoring/2_xlog_details_info_header.png){: width="1200" }
 
 **XLog Profile**
 
 Profile 에서는 해당 메소드의 실행소요된 시간을 계산하여 표시합니다. 메소드들을 실행 관계를 트리형태로 표현하고 있습니다. 이전 단계와의 시작 시간 차이를 T-GAP으로 표시합니다.
 
-![2_xlog_details_profile.png](/assets/images/monitoring/2_xlog_details_profile.png){: width="800" }
+![2_xlog_details_profile.png](/assets/images/monitoring/2_xlog_details_profile.png){: width="1200" }
 
 **XLog 특정한 확률의 로그**
 

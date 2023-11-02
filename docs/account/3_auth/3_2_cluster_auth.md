@@ -40,7 +40,7 @@ Cluster
 
 메뉴에서 [계정] - [클러스터 권한]을 클릭하면 다음과 같이 클러스터 권한의 목록을 확인할 수 있습니다.
 
-![4_account-auth-cluster-list.png](/assets/images/auth/4_account-auth-cluster-list.png){: width="800" }
+![4_account-auth-cluster-list.png](/assets/images/auth/4_account-auth-cluster-list.png){: width="1200" }
 
 **클러스터 권한 생성**
 
@@ -48,16 +48,16 @@ Cluster
 
 - 권한에는 admin/viewer 중 선택할 수 있습니다.
 
-![4_account-auth-cluster-create.png](/assets/images/auth/4_account-auth-cluster-create.png){: width="800" }
+![4_account-auth-cluster-create.png](/assets/images/auth/4_account-auth-cluster-create.png){: width="1200" }
 
 **생성된 클러스터 권한 수정**
 
 클러스터 권한 목록에서 생성한 권한이름으로 생성 된 것을 확인할 수 있으며, 입력 정보를 수정하거나 추가 후에 [수정]버튼을 클릭하여 수정할 수 있습니다.
 
-![4_account-auth-cluster-create-success.png](/assets/images/auth/4_account-auth-cluster-create-success.png){: width="800" }
+![4_account-auth-cluster-create-success.png](/assets/images/auth/4_account-auth-cluster-create-success.png){: width="1200" }
 
 **클러스터 권한 삭제**
 
 [삭제] 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 클러스터 권한 명 입력 후 [Delete] 버튼 클릭 시 클러스터 권한이 삭제됩니다.
 
-![4_account-auth-cluster-delete-confirm.png](/assets/images/auth/4_account-auth-cluster-delete-confirm.png){: width="800" }
+![4_account-auth-cluster-delete-confirm.png](/assets/images/auth/4_account-auth-cluster-delete-confirm.png){: width="1200" }

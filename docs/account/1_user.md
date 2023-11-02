@@ -37,7 +37,7 @@ Global
 
 메뉴에서 [계정] - [사용자]를 클릭하면 다음과 같이 사용자의 목록을 확인할 수 있습니다. 좌측 사용자 목록에서 사용자 아이콘은 사용자 Active 여부에 따라 녹색/빨강으로 표시됩니다.
 
-![4_user-list.png](/assets/images/auth/4_user-list.png){: width="800" }
+![4_user-list.png](/assets/images/auth/4_user-list.png){: width="1200" }
 
 ---
 
@@ -45,7 +45,7 @@ Global
 
 [생성]을 클릭 후 내용을 입력하여 사용자를 생성할 수 있습니다.
 
-![4_user-create.png](/assets/images/auth/4_user-create.png){: width="800" }
+![4_user-create.png](/assets/images/auth/4_user-create.png){: width="1200" }
 
 | 항목  | 설명 |
 |---|---|
@@ -66,7 +66,7 @@ Global
 
 
 
-![4_user-update.png](/assets/images/auth/4_user-update.png){: width="800" }
+![4_user-update.png](/assets/images/auth/4_user-update.png){: width="1000" }
 
 ---
 
@@ -75,7 +75,7 @@ Global
 [삭제] 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 사용자 명 입력 후 [Delete] 버튼 클릭 시 사용자가 삭제됩니다.
 
 
-![4_user-delete.png](/assets/images/auth/4_user-delete.png){: width="800" }
+![4_user-delete.png](/assets/images/auth/4_user-delete.png){: width="1000" }
 
 ---
 
@@ -84,6 +84,7 @@ Global
 **1. 사용자를 생성하세요.**
 
 ```
-Active : Enable
-Group : 미선택
+계정 활성화: 활성화
+비밀번호 초기화: 활성화
+그룹: 미선택
 ```

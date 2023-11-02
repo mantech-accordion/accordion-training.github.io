@@ -40,7 +40,7 @@ Namespace
 
 메뉴에서 [계정] - [네임스페이스 권한]을 클릭하면 다음과 같이 네임스페이스의 목록을 확인할 수 있습니다.
 
-![4_account-auth-namespace.png](/assets/images/auth/4_account-auth-namespace.png){: width="800" }
+![4_account-auth-namespace.png](/assets/images/auth/4_account-auth-namespace.png){: width="1200" }
 
 ---
 
@@ -48,7 +48,7 @@ Namespace
 
 [생성]을 클릭 후 내용을 입력하여 네임스페이스 권한을 생성할 수 있습니다. [추가]를 클릭하여 메뉴와 메뉴에 대한 권한을 추가할 수 있습니다.
 
-![4_account-auth-namespace-create.png](/assets/images/auth/4_account-auth-namespace-create.png){: width="800" }
+![4_account-auth-namespace-create.png](/assets/images/auth/4_account-auth-namespace-create.png){: width="1200" }
 
 ---
 
@@ -56,7 +56,7 @@ Namespace
 
 네임스페이스 권한 목록에서 생성한 권한이름으로 생성 된 것을 확인할 수 있으며, 입력 정보를 수정하거나 추가 후에 [수정]버튼을 클릭하여 수정할 수 있습니다.
 
-![4_account-auth-namespace-create-success.png](/assets/images/auth/4_account-auth-namespace-create-success.png){: width="800" }
+![4_account-auth-namespace-create-success.png](/assets/images/auth/4_account-auth-namespace-create-success.png){: width="1200" }
 
 ---
 
@@ -64,7 +64,7 @@ Namespace
 
 [삭제] 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 네임스페이스 권한 명 입력 후 [Delete] 버튼 클릭 시 네임스페이스 권한이 삭제됩니다.
 
-![4_account-auth-namespace-delete-confirm.png](/assets/images/auth/4_account-auth-namespace-delete-confirm.png){: width="800" }
+![4_account-auth-namespace-delete-confirm.png](/assets/images/auth/4_account-auth-namespace-delete-confirm.png){: width="1200" }
 
 ---
 

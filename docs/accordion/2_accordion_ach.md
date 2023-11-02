@@ -72,8 +72,8 @@ Worker Node : 애플리케이션 서비스 노드
 **Container Orchestration**
 
 - Kubernetes
-- Calcio/Weave
-- Accordion console
+- Calico/Cilium
+- Console
 - Catalog & Helm
 - Istio & Kiali
 
@@ -81,4 +81,4 @@ Worker Node : 애플리케이션 서비스 노드
 
 - Thanos & Prometheus
 - FileBeat & Opensearch
-- Scouter APM
+- APM(Scouter)

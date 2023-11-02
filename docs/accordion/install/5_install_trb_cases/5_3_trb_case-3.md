@@ -30,7 +30,7 @@ Ansible 플레이북이 수행되는 도중, `AnsibleUndefinedVariable` 에러�
 ---
 ## 원인 및 에러 분석 단계
 
-Calico CNI에서 사용할 클러스터 트래픽을 위한 NIC을 각 노드마다 정해주어야합니다.
+K8s 클러스터 네트워크로 사용할 NIC을 각 노드마다 선언해주어야합니다.
 허나, 이 NIC 이름을 잘못 작성하거나, 노드마다 다른 경우 `IP_AUTODETECTION_METHOD=cidr`로 지정해주면 됩니다.
 
 - 엔서블 로그 확인

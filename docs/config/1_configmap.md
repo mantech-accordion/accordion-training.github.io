@@ -36,13 +36,13 @@ Namespace
 ## 화면구성
 배포된 디플로이먼트 정보를 제공합니다.
 
-![config-005.png](/assets/images/config/config-005.png){: width="800" }
+![config-005.png](/assets/images/config/config-005.png){: width="1200" }
 
 ---
 ## 컨피그맵 생성
 `+생성` 을 선택하면 나타나는 모달에서 쿠버네티스 컨피그맵 리소스 정보를 입력하여 생성할 수 있습니다. 생성 시에는 FORM/YAML로 입력할 수 있습니다.
 
-![config-006.png](/assets/images/config/config-006.png){: width="800" }
+![config-006.png](/assets/images/config/config-006.png){: width="1000" }
 
 ---
 

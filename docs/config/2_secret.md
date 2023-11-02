@@ -47,14 +47,14 @@ Namespace
 ## 화면구성
 생성된 시크릿 정보를 제공합니다.
 
-![config-sc-001.png](/assets/images/config/config-sc-001.png){: width="800" }
+![config-sc-001.png](/assets/images/config/config-sc-001.png){: width="1200" }
 
 ---
 
 ## 시크릿 생성
 `+생성`을 클릭 후 내용을 입력하여 시크릿을 생성할 수 있습니다. 시크릿은 FORM/YAML로 입력할 수 있습니다.
 
-![config-sc-002.png](/assets/images/config/config-sc-002.png){: width="800" }
+![config-sc-002.png](/assets/images/config/config-sc-002.png){: width="1200" }
 
 - Name
 - Secret Type
@@ -83,7 +83,7 @@ Namespace
 ## 시크릿 삭제
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 네임스페이스/시크릿 명 입력 후 `Delete` 버튼 클릭 시 시크릿이 삭제됩니다.
 
-![secret-delete.png](/assets/images/config/secret-delete.png){: width="800" }
+![secret-delete.png](/assets/images/config/secret-delete.png){: width="1200" }
 
 ---
 ## 연습문제

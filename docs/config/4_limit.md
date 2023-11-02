@@ -66,28 +66,28 @@ spec:
 ## 화면구성
 생성된 리밋레인지 정보를 제공합니다.
 
-![config-009.png](/assets/images/config/config-009.png){: width="800" }
+![config-009.png](/assets/images/config/config-009.png){: width="1200" }
 
 ---
 
 ## 리밋레인지 생성
 `+생성`을 클릭 후 내용을 입력하여 리밋레인지을 생성할 수 있습니다.
 
-![limit-create.png](/assets/images/config/limit-create.png){: width="800" }
+![limit-create.png](/assets/images/config/limit-create.png){: width="1200" }
 
 ---
 
 ## 리밋레인지 수정
 리밋레인지 목록에서 특정 리밋레인지을 클릭하여 우측 YAML에 수정할 내용 입력 후 `수정`버튼을 클릭하면 수정할 수 있습니다.
 
-![config-010.png](/assets/images/config/config-010.png){: width="800" }
+![config-010.png](/assets/images/config/config-010.png){: width="1200" }
 
 ---
 
 ## 리밋레인지 삭제
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 네임스페이스/리밋레인지 명 입력 후 `Delete` 버튼 클릭 시 리밋레인지이 삭제됩니다.
 
-![limit-delete.png](/assets/images/config/limit-delete.png){: width="800" }
+![limit-delete.png](/assets/images/config/limit-delete.png){: width="1200" }
 
 
 ---

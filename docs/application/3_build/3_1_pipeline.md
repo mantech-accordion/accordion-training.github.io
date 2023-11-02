@@ -28,9 +28,9 @@ Namespace
 ## 파이프라인
 파이프라인은 이미지 빌드 및 배포를 위해 한개 이상의 태스크를 가지고 태스크의 연관 관계(디펜던시)를 관리합니다. 파이프라인은 지속적으로 수행이 가능하며 수행에 대한 이력을 관리할 수 있습니다.
 
-![pipeline-list.png](/assets/images/application/pipeline/pipeline-list.png){: width="800" }
+![pipeline-list.png](/assets/images/application/pipeline/pipeline-list.png){: width="1200" }
 
-![pipeline-005.png](/assets/images/application/pipeline/pipeline-005.png){: width="800" }
+![pipeline-005.png](/assets/images/application/pipeline/pipeline-005.png){: width="1200" }
 
 
 ---
@@ -39,7 +39,7 @@ Namespace
 
 `애플리케이션` ➡ `빌드` ➡ `파이프라인`
 
-![pipeline-001.png](/assets/images/application/pipeline/pipeline-001.png){: width="800" }
+![pipeline-001.png](/assets/images/application/pipeline/pipeline-001.png){: width="600" }
 
 ---
 
@@ -49,13 +49,13 @@ Namespace
 `+생성` 버튼을 선택하면 나타나는 모달에서 파이프라인 정보를 입력하여 생성할 수 있습니다. 
 생성 시에는 `FORM` 또는 `YAML`로 입력할 수 있습니다.
 
-![pipeline-002.png](/assets/images/application/pipeline/pipeline-002.png){: width="800" }
+![pipeline-002.png](/assets/images/application/pipeline/pipeline-002.png){: width="1200" }
 
 파이프라인 생성 시 파이프라인 템플릿에서 태스크에 대한 구성 정보를 불러와 설정할 수 있습니다. 
 템플릿을 수정해서 사용하고 싶은 경우 파이프라인 생성 후 수정 화면에서 변경사항을 반영합니다.
 
 
-![pipeline-003.png](/assets/images/application/pipeline/pipeline-003.png){: width="800" }
+![pipeline-003.png](/assets/images/application/pipeline/pipeline-003.png){: width="1000" }
 
 **파이프라인 입력값**
 
@@ -79,7 +79,7 @@ Namespace
 태스크가 없는 파이프라인의 경우에는 우측에 안내 문구가 표시되며 안내 문구의 태스크 생성 버튼을 선택하면 태스크 구성을 할 수 있습니다. 파라미터까지 설정이 완료되면 저장 버튼을 선택해 작성을 완료합니다.
 
 
-![pipeline-011.png](/assets/images/application/pipeline/pipeline-011.png){: width="800" }
+![pipeline-011.png](/assets/images/application/pipeline/pipeline-011.png){: width="1200" }
 
 **태스크 템플릿 종류**
 
@@ -100,7 +100,7 @@ Namespace
 
 파이프라인을 생성할 때 태스크에 대한 정보는 파이프라인 템플릿에서 가져와 구성합니다. 파이프라인의 태스크에 대한 정보를 변경해야하는 경우 변경할 파이프라인을 찾아 파이프라인 탭의 `수정` 버튼을 선택합니다.
 
-![pipeline-010.png](/assets/images/application/pipeline/pipeline-010.png){: width="800" }
+![pipeline-010.png](/assets/images/application/pipeline/pipeline-010.png){: width="1200" }
 
 
 ---
@@ -108,7 +108,7 @@ Namespace
 ## 파이프라인 실행과 중지
 이력 탭에서 실행 버튼을 선택하면 파이프라인의 빌드가 실행되는 모습을 확인할 수 있습니다.
 
-![pipeline-run.png](/assets/images/application/pipeline/pipeline-run.png){: width="800" }
+![pipeline-run.png](/assets/images/application/pipeline/pipeline-run.png){: width="1200" }
 
 상단의 `중지` 버튼 또는 우측의 멈춤 아이콘 버튼을 선택하면 진행 중인 파이프라인의 빌드를 중지시킬 수 있습니다. 그 외에 빌드 내역 중 특정 빌드로 다시 배포하고 싶은 경우 해당 빌드 내역의 우측 버튼을 이용해 다시 배포도 가능합니다. 
 이 경우 다시 실행하려는 빌드가 성공으로 완료되었을 때만 가능합니다.
@@ -127,11 +127,11 @@ Namespace
 
 빌드 이력을 선택하면 개별 빌드에 대한 상세 정보를 확인할 수 있습니다.
 
-![build-history-detail.png](/assets/images/application/pipeline/build-history-detail.png){: width="800" }
+![build-history-detail.png](/assets/images/application/pipeline/build-history-detail.png){: width="1200" }
 
 개별 빌드는 하나 이상의 태스크로 구성되며 태스크를 선택하면 해당 태스크에서 발생한 로그를 확인할 수 있습니다.
 
-![build-history-log.png](/assets/images/application/pipeline/build-history-log.png){: width="800" }
+![build-history-log.png](/assets/images/application/pipeline/build-history-log.png){: width="1200" }
 
 
 ## 파이프라인 삭제

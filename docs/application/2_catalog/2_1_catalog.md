@@ -28,7 +28,7 @@ Namespace
 
 `클러스터` ➡ `네임스페이스`
 
-![deploy-001.png](/assets/images/application/catalog/deploy-001.png){: width="800" }
+![deploy-001.png](/assets/images/application/catalog/deploy-001.png){: width="600" }
 
 `애플리케이션` ➡ `카탈로그`
 
@@ -46,7 +46,7 @@ Namespace
 - 마지막 배포현황
 
 
-![catalog-002.png](/assets/images/application/catalog/catalog-002.png){: width="800" }
+![catalog-002.png](/assets/images/application/catalog/catalog-002.png){: width="1200" }
 
 **배포 리소스**
 
@@ -54,7 +54,7 @@ Namespace
 
 - 디플로이먼트, 스테이트풀셋, 서비스등 워크로드 정보
 
-![catalog-003.png](/assets/images/application/catalog/catalog-003.png){: width="800" }
+![catalog-003.png](/assets/images/application/catalog/catalog-003.png){: width="1200" }
 
 **이력**
 
@@ -65,25 +65,25 @@ Namespace
 - 배포 중인 카탈로그의 배포 중단 
 - 배포에 성공한 이력에 대해 재배포 또는 롤백 
 
-![catalog-004.png](/assets/images/application/catalog/catalog-004.png){: width="800" }
+![catalog-004.png](/assets/images/application/catalog/catalog-004.png){: width="1200" }
 
 
 **YAML**
 
 카탈로그의 YAML 내용을 확인하고 수정 가능합니다.
 
-![catalog-005.png](/assets/images/application/catalog/catalog-005.png){: width="800" }
+![catalog-005.png](/assets/images/application/catalog/catalog-005.png){: width="1200" }
 
 
 ---
 ## 카탈로그 생성
 카탈로그 메뉴의 `+생성` 버튼을 선택하면 카탈로그 생성에 필요한 카탈로그 템플릿을 선택할 수 있습니다.
 
-![deploy-002.png](/assets/images/application/catalog/deploy-002.png){: width="800" }
+![deploy-002.png](/assets/images/application/catalog/deploy-002.png){: width="1200" }
 
 아코디언은 Tomcat, Wildfly 등에 대한 템플릿을 기본 제공하며 카탈로그 템플릿은 추가하거나 변경할 수 있습니다.
 
-![deploy-003.png](/assets/images/application/catalog/deploy-003.png){: width="800" }
+![deploy-003.png](/assets/images/application/catalog/deploy-003.png){: width="1200" }
 
 ---
 
@@ -92,7 +92,7 @@ Namespace
 생성할 카탈로그에 대한 템플릿을 고르고 `다음: 일반 설정` 버튼으로 다음 과정으로 넘어갑니다.
 다음 과정인 일반 설정에서는 카탈로그의 이름이나 설명, 로고 이미지와 같은 생성하려는 카탈로그에 대한 정보를 입력합니다.
 
-![deploy-004.png](/assets/images/application/catalog/deploy-004.png){: width="800" }
+![deploy-004.png](/assets/images/application/catalog/deploy-004.png){: width="1200" }
 
 
 **카탈로그 기본 정보**
@@ -107,7 +107,7 @@ Namespace
 `고급 설정`을 선택하면 기본 정보 외 배포 정책 등 상세한 설정이 가능합니다. 
 `고급 설정`의 항목은 카탈로그마다 차이가 있으며 자주 사용하는 항목은 다음과 같습니다.
 
-![deploy-005.png](/assets/images/application/catalog/deploy-005.png){: width="800" }
+![deploy-005.png](/assets/images/application/catalog/deploy-005.png){: width="1200" }
 
 **배포전략 / 배포 정책 종류**
 
@@ -129,7 +129,7 @@ Namespace
 카탈로그 정보 입력이 완료되면 `다음: 배포 리소스 설정` 버튼으로 다음 과정으로 넘어갑니다. 
 다음 과정인 `배포 리소스 설정`에서는 환경변수 또는 시스템 리소스 할당과 같이 카탈로그로 배포하는 쿠버네티스 리소스에 대한 정보를 입력합니다.
 
-![deploy-006.png](/assets/images/application/catalog/deploy-006.png){: width="800" }
+![deploy-006.png](/assets/images/application/catalog/deploy-006.png){: width="1200" }
 
 
 ---
@@ -139,7 +139,7 @@ Namespace
 배포 리소스에 대한 설정이 완료되면 `다음: 파이프라인 설정` 버튼으로 다음 과정으로 넘어갑니다. 다음 과정인 `파이프라인 설정`에서는 쿠버네티스 리소스를 배포하기 전에 수행하는 파이프라인에 대해 설정합니다. 
 파이프라인은 기본 파이프라인 템플릿을 가지고 있으며 사용자는 이를 수정하여 배포하는 카탈로그마다 개별 설정할 수 있습니다.
 
-![deploy-007.png](/assets/images/application/catalog/deploy-007.png){: width="800" }
+![deploy-007.png](/assets/images/application/catalog/deploy-007.png){: width="1200" }
 
 ---
 
@@ -147,7 +147,7 @@ Namespace
 
 `생성` 버튼을 클릭하면 다시 카탈로그 화면으로 돌아오게 됩니다. 그리고 생성된 카탈로그를 확인할 수 있습니다.
 
-![deploy-008.png](/assets/images/application/catalog/deploy-008.png){: width="800" }
+![deploy-008.png](/assets/images/application/catalog/deploy-008.png){: width="1200" }
 
 ---
 
@@ -156,17 +156,17 @@ Namespace
 카탈로그를 배포하기 위해서는 화면의 일반 탭 `배포` 버튼을 클릭해야합니다.
 `신규배포` 팝업에서 배포의 `요약`,`설명`을 입력하고 배포를 실행합니다.
 
-![deploy-009.png](/assets/images/application/catalog/deploy-009.png){: width="800" }
+![deploy-009.png](/assets/images/application/catalog/deploy-009.png){: width="1200" }
 
 배포 중인 카탈로그는 `이력` 탭에서 파이프라인 작업 내역을 실시간으로 확인 가능합니다.
 
-![deploy-011.png](/assets/images/application/catalog/deploy-011.png){: width="800" }
+![deploy-011.png](/assets/images/application/catalog/deploy-011.png){: width="1200" }
 
 ---
 ## 카탈로그 수정
 카탈로그를 변경하기 위해서 목록에서 카탈로그를 찾아 수정 버튼을 선택합니다. 카탈로그 수정 시 설정값은 앞에 카탈로그 생성 시 입력했던 값과 유사합니다.
 
-![catalog_update.png](/assets/images/application/catalog/catalog_update.png){: width="800" }
+![catalog_update.png](/assets/images/application/catalog/catalog_update.png){: width="1200" }
 
 
 ---
@@ -175,7 +175,7 @@ Namespace
 삭제하려는 카탈로그를 선택하고 우측의 삭제 버튼을 선택합니다.
 모달에서 네임스페이스와 카탈로그 이름을 입력하여 삭제합니다.
 
-![catalog_delete.png](/assets/images/application/catalog/catalog_delete.png){: width="800" }
+![catalog_delete.png](/assets/images/application/catalog/catalog_delete.png){: width="1200" }
 
 ---
 

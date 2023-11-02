@@ -30,18 +30,18 @@ Namespace
 승인 태스크는 로그 정보가 제공되는 것이 아니라 승인 목록이 나타나고 사용자가 승인자 목록에 포함되어 있으면 승인 또는 거절이 가능합니다.
 승인의 경우 모든 승인자가 승인해야 다음 태스크로 넘어가며 한명의 승인자라도 거절하면 파이프라인은 중지됩니다.
 
-![build-approval.png](/assets/images/application/pipeline/build-approval.png){: width="800" }
+![build-approval.png](/assets/images/application/pipeline/build-approval.png){: width="1200" }
 
 ---
 
 **승인 성공**
 
-![build-approval-allow.png](/assets/images/application/pipeline/build-approval-allow.png){: width="800" }
+![build-approval-allow.png](/assets/images/application/pipeline/build-approval-allow.png){: width="1200" }
 
 
 **승인 실패**
 
-![build-approval-deny.png](/assets/images/application/pipeline/build-approval-deny.png){: width="800" }
+![build-approval-deny.png](/assets/images/application/pipeline/build-approval-deny.png){: width="1200" }
 
 
 ---
@@ -54,7 +54,7 @@ Namespace
 이는 `{이름}.{상태}` 의 형식으로 입력할 수 있다. 상태에 입력할 수 있는 값은 다음과 같습니다.
 
 
-![build-create-task.png](/assets/images/application/pipeline/build-create-task.png){: width="800" }
+![build-create-task.png](/assets/images/application/pipeline/build-create-task.png){: width="1200" }
 
 
 | 상태        |  설명  |
@@ -72,5 +72,5 @@ Namespace
 - child 태스크가 성공하고 child-2 태스크가 실패하면 child-3 태스크를 수행한다.
 
 
-![build-depends.png](/assets/images/application/pipeline/build-depends.png){: width="800" }
+![build-depends.png](/assets/images/application/pipeline/build-depends.png){: width="1200" }
 

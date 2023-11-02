@@ -42,24 +42,24 @@ Namespace
 ## 화면구성
 헬름 설치를 진행할 수 있으며 배포된 워크로드 정보를 보여주며 헬름 업그레이드이 가능합니다.
 
-![helmchart-01.png](/assets/images/application/helm/helmchart-01.png){: width="800" }
+![helmchart-01.png](/assets/images/application/helm/helmchart-01.png){: width="1200" }
 
 
 **Resources**
 
 `Resources`에서는 헬름으로 배포된 워크로드 정보를 제공합니다.
-![helmchart-02.png](/assets/images/application/helm/helmchart-02.png){: width="800" }
+![helmchart-02.png](/assets/images/application/helm/helmchart-02.png){: width="1200" }
 
 
 **Status**
 
 `Status`에서는 헬름의 상태와 `Value.yaml` 편집을 통해 헬름 업그레이드가 가능합니다.
-![helmchart-03.png](/assets/images/application/helm/helmchart-03.png){: width="800" }
+![helmchart-03.png](/assets/images/application/helm/helmchart-03.png){: width="1200" }
 
 **History**
 
 `History`에서는 배포 이력 정보를 제공하고 특정 버전으로 `롤백`을 지원합니다.
-![helmchart-04.png](/assets/images/application/helm/helmchart-04.png){: width="800" }
+![helmchart-04.png](/assets/images/application/helm/helmchart-04.png){: width="1200" }
 
 
 ---
@@ -69,20 +69,20 @@ Namespace
 
 `런치` 를 클릭하면 헬름 저장소에 등록된 차트를 배포할 수 있습니다.
 
-![helm-3.png](/assets/images/application/helm/helm-3.png){: width="800" }
+![helm-3.png](/assets/images/application/helm/helm-3.png){: width="1200" }
 
 **README**
 
 차트의 README 파일을 확인할 수 있습니다.
 
-![helm-4.png](/assets/images/application/helm/helm-4.png){: width="800" }
+![helm-4.png](/assets/images/application/helm/helm-4.png){: width="1200" }
 
 **Value.yaml**
 
 차트의 `value.yaml` 을 편집할 수 있습니다.
 배포할 앱 이름을 입력하고 `런치` 를 클릭하면 앱 배포가 시작됩니다.
 
-![helm-5.png](/assets/images/application/helm/helm-5.png){: width="800" }
+![helm-5.png](/assets/images/application/helm/helm-5.png){: width="1200" }
 
 
 **헬름 앱**
@@ -90,14 +90,14 @@ Namespace
 배포된 앱은 `헬름 앱`에서 확인할 수 있습니다.
 네임스페이스, 상태, 차트, 앱버전 정보를 제공합니다.
 
-![helm-6.png](/assets/images/application/helm/helm-6.png){: width="800" }
+![helm-6.png](/assets/images/application/helm/helm-6.png){: width="1200" }
 
 **헬름 앱 리소스**
 
 `헬름 앱`을 클릭하면 자세한 배포 리소스 정보를 확인할 수 있습니다. 
 `헬름 앱 리소스` 에서는 워크로드와 yml 내용을 제공합니다.
 
-![helm-7.png](/assets/images/application/helm/helm-7.png){: width="800" }
+![helm-7.png](/assets/images/application/helm/helm-7.png){: width="1200" }
 
 ---
 

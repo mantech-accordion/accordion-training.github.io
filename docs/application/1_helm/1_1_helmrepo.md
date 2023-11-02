@@ -36,7 +36,7 @@ Cluster
 
 아코디언에서는 헬름을 사용하기 위해서는 먼저 헬름 레퍼지토리를 등록해야합니다. 기존 사용중이었던 헬름 레퍼지토리도 간편하게 등록 및 관리 가능합니다.
 
-![helm-repo-1.png](/assets/images/application/helm/helm-repo-1.png){: width="800" }
+![helm-repo-1.png](/assets/images/application/helm/helm-repo-1.png){: width="1200" }
 
 | 항목        |  설명  |
 |:------------|:-------|
@@ -52,7 +52,7 @@ Cluster
 
 등록된 `헬름 레퍼지토리`에서는 헬름 차트 검색과 다운로드 가능합니다.
 
-![helm-repo-3.png](/assets/images/application/helm/helm-repo-3.png){: width="800" }
+![helm-repo-3.png](/assets/images/application/helm/helm-repo-3.png){: width="1200" }
 
 
 ---
@@ -63,5 +63,5 @@ Cluster
 
 Google Cloud Storage, Amazon S3, Azure Blob Storage, Openstack Object Storage 를 포함한 클라우드 스토리지 백엔드를 지원합니다.
 
-![helm-repo-2.png](/assets/images/application/helm/helm-repo-2.png){: width="800" }
+![helm-repo-2.png](/assets/images/application/helm/helm-repo-2.png){: width="1200" }
 

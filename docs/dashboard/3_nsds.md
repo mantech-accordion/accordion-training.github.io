@@ -25,7 +25,7 @@ Namespace
 ## 네임스페이스 대시보드
 네임스페이스 대시보드는 네임스페이스에 대한 정보와 시스템 리소스를 확인할 수 있습니다.
 
-![3_ns_dashboard_main.png](/assets/images/dashboard/3_ns_dashboard_main.png){: width="800" }
+![3_ns_dashboard_main.png](/assets/images/dashboard/3_ns_dashboard_main.png){: width="1200" }
 
 ---
 
@@ -39,7 +39,7 @@ Namespace
 ## Namespace Info
 네임스페이스 대시보드는 네임스페이스에 대한 정보와 시스템 리소스를 확인할 수 있습니다.
 
-![3_ns_info.png](/assets/images/dashboard/3_ns_info.png){: width="800" }
+![3_ns_info.png](/assets/images/dashboard/3_ns_info.png){: width="1200" }
 
 
 |항목|설명|

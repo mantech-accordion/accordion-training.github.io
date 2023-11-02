@@ -26,7 +26,7 @@ Global
 ## 글로벌 대시보드
 글로벌 대시보드에서는 Accordion Manager Info/Cluster Info/사용량 Top5/Namespace 목록을 확인 할 수 있습니다.
 
-![global-dashboard.png](/assets/images/dashboard/global-dashboard.png){: width="800" }
+![global-dashboard.png](/assets/images/dashboard/global-dashboard.png){: width="1200" }
 
 ---
 

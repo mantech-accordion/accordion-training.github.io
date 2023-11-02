@@ -10,7 +10,7 @@ permalink: /docs/dashboard
 
 대시보드는 쿠버네티스 리소스 및 CPU/메모리와 같은 시스템 리소스 사용 현황 정보를 제공합니다.
 
-![global-dashboard.png](/assets/images/dashboard/global-dashboard.png){: width="800" }
+![global-dashboard.png](/assets/images/dashboard/global-dashboard.png){: width="1200" }
 
 **대시보드 종류**
 

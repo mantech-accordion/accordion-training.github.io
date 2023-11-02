@@ -37,7 +37,7 @@ Global
 
 
 **클러스터 목록**
-![3_cluster_overview.png](/assets/images/dashboard/cluster/3_cluster_overview.png)
+![3_cluster_overview.png](/assets/images/dashboard/cluster/3_cluster_overview.png){: width="1000" }
 
 - 항목별 상세설명
 

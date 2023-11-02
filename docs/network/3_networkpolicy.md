@@ -91,14 +91,14 @@ spec:
 ## 화면구성
 생성된 네트워크폴리시 정보를 제공합니다.
 
-![network-008.png](/assets/images/network/network-008.png){: width="800" }
+![network-008.png](/assets/images/network/network-008.png){: width="1200" }
 
 ---
 
 ## 네트워크폴리시 생성
 `+생성`을 클릭 후 내용을 입력하여 네트워크폴리시를 생성할 수 있습니다. 네트워크폴리시는 YAML로 입력할 수 있습니다.
 
-![network-009.png](/assets/images/network/network-009.png){: width="800" }
+![network-009.png](/assets/images/network/network-009.png){: width="1200" }
 
 ---
 
@@ -110,7 +110,7 @@ spec:
 ## 네트워크폴리시 삭제
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 네임스페이스/네트워크폴리시 명 입력 후 `Delete` 버튼 클릭 시 네트워크폴리시가 삭제됩니다.
 
-![networkpolicy-delete.png](/assets/images/network/networkpolicy-delete.png){: width="800" }
+![networkpolicy-delete.png](/assets/images/network/networkpolicy-delete.png){: width="1200" }
 
 ---
 ## 연습문제

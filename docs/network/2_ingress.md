@@ -40,7 +40,7 @@ Namespace
 ## 화면구성
 생성된 인그레스 정보를 제공합니다.
 
-![network-006.png](/assets/images/network/network-006.png){: width="800" }
+![network-006.png](/assets/images/network/network-006.png){: width="1200" }
 
 ---
 
@@ -60,7 +60,7 @@ Namespace
 ## 인그레스 삭제
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 네임스페이스/인그레스 명 입력 후 `Delete` 버튼 클릭 시 인그레스가 삭제됩니다.
 
-![ingress-delete.png](/assets/images/network/ingress-delete.png){: width="800" }
+![ingress-delete.png](/assets/images/network/ingress-delete.png){: width="1200" }
 
 ---
 

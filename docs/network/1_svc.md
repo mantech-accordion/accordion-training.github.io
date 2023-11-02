@@ -40,7 +40,7 @@ Kubernetes를 사용하면 익숙하지 않은 서비스 디스커버리 메커�
 ## 화면구성
 생성된 서비스 정보를 제공합니다.
 
-![network-004.png](/assets/images/network/network-004.png){: width="800" }
+![network-004.png](/assets/images/network/network-004.png){: width="1200" }
 
 ---
 
@@ -74,7 +74,7 @@ Kubernetes를 사용하면 익숙하지 않은 서비스 디스커버리 메커�
 ## 서비스 삭제
 `삭제` 버튼 클릭 시 삭제 팝업창이 나타나며 삭제하려는 해당 네임스페이스/서비스 명 입력 후 `Delete` 버튼 클릭 시 서비스가 삭제된다.
 
-![service-delete.png](/assets/images/network/service-delete.png){: width="800" }
+![service-delete.png](/assets/images/network/service-delete.png){: width="1200" }
 
 ---
 

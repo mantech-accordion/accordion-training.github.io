@@ -79,7 +79,7 @@ pod에 리소스(메모리/CPU) 제한을 설정한뒤에 컨테이너가 허용
   Mar 15 09:22:41 acc-jejupass03 kernel: [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj nam
   ```
 
-![7_oom_killed_system_monitoring.jpg](/assets/images/troubleshoot/7_oom_killed_system_monitoring.jpg){: width="800" }
+![7_oom_killed_system_monitoring.jpg](/assets/images/troubleshoot/7_oom_killed_system_monitoring.jpg){: width="1200" }
 
 ---
 
@@ -91,7 +91,7 @@ pod에 리소스(메모리/CPU) 제한을 설정한뒤에 컨테이너가 허용
 $ kubectl edit deployment <deployment> -n <namespace>
 ```
 
-![7_oom_killed_deployment_resource_quota.jpg](/assets/images/troubleshoot/7_oom_killed_deployment_resource_quota.jpg){: width="800" }
+![7_oom_killed_deployment_resource_quota.jpg](/assets/images/troubleshoot/7_oom_killed_deployment_resource_quota.jpg){: width="1200" }
 
 
 -	`리소스가 예기치 않게 스파이크 처서 애플리케이션에 접속되지 않는 경우 프로그램에서 리소스 leak이 발생하고 있을 가능성이 있으므로 프로그램을 디버깅하여 원인을 찾아야 함`

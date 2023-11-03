@@ -20,7 +20,7 @@ parent: appendix. Support
 
 **회원가입 및 로그인을 한 다음, 카테고리에 맞는 Docs들을 확인하실 수 있습니다.**
 
-![tech_menu](/assets/images/support/tech_menu.png){: width="800" }
+![tech_menu](/assets/images/support/tech_menu.png){: width="1200" }
 
 
 **카테고리 설명**
@@ -46,6 +46,6 @@ parent: appendix. Support
 
 (문의할 문서 최하단에 있는 문의 사항 E-mail 전송 클릭)
 
-![tech_email_sendmail_1](/assets/images/support/tech_email_sendmail_1.png){: width="1000" }
+![tech_email_sendmail_1](/assets/images/support/tech_email_sendmail_1.png){: width="1200" }
 
-![tech_email_sendmail_2](/assets/images/support/tech_email_sendmail_2.png){: width="350" }
+![tech_email_sendmail_2](/assets/images/support/tech_email_sendmail_2.png){: width="500" }

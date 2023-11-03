@@ -18,7 +18,7 @@ parent: appendix. Support
 ---
 ## 📍 이슈 티켓팅 워크플로우
 
-![jira_workflow](/assets/images/support/jira_workflow.png){: width="800" }
+![jira_workflow](/assets/images/support/jira_workflow.png){: width="1200" }
 
 - ESCALATED CASE : 이슈 등록
 - RESOLVED : 문제 해결 (버그나, 제품에 문제가 있을 때 패치가 돼서 해결한 경우)
@@ -38,7 +38,7 @@ parent: appendix. Support
 ---
 ## Jira Work Management 이슈 등록 방법
 
-![jira_issue_enrollment](/assets/images/support/jira_issue_enrollment.png){: width="600" }
+![jira_issue_enrollment](/assets/images/support/jira_issue_enrollment.png){: width="700" }
 
 - 프로젝트(**필수**) : 파트너사 이름입니다.
 - 이슈 유형(**필수**)

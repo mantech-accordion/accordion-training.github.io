@@ -40,7 +40,7 @@ Namespace
 ---
 ## 화면 구성
 
-![audit_log.png](/assets/images/monitoring/audit_log.png){: width="800" }
+![audit_log.png](/assets/images/monitoring/audit_log.png){: width="1200" }
 
 
 | 항목  | 설명 |
@@ -56,7 +56,7 @@ Namespace
 
 로그 클릭 시 우측에 자세한 로그내용이 나옵니다.
 
-![audit_log_detail.png](/assets/images/monitoring/audit_log_detail.png){: width="800" }
+![audit_log_detail.png](/assets/images/monitoring/audit_log_detail.png){: width="1200" }
 
 
 ---
@@ -64,7 +64,7 @@ Namespace
 ## 검색 조건
 
 
-![audit_log_condition.png](/assets/images/monitoring/audit_log_detail.png){: width="800" }
+![audit_log_condition.png](/assets/images/monitoring/audit_log_detail.png){: width="1200" }
 
 - namespace : namespace 이름
 - resourceType : resource 타입

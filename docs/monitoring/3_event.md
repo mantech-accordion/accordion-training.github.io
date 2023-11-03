@@ -41,7 +41,7 @@ cluster 내의 이벤트 로그를 제공합니다. 범위설정에서 설정한
 
 ## 화면 구성
 
-![event_log.png](/assets/images/monitoring/event_log.png){: width="800" }
+![event_log.png](/assets/images/monitoring/event_log.png){: width="1200" }
 
 | 항목  | 설명 |
 |---|---|
@@ -56,7 +56,7 @@ cluster 내의 이벤트 로그를 제공합니다. 범위설정에서 설정한
 
 로그 클릭 시 우측에 자세한 로그내용이 나옵니다.
 
-![event_log_detail.png](/assets/images/monitoring/event_log_detail.png){: width="800" }
+![event_log_detail.png](/assets/images/monitoring/event_log_detail.png){: width="1200" }
 
 **검색 조건**
 

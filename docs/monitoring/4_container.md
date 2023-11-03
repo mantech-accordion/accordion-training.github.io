@@ -41,11 +41,11 @@ Cluster 내에 있는 pod들의 container 로그와 시간별 로그 통계를 �
 
 ## 화면 구성
 
-![container_log.png](/assets/images/monitoring/container_log.png){: width="800" }
+![container_log.png](/assets/images/monitoring/container_log.png){: width="1200" }
 
 로그 클릭 시 우측에 자세한 로그내용이 나옵니다.
 
-![container_log_detail.png](/assets/images/monitoring/container_log_detail.png){: width="800" }
+![container_log_detail.png](/assets/images/monitoring/container_log_detail.png){: width="1200" }
 
 ---
 

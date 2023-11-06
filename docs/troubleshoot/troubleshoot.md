@@ -1,7 +1,7 @@
 ---
 layout: default
 title: appendix. 트러블슈팅 가이드
-nav_order: 14
+nav_order: 15
 has_children: true
 permalink: /docs/troubleshoot
 ---

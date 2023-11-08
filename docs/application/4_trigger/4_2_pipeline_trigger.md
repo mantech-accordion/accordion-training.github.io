@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 5.4 실습
-nav_order: 4
-parent: 5. 애플리케이션
-has_children: true
+title: 5.4.2 파이프라인 트리거
+nav_order: 2
+grand_parent: 5. 애플리케이션
+parent: 5.4 트리거
 ---
 
-# 실습
+# 파이프라인 트리거
 {: .no_toc }
 
 ## Table of contents
@@ -18,9 +18,6 @@ has_children: true
 ---
 
 <div class="code-example" markdown="1">
-Cluster
-{: .label .label-blue }
-
 Namespace
 {: .label .label-green }
 </div>

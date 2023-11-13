@@ -31,7 +31,7 @@ Namespace
 **카탈로그 트리거 설정**
 
 트리거를 생성하면 다양한 설정을 진행 할 수 있습니다.
-![catalog-option](/assets/images/application/trigger/catalog-trigger-option.png){: width="1200" }
+![catalog-option](/assets/images/application/trigger/catalog-trigger-option.png){: width="1000" }
 
 
 **예약 종류**
@@ -43,13 +43,13 @@ Namespace
 
 - 이름 
 
-    ![reserved-action-name](/assets/images/application/trigger/reserved-action-name.png){: width="1200" }
+    ![reserved-action-name](/assets/images/application/trigger/reserved-action-name.png){: width="600" }
 
     - trigger 이름을 지정
 
 - 스케줄
 
-    ![reserved-action-schedule](/assets/images/application/trigger/reserved-action-schedule.png){: width="1200" }
+    ![reserved-action-schedule](/assets/images/application/trigger/reserved-action-schedule.png){: width="600" }
     
     - cronjob 형태이며 자율적으로 원하는 시간을 설정할 수 있다.
     - 예시    
@@ -58,11 +58,11 @@ Namespace
         ```
 
 - 특정 행동 종류 
-![reserved-action-action](/assets/images/application/trigger/reserved-action-action.png){: width="1200" }
+![reserved-action-action](/assets/images/application/trigger/reserved-action-action.png){: width="1000" }
     - 원하는 행동으로 지정해서 사용하면 됩니다.
 
 - 옵션
-![reserved-action-option](/assets/images/application/trigger/reserved-action-option.png){: width="1200" }
+![reserved-action-option](/assets/images/application/trigger/reserved-action-option.png){: width="1000" }
 
     - 트리거 수행 서비스 어카운트
         - 트리거를 수행하기 위해서는 service account가 필요합니다.
@@ -78,13 +78,13 @@ Namespace
 - 이름 : 예약 액션 설정할 때 설정했기에 생략
 - 특정 행동 종류
 
-    ![post-build-action-kind](/assets/images/application/trigger/post-build-action-kind.png){: width="1200" }
+    ![post-build-action-kind](/assets/images/application/trigger/post-build-action-kind.png){: width="600" }
 
 
     - 원하는 행동으로 지정해서 사용하면 됩니다.
 
 - 옵션
-![post-build-action-option](/assets/images/application/trigger/post-build-action-option.png){: width="1200" }
+![post-build-action-option](/assets/images/application/trigger/post-build-action-option.png){: width="1000" }
     - 트리거 수행 서비스 어카운트
     - 대상(카탈로그/파이프라인) 종류
         - 예약 액션으로 카탈로그 및 파이프라인이 빌드가 되었을 때, 빌드가 되길 원하는 종류를 지정하면 됩니다.

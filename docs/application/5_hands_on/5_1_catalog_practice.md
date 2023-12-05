@@ -64,9 +64,9 @@ Namespace
   - 푸시 레지스트리: user-registry
 
 
-4. 이미지 서명 테스크 추가
-- 다른 테스크 템플릿 불러오기 : image-sign
-- 테스크 이름 : image-sign
+4. 이미지 스캐닝 테스크 추가
+- 다른 테스크 템플릿 불러오기 : acc-image-vulnerability-scanning
+- 테스크 이름 : image-scanning
 - 테스크 연관 관계 : image-build.Succeeded
 ```
 

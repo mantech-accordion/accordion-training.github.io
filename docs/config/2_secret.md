@@ -30,7 +30,8 @@ Namespace
 
 **시크릿 대표적인 용도**
 
-- 비밀번호, 
+- 비밀번호
+- TLS 인증서
 - OAuth 토큰
 - Docker Registry
 - SSH 키

@@ -34,7 +34,7 @@ Namespace
 ---
 
 ## 화면구성
-배포된 디플로이먼트 정보를 제공합니다.
+배포된 컨피그맵 정보를 제공합니다.
 
 ![config-005.png](/assets/images/config/config-005.png){: width="1200" }
 

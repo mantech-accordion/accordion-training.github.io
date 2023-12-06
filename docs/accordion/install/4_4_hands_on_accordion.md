@@ -64,32 +64,31 @@ grand_parent: 2. Accordion v2
 
 ```
 1. 호스트 클러스터 설치
-    1.1 클러스터 이름: accordion-host-cluster
+    1.1 클러스터 이름: host-cluster
     1.2 마스터 3중화
         1.2.1 마스터 노드에는 일반적인 Pod가 배치되지 않도록 설정
     1.3 외부 L4 VIP: <부여받은 정보>
     1.4 컨테이너 런타임: containerd
-    1.5 SELinux enforcing 모드로 설치 진행
+    1.5 SELinux permissive 모드로 설치 진행
     1.6 스토리지
-        1.6.1 NFS v4 사용
+        1.6.1 NFS v3 사용
         1.6.2 NFS IP:PATH = <부여받은 정보>
     1.7 유저 레지스트리는 harbor로 설치
     1.8 노드간 같은 대역일 경우 캡슐화를 하지않고, 망이 다를 경우만 캡슐화하도록 설정
     1.9 kube-proxy는 IPVS로 프록시할 수 있게 설정
     1.10 컨테이너, addon 파일, tmp 파일이 쌓일 경로는 /data 아래에 쌓이도록 설정
-    1.11 metalLB 설치
 
 2. 멤버 클러스터 설치
-    2.1 클러스터 이름: accordion-member-cluster
+    2.1 클러스터 이름: member-cluster
     2.2 싱글 마스터
         2.2.1 마스터 노드에는 일반적인 Pod가 배치되지 않도록 설정
-    2.3 컨테이너 런타임: CRI-O
+    2.3 컨테이너 런타임: containerd
     2.4 SELinux permissive 모드로 설치 진행
     2.5 스토리지
-        2.5.1 NFS v4 사용
+        2.5.1 NFS v3 사용
         2.5.2 NFS IP:PATH = <부여받은 정보>
     2.6 유저 레지스트리는 호스트 클러스터와 별도로 구성하며, harbor로 설치
     2.7 노드간 같은 대역일 경우 캡슐화를 하지않고, 망이 다를 경우만 캡슐화하도록 설정
-    2.8 kube-proxy는 IPVS로 프록시할 수 있게 설정
+    2.8 kube-proxy는 iptables로 프록시할 수 있게 설정
     2.9 컨테이너, addon 파일, tmp 파일이 쌓일 경로는 /data 아래에 쌓이도록 설정
 ```

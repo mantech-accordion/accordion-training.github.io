@@ -153,29 +153,37 @@ acc-node2
 
 {% highlight bash %}
 
+
 #- setup variable for cluster installation
 
 ########################################################
 ## Master configuation
 ########################################################
-# master isolation ( yes / no ) 
+# cluster_name
+cluster_name: "host-cluster"
+# master isolation ( yes / no )
 master_isolation: "yes"
-master_host_name: "acc-master" # 정보 수정
-master_ip: 10.20.200.201 # 정보 수정
+master_host_name: "accordion-master1"
+master_ip: "10.20.200.201"
 
+acc_interface: "eth0"
 ########################################################
 # 3master mode( yes / no )
 ########################################################
 master_mode: "no"
-master2_ip: 10.20.200.202
-master3_ip: 10.20.200.203
-master2_hostname: "dev-accordion2"
-master3_hostname: "dev-accordion3"
+master2_ip: "10.20.200.202" 
+master3_ip: "10.20.200.203"
+master2_hostname: "accordion-master2"
+master3_hostname: "accordion-master3"
 # L4_mode ( L4 / haproxy )
-L4_mode: "haproxy"
-haproxy_port: 8443
-keep_vip: 10.20.200.200
-keep_interface: ens192
+L4_mode: "L4"
+haproxy_port: "6443"
+keep_vip: "10.20.200.200"
+
+# L4_domain_option ( yes / no )
+L4_domain_option: "yes"
+L4_domain_address: "l4.domain.accordions.co.kr"
+
 # Set it up if you want to add the master server later
 # If master_mode is "no", it will not work.
 # single_option( yes / no )
@@ -190,7 +198,6 @@ container_option: "containerd"
 selinux_enable: "no"
 
 # container_option (cri-o)
-crio_interface: "ens192"
 pid_limit: "4096"
 
 ########################################################
@@ -200,11 +207,11 @@ pid_limit: "4096"
 storage_option: "nfs"
 
 # nfs_setup ( internal / external )
-nfs_setup: "internal" 
-nfs_server_ip: 10.10.0.84 # master ip로 정보 수정
-accordion_nfs_path: "/mnt/vol1"
+nfs_setup: "external"
+nfs_server_ip: "10.10.0.85"
+accordion_nfs_path: "/volume1/tech"
 
-# nfs_version ( v3 / v4 )
+# nfs_version ( v3 / v4 / v4.1 / v4.2 )
 nfs_version: "v3"
 
 # ceph_option ( cephfs / rbd )
@@ -231,64 +238,97 @@ etcd_external: "no"
 ########################################################
 # accordion_registry_option ( local / external )
 base_registry_option: "local"
-base_registry_address: 10.20.200.200 # master ip로 정보 수정
-base_registry_port: 5000
-base_registry_id: accregistry
-base_registry_passwd: accordionadmin
+base_registry_addr: "10.20.200.200"
+base_registry_port: "5000"
+base_registry_id: "accregistry"
+base_registry_passwd: "accordionadmin"
 
 ########################################################
 # user registry
 ########################################################
-# registry_option ( registry / harbor)
+# registry_option ( registry / harbor )
 user_registry_option: "registry"
-user_registry_address: 10.20.200.200 # master ip로 정보 수정
+user_registry_addr: "10.20.200.200"
 user_registry_port: 30001
 
 # registry_external ( yes / no )
 user_registry_external: "no"
 
 # user_registry_external: "yes"
-user_registry_id: accregistry
-user_registry_pw: accordionadmin
+user_registry_id: "accregistry"
+user_registry_pw: "accordionadmin"
 
 # registry information
 htpasswd_option: "yes"
 
+#######################################################
+# registry domain option
+########################################################
+# registry_domain_option ( yes / no )
+registry_domain_option: "yes"
+base_registry_domain_address: "base.registry.accordions.co.kr"
+user_registry_domain_address: "user.registry.accordions.co.kr"
+
+# hosts_setting( yes / no )
+# If the value 'host_setting' is yes, the domain is added to /etc/hosts
+# (Not working if 'registry_domain_option' is no)
+hosts_setting: "yes"
+
 ########################################################
 # Network Setting
 ########################################################
-# CNI (calico or weave)
+# CNI (calico & cilium)
 network_cni: "calico"
+
 # podman Network
 podman_cidr: "172.17.0.0/16"
-# Pod Network (weave)
-IPALLOC_RANGE: "172.32.0.0/12"
-# Pod Network (calico)
+
+# Pod Network
 pod_network_cidr: "172.32.0.0/16"
+
 # Calico Mode (IPIP & vxlan)
-calico_backend: "vxlan" # 정보 수정
+calico_backend: "IPIP"
+
+# Calico ippool(CrossSubnet & Always)
+calico_ippool: "CrossSubnet"
+
+# Cilium tunnel_option(disabled & vxlan & geneve)
+tunnel_option: "geneve"
+
+# Calico autodetection mode( interface / cidr )
+# If the option is 'interface', it follows the value set in acc_interface.
+calico_autodetection_mode: "interface"
+# If the option is 'cidr', set the value 'interface_cidr' to OS interface cidr.
+interface_cidr: "10.20.200.0/24"
+
 # kubernetes Service Network
-service_cidr: "10.96.0.0/12"
+service_cidr: "10.96.0.0/16"
 kubelet_clusterdns: "10.96.0.10"
 kubernetes_clusterip: "10.96.0.1"
+
+# proxy_mode( iptables / ipvs )
+proxy_mode: "iptables"
+# iptables_install( yes / no )
+iptables_install: "no"
 
 ########################################################
 ## container dir
 ########################################################
-containers_storage_runroot: /mnt/vol1/var/run/containers # 정보 수정
-containers_storage_volume: /mnt/vol1/var/lib/containers # 정보 수정
+containerd_root_dir: "/var/lib/containerd"
+containers_storage_runroot: "/var/run/containers"
+containers_storage_volume: "/var/lib/containers"
 
 ########################################################
 ## Kubernetes dir
 ########################################################
-kubelet_root_dir: /mnt/vol1/var/lib # 정보 수정
-kube_addon_dir: /mnt/vol1/etc/kubernetes/addon # 정보 수정
-docker_rpm_dir: /mnt/vol1/tmp # 정보 수정 
+kubelet_root_dir: "/var/lib/kubelet"
+kube_addon_dir: "/etc/kubernetes/addon"
+docker_rpm_dir: "/tmp"
 
 ########################################################
 # If the external IP is set up on the master server, enter the IP.
 ########################################################
-master_external_ip: "127.0.0.1" # public ip로 정보 수정
+master_external_ip: "127.0.0.1"
 
 ########################################################
 ## Add node option (yes / no)
@@ -298,7 +338,7 @@ noschedule: "no"
 ##########################################
 ## accordion GPU monitoring(yes/no)
 ##########################################
-gpu_server: "yes"
+gpu_server: "no"
 
 ##########################################
 ## external prometheus
@@ -306,6 +346,39 @@ gpu_server: "yes"
 external_prometheus: "no"
 prometheus_name: "prometheus-operator-prometheus"
 prometheus_ns: "acc-system"
+
+##########################################
+# vm provisioning
+##########################################
+# Enable only when using accordion provisioning
+# uuid_enable (yes/no)
+uuid_enable: "no"
+# vm_type (vsphere/openstack)
+vm_type: "vsphere"
+
+##########################################
+# addon package
+##########################################
+istio_install: "yes"
+prometheus_install: "yes"
+opensearch_install: "yes"
+
+##########################################
+# istio_option (default/kubeflow)
+##########################################
+istio_option: "default"
+
+########################################################
+## ha
+########################################################
+minio_ha: "no"
+prometheus_ha: "no"
+alertmanager_ha: "no"
+elasticsearch_ha: "no"
+logstash_ha: "no"
+thanos_ha: "no"
+tsdb_ha: "no"
+harbor_ha: "no"
 
 
 {% endhighlight %}

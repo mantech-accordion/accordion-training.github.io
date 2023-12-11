@@ -90,8 +90,8 @@ Kubernetes를 사용하면 익숙하지 않은 서비스 디스커버리 메커�
 
 - 서비스
   name: lab-network-svc-apache
-  port: 80
-  target port: 80
+  port: 8080
+  target port: 8080
   type: ClusterIP
   protocol: TCP
 ```

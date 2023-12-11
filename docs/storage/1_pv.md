@@ -154,7 +154,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Delete
   mountOptions:
-    - nfsvers=4
+    - nfsvers=3,nolock
   nfs:
     path: <NAS PATH>
     server: <NAS IP>

@@ -70,12 +70,12 @@ Namespace
 
 ```
 - 이름 : lab-network-ingress-apache
-- 인그레스 클래스명 : user-ingress-class
+- 인그레스 클래스명 : nginx
 - 도메인 주소: 'demo-apache.example.com'
 - 프로토콜 : HTTP
 - 경로 : /
 - 서비스 : demo-apache
-- 포트 : 80
+- 포트 : 8080
 ```
 
 
@@ -113,9 +113,9 @@ spec:
   selector:
     app: demo-apache
   ports:
-  - port: 80
+  - port: 8080
     protocol: TCP
-    targetPort: 80
+    targetPort: 8080
   type: ClusterIP
 
 ---
@@ -128,7 +128,7 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/affinity: cookie
 spec:
-  ingressClassName: user-ingress-class
+  ingressClassName: nginx
   rules:
   - host: 'example.com'
     http:

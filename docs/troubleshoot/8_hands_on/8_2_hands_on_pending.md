@@ -53,7 +53,7 @@ spec:
         accordion-role: "test"
       containers:
       - name: nginx
-        image: nginx:latest
+        image: base.registry.accordions.co.kr:5000/nginx:1.20.1-alpine
 
 ---
 apiVersion: v1
@@ -116,7 +116,7 @@ spec:
             claimName: pending-vol
       containers:
         - name: apache
-          image: docker.io/library/httpd:2.4
+          image: base.registry.accordions.co.kr:5000/httpd-24-rhel7:2.4-146
           resources: {}
           volumeMounts:
             - name: timezone
@@ -134,9 +134,9 @@ spec:
   selector:
     app: practice-trb-2-2
   ports:
-  - port: 80
+  - port: 8080
     protocol: TCP
-    targetPort: 80
+    targetPort: 8080
   type: ClusterIP
 {% endhighlight %}
    

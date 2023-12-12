@@ -61,9 +61,10 @@ spec:
   selector:
     app: demo-success-apache
   ports:
-  - port: 80
+  - name: tcp
+    port: 8080
     protocol: TCP
-    targetPort: 80
+    targetPort: 8080
   type: NodePort
 
 {% endhighlight %}
@@ -105,9 +106,10 @@ spec:
   selector:
     app: wrong-label-apache
   ports:
-  - port: 80
+  - name: tcp
+    port: 8080
     protocol: TCP
-    targetPort: 80
+    targetPort: 8080
   type: NodePort
 
 {% endhighlight %}

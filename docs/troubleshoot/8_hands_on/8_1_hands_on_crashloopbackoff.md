@@ -65,7 +65,7 @@ spec:
         - name: logs
           mountPath: /var/log/cleaner
       - name: logger-con
-        image: busybox:1.31.0
+        image: base.registry.accordions.co.kr:5000/busybox:1.28
         command: ["sh","-c","tail -f /var/log/cleaner/cleaner"]
         volumeMounts:
         - name: logs

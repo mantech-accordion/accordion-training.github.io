@@ -112,7 +112,7 @@ spec:
             -XX:HeapDumpPath=$CATALINA_HOME/logs/$HOSTNAME/heapdump -verbose:gc -Xloggc:$CATALINA_HOME/logs/$HOSTNAME/gclog/gc-%t.log
             -Djava.security.egd=file:/dev/./urandom -Duser.timezone=GMT+09:00 -Dcatalina.host=$HOSTNAME
             -Dcatalina.logdir=$CATALINA_HOME/logs/$HOSTNAME -Xms1024m -Xmx1024m -Catalina
-        image: base.registry.accordions.co.kr:5000/accordion/tomcat:9-jdk8
+        image: proxy.accordions.co.kr/tomcat:9-jdk8
         imagePullPolicy: Always
         lifecycle:
           preStop:

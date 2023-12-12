@@ -40,7 +40,6 @@ Namespace
 배포 리소스 설정
 ```
 - 레플리카 파드 수 : 2
-- resource.limits.cpu : 1
 - resource.limits.memory : 2Gi
 - serviceType : NodePort
 ```
@@ -66,6 +65,7 @@ Namespace
 
 4. 이미지 스캐닝 테스크 추가
 - 다른 테스크 템플릿 불러오기 : acc-image-vulnerability-scanning
+  - auth: user-registry
 - 테스크 이름 : image-scanning
 - 테스크 연관 관계 : image-build.Succeeded
 ```

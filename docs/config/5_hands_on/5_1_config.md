@@ -86,7 +86,7 @@ value:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: sample
+  name: lab-config-demo-pod
 spec:
   containers:
     - name: nginx
@@ -94,13 +94,13 @@ spec:
       env:
         - name: PLAYER_INITIAL_LIVES
           valueFrom:
-            configMapKeyRef:
-              name: game-demo
+            secretKeyRef:
+              name: lab-config-demo-secret
               key: player_initial_lives
         - name: UI_PROPERTIES_FILE_NAME
           valueFrom:
-            configMapKeyRef:
-              name: game-demo
+            secretKeyRef:
+              name: lab-config-demo-secret
               key: ui_properties_file_name
       volumeMounts:
       - name: config
@@ -109,12 +109,7 @@ spec:
   volumes:
   - name: config
     configMap:
-      name: game-demo
-      items:
-      - key: "game.properties"
-        path: "game.properties"
-      - key: "user-interface.properties"
-        path: "user-interface.properties"
+      name: lab-config-demo-configmap
 
 {% endhighlight %}
 </details>

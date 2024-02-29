@@ -54,7 +54,7 @@ Namespace
 2. 코드 분석 테스크 추가
 - 다른 테스크 템플릿 불러오기 : acc-src-static-code-analysis
 - 테스크 이름 : code-inspection
-- 테스크 연관 관계 : src-build.Succeeded
+- 테스크 연관 관계 : vcs-get.Succeeded
 
 
 3. 레지스트리 푸시 장소 변경

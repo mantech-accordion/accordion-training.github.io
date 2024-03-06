@@ -30,8 +30,10 @@ Namespace
 
 ```
 - 컨피그맵 이름: egov-conf
+
 - key: server.xml
   value: < 아래 1. server.xml 내용 >
+
 - key: context.xml
   value: < 아래 2. context.xml 내용 >
 ```
@@ -159,8 +161,11 @@ Namespace
 배포 리소스 설정
 ```
 - 레플리카 파드 수 : 2
+
 - 이미지풀정책: IfNotPresent
+
 - 업데이트전략: RollingUpdate
+
 - 환경변수
   - JAVA_OPTS에 Metaspace 관련 프로퍼티 추가
     ...
@@ -169,10 +174,13 @@ Namespace
 - 리소스 설정
   - limits.memory: 2Gi
   - requests.memory: 2Gi
+
 - 노드셀렉터
   - key: node-role.kubernetes.io/worker
     value: ""
+
 - 토폴로지키: kubernetes.io/hostname 선택
+
 - 볼륨
   - ConfigMap 볼륨 추가(server.xml)
     - name: server-xml
@@ -186,6 +194,7 @@ Namespace
         mountPath: /usr/local/tomcat/conf/server.xml
         subPath: server.xml
         readOnly: true
+
   - ConfigMap 볼륨 추가(context.xml)
     - name: context-xml
       from: configMap
@@ -198,6 +207,7 @@ Namespace
           mountPath: /usr/local/tomcat/conf/context.xml
           subPath: context.xml
         readOnly: true
+
   - PVC 볼륨 추가
     - name: log-vol
       from: persistentVolumeClaim
@@ -205,6 +215,7 @@ Namespace
           volumeMounts: 
             mountPath: /usr/local/tomcat/logs
             readOnly: false
+
 - 프로브
   - type: readinessProbe
     action: httpGet
@@ -218,6 +229,7 @@ Namespace
       failureThreshold: 3
       initialDelaySeconds: 0
       timeoutSeconds: 1
+
 - 서비스타입: ClusterIP
 ```
 
@@ -230,7 +242,9 @@ Namespace
 
 ```
 - 이름 : egov-ing
+
 - 인그레스 클래스명 : nginx
+
 - 어노테이션
     - key: nginx.ingress.kubernetes.io/affinity
       value: cookie
@@ -240,11 +254,17 @@ Namespace
       value: route
     - key: nginx.ingress.kubernetes.io/use-regex
       value: "true"
+
 - 도메인 주소: 'egov.nip.io'
+
 - 프로토콜 : HTTPS
+
 - 시크릿: wildcard-certs
+
 - 경로 : /
+
 - 서비스 : egov
+
 - 포트 : 8080/TCP
 ```
 

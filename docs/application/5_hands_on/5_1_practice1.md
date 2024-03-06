@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 5.5.1 카탈로그 실습
+title: 5.5.1 카탈로그 실습1
 nav_order: 1
 parent: 5.5 실습
 grand_parent: 5. 애플리케이션

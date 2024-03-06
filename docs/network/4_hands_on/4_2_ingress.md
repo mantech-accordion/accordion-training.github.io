@@ -29,7 +29,7 @@ Namespace
 
 ```
 - 이름 : demo-ingress
-- 인그레스 클래스명 : user-ingress-class
+- 인그레스 클래스명 : nginx
 - 도메인 주소: '*.nip.io'
 - 프로토콜 : HTTP
 - 경로 : /
@@ -121,7 +121,7 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/affinity: cookie
 spec:
-  ingressClassName: user-ingress-class
+  ingressClassName: nginx
   rules:
   - host: 'test.example.com'
     http:

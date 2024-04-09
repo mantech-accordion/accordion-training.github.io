@@ -38,9 +38,37 @@ Cluster
 ![registry-create.png](/assets/images/setting/registry-create.png)
 
 ---
+
+## 레지스트리 이미지 태그 보기
+
+보기를 클릭하면 각 이미지에 해당하는 태그 개수를 확인할 수 있습니다.
+
+![registry-tag-info.png](/assets/images/setting/registry-tag-info.png)
+
+---
+
+## 레지스트리 이미지 확인
+
+각 이미지를 클릭하면 해당 이미지 개수, 사이즈, 생성일, 서명 여부 등 이미지에 대한 정보를 확인할 수 있으며,
+이미지 삭제, 태그 변경 등의 작업을 수행할 수 있습니다.
+
+- 기본 확인
+![registry-image-info.png](/assets/images/setting/registry-image-info.png)
+
+- 상세 확인
+![registry-image-info-detail.png](/assets/images/setting/registry-image-info-detail.png)
+
+
+---
 ## 레지스트리 수정
 
 수정하려는 레지스트리를 선택하고 우측의 YAML 편집기에서 정보를 변경 후 수정 버튼을 선택하여 반영합니다.
+
+- 이미지 삭제
+![registry-remove-image.png](/assets/images/setting/registry-remove-image.png)
+
+- 이미지 태그 변경
+![registry-change-image-tag.png](/assets/images/setting/registry-change-image-tag.png)
 
 ---
 ## 레지스트리 삭제

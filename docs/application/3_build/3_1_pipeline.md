@@ -137,3 +137,39 @@ Namespace
 ## 파이프라인 삭제
 
 삭제하려는 파이프라인을 선택하고 우측의 삭제 버튼을 선택합니다.
+
+---
+
+## 연습문제
+
+**1. 파이프라인을 이용해서 JAVA Build를 수행하세요.**
+
+파이프라인 생성
+
+```
+- 이름: lab-jbuild-pipeline
+- 파이프라인 템플릿: acc-vcs-jbuild-tomcat
+- 요약: 파이프라인 테스트
+```
+
+파이프라인 수정
+```
+- vcs-get 테스크
+    - repo: https://github.com/mantech-accordion/jpetstore-6.git
+    - ref: master
+    - auth: none
+    - cleanWorkspace: true
+    - workspace: scm
+- src-build 테스크
+    - cmd: mvn clean package -f scm/pom.xml -Duser.timezone=GMT+09:00
+    - mavenImage: maven:jdk-8-alpine 선택
+    - mavenHome: .
+- dockerfile-tomcat 테스크 삭제
+- image-build 테스크 삭제
+```
+
+**2. 파이프라인을 실행하세요.**
+
+**3. 파이프라인 수행 이력을 확인하세요.**
+
+**4. 생성한 파이프라인을 삭제합니다.**

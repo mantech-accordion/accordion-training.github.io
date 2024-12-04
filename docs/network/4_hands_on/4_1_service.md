@@ -121,18 +121,18 @@ spec:
 
 **2. 생성한 서비스를 NodePort로 접근하여 확인하세요.**
 
+HINT
 ```
-URL=> http://<IP>:<NodePort>
-IP = 강사가 부여해주는 IP로 접근하세요
+- URL=> http://<IP>:<NodePort>
 ```
 
 **3. 예제2 yaml을 사용하여 Deployment 및 Service를 생성하세요.**
 
 **4. 생성한 서비스를 NodePort로 접근하여 확인하세요.**
 
+HINT
 ```
 URL=> http://<IP>:<NodePort>
-IP = 강사가 부여해주는 IP로 접근하세요
 ```
 
 **5. 접근이 되지 않는 서비스를 찾고, 그 이유를 확인하세요.**

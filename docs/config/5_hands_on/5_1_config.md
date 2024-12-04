@@ -23,7 +23,7 @@ Namespace
 </div>
 
 ---
-## 연습문제
+## 실습문제
 
 **1. 아래 속성으로 새 시크릿과 컨피그맵을 생성하고, 생성한 시크릿과 컨피그맵을 Pod에 사용하세요.**
 - 단, 컨피그맵은 Pod에 볼륨 마운트하고, 시크릿은 Pod에 환경변수로 사용하세요.
@@ -50,7 +50,9 @@ Namespace
 
 ```
 - 컨피그맵 이름: lab-config-demo-configmap
+
 key: nginx.conf
+
 value:
   user  nginx;
   worker_processes  auto;
@@ -116,5 +118,13 @@ spec:
 
 
 **3. Pod에 터미널 접근하여 환경 변수 및 volumeMount한 설정 파일을 확인하세요.**
+
+
+HINT
+```
+- 볼륨 마운트 확인 명령어: df -Th && ls -l /config
+
+- 환경 변수 확인 명령어: env | egrep -i "ui_properties|player"
+```
 
 **4. 생성한 리소스들을 삭제하세요.**

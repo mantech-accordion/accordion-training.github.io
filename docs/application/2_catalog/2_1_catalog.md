@@ -219,9 +219,15 @@ Namespace
 vcs-get:
     - repo: https://github.com/mantech-accordion/jpetstore-6.git
     - ref: master
-    - cleanWorkspace: false
+    - auth: none
+    - cleanWorkspace: true
+    - workspace: scm
+src-build:
+    - cmd: mvn clean package -f scm/pom.xml -Duser.timezone=GMT+09:00
+    - mavenImage: base.registry.accordions.co.kr:5000/maven:jdk-8-alpine
+    - mavenHome: .
 dockerfile-tomcat:
-    - tomcatImage: tomcat:9.0.68-jdk8
+    - tomcatImage: base.registry.accordions.co.kr:5000/tomcat:9-jdk8
 ```
 
 
@@ -229,3 +235,6 @@ dockerfile-tomcat:
 
 
 **3. 배포된 워크로드 상태를 확인하세요.**
+
+
+**4. 배포된 카탈로그를 삭제하세요.**

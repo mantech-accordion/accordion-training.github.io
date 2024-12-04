@@ -115,29 +115,43 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress
+  name: demo-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/affinity: cookie
 spec:
   ingressClassName: nginx
   rules:
-  - host: 'test.example.com'
+  - host: 'demo-apache.nip.io'
     http:
       paths:
       - backend:
           service:
-            name: app
+            name: demo-apache
             port:
-              number: 8080
+              number: 80
         path: /
         pathType: Prefix
+  - host: 'demo-nginx.nip.io'
+    http:
+      paths:
+      - backend:
+          service:
+            name: demo-nginx
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+
               
 {% endhighlight %}
    
 </details>
 
-**2. /etc/hosts 혹은 window hosts 파일에 demo-apache.nip.io를 저장한 뒤, 생성한 인그레스에 접속해보세요.**
+**2. 각자 PC의 hosts 파일에 아코디언 접속 IP로 demo-apache.nip.io를 저장한 뒤, 생성한 인그레스에 접속해보세요.**
 
-**3. 생성한 인그레스를 확인하고 삭제하세요.**
+**3. 각자 PC의 hosts 파일에 아코디언 접속 IP로 demo-nginx.nip.io를 저장한 뒤, 생성한 인그레스에 접속해보세요.**
+
+**4. 생성한 인그레스에 ingressClassName을 test로 변경한 후, demo-apache.nip.io에 접속해보세요.**
+
+**5. 생성한 인그레스를 확인하고 삭제하세요.**

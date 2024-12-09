@@ -140,7 +140,28 @@ Namespace
 
 ---
 
-## 연습문제
+## 연습문제1
+
+**1. acc-showcase-env 파이프라인을 이용하여 환경변수를 확인하는 파이프라인을 수행하세요.**
+
+파이프라인 생성
+
+```
+- 이름: lab-env-pipeline
+- 파이프라인 템플릿: acc-showcase-env
+- 요약: 환경변수 파이프라인 테스트
+```
+
+**2. 파이프라인을 실행하세요.**
+
+**3. 파이프라인 수행 이력을 확인하세요.**
+
+**4. 생성한 파이프라인을 삭제합니다.**
+
+
+---
+
+## 연습문제2
 
 **1. 파이프라인을 이용해서 JAVA Build를 수행하세요.**
 
@@ -149,7 +170,7 @@ Namespace
 ```
 - 이름: lab-jbuild-pipeline
 - 파이프라인 템플릿: acc-vcs-jbuild-tomcat
-- 요약: 파이프라인 테스트
+- 요약: 자바 빌드 파이프라인 테스트
 ```
 
 파이프라인 수정
@@ -173,3 +194,37 @@ Namespace
 **3. 파이프라인 수행 이력을 확인하세요.**
 
 **4. 생성한 파이프라인을 삭제합니다.**
+
+---
+
+## 연습문제3
+
+**1. acc-vcs-image 파이프라인을 이용해서 image build를 수행하세요.**
+
+파이프라인 생성
+
+```
+- 이름: lab-image-build-pipeline
+- 파이프라인 템플릿: acc-vcs-image
+- 요약: 이미지 빌드 파이프라인 테스트
+```
+
+파이프라인 수정
+```
+- vcs-get 테스크
+    - repo: https://github.com/mantech-accordion/simple-php-website.git
+    - ref: master
+    - auth: none
+    - cleanWorkspace: true
+    - workspace: .
+- image-build 테스크
+    - regcred: user-registry
+```
+
+**2. 파이프라인을 실행하세요.**
+
+**3. 파이프라인 수행 이력을 확인하세요.**
+
+**4. 레지스트리 탭에서 빌드된 이미지를 확인하세요.**
+
+**5. 생성한 파이프라인을 삭제합니다.**

@@ -192,14 +192,14 @@ Namespace
 
 ---
 
-## 연습문제
+## 연습문제1
 
-**1. 카탈로그를 이용해서 tomcat 워크로드를 생성하세요.**
+**1. acc-tomcat 카탈로그템플릿을 이용해서 tomcat 워크로드를 생성하세요.**
 
 일반설정
 
 ```
-- name: lab-app-catalog-tomcat
+- name: lab-catalog-tomcat
 - 카탈로그 : acc-tomcat
 - 상세설명 : 카탈로그 생성
 - 고급설정 : 배포 클러스터, 네임스페이스 선택
@@ -208,9 +208,9 @@ Namespace
 
 배포 리소스 설정
 ```
-- 레플리카 파드 수 : 2 
-- resource.limits.cpu : 1
-- resource.limits.memory : 2Gi
+- 레플리카 파드 수 : 1
+- resource.limits.cpu : 0
+- resource.limits.memory : 1.5Gi
 - serviceType : NodePort
 ```
 
@@ -227,14 +227,88 @@ src-build:
     - mavenImage: base.registry.accordions.co.kr:5000/maven:jdk-8-alpine
     - mavenHome: .
 dockerfile-tomcat:
-    - tomcatImage: base.registry.accordions.co.kr:5000/tomcat:9-jdk8
+    - tomcatImage: base.registry.accordions.co.kr:5000/accordion/tomcat:9-jdk8
 ```
-
 
 **2. 카탈로그를 배포하세요.**
 
+**3. 배포된 워크로드 상태를 확인하세요.**
+
+**4. 배포된 카탈로그를 삭제하세요.**
+
+
+---
+
+## 연습문제2
+
+**1. acc-wildfly 카탈로그템플릿을 이용해서 wildfly 워크로드를 생성하세요.**
+
+일반설정
+
+```
+- name: lab-catalog-wildfly
+- 카탈로그 : acc-wildfly
+- 상세설명 : 카탈로그 생성
+- 고급설정 : 배포 클러스터, 네임스페이스 선택
+- 컨테이너 이미지 정책 : 레지스트리 user-registry, 보관개수 10
+```
+
+배포 리소스 설정
+```
+- 레플리카 파드 수 : 2 
+- resource.limits.cpu : 0
+- resource.limits.memory : 1.5Gi
+- serviceType : NodePort
+```
+
+파이프라인 설정
+```
+vcs-get:
+    - repo: https://github.com/mantech-accordion/jpetstore-6.git
+    - ref: master
+    - auth: none
+    - cleanWorkspace: true
+    - workspace: scm
+src-build:
+    - cmd: mvn clean package -f scm/pom.xml -Duser.timezone=GMT+09:00
+    - mavenImage: base.registry.accordions.co.kr:5000/maven:jdk-8-alpine
+    - mavenHome: .
+dockerfile-wildfly:
+    - tomcatImage: base.registry.accordions.co.kr:5000/accordion/wildfly:26-jdk8
+```
+
+**2. 카탈로그를 배포하세요.**
 
 **3. 배포된 워크로드 상태를 확인하세요.**
 
+**4. 배포된 카탈로그를 삭제하세요.**
+
+
+---
+
+## 연습문제3
+
+**1. acc-from-image 카탈로그 템플릿을 이용해서 nginx 워크로드를 생성하세요.**
+
+일반설정
+
+```
+- name: lab-catalog-nginx
+- 카탈로그: acc-from-image
+- 상세설명: 카탈로그 생성
+- 고급설정: 배포 클러스터, 네임스페이스 선택
+- 컨테이너 이미지 정책: 레지스트리 user-registry, 보관개수 5
+```
+
+배포 리소스 설정
+```
+- 레플리카 파드 수: 1
+- 이미지: base.registry.accordions.co.kr:5000/nginx:1.25.4-alpine
+- serviceType: NodePort
+```
+
+**2. 카탈로그를 배포하세요.**
+
+**3. 배포된 워크로드 상태를 확인하세요.**
 
 **4. 배포된 카탈로그를 삭제하세요.**

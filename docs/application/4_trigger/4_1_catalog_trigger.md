@@ -105,3 +105,54 @@ Namespace
 ## 카탈로그 트리거 삭제
 삭제할 트리거의 삭제 버튼을 눌러 트리거 삭제도 가능합니다.
 ![catalog-trigger-delete](/assets/images/application/trigger/catalog-trigger-delete.png){: width="1200" }
+
+
+---
+
+## 연습문제
+
+**1. 트리거를 이용해서 카탈로그 정기 배포를 수행하세요.**
+
+해당 연습 문제는 아래의 카탈로그 연습 문제를 선행한 뒤 진행합니다.
+```5. 애플리케이션 -> 5.2 카탈로그 -> 5.2.1 카탈로그 배포 -> 연습 문제1```
+
+아래 예제YAML을 토대로, tgr-builder ServiceAccount 및 ClusterRoleBinding을 생성합니다.
+
+<details>
+<summary>예제 Yaml</summary>
+  
+{% highlight yaml %}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: tgr-builder
+  namespace: <namespace>
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: tgr-builder
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: tgr-builder
+  namespace: <namespace>
+
+{% endhighlight %}
+   
+</details>
+
+
+```
+- 예약 액션
+- 트리거 이름: tgr-daily-deploy
+- 스케쥴: 0 * * * *(Every Hour)
+- 트리거 수행 서비스 어카운트: tgr-builder
+```
+
+**2. 설정된 트리거 상태를 확인하세요.**

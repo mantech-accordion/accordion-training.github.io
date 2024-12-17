@@ -103,7 +103,15 @@ Namespace
 - baseImage: tomcat9-jdk8
 - workspace: scm
 
-4. 승인 단계 추가
+
+4. image-scan
+- 테스트 이름: image-scan
+- 테스크 연관 관계: image-build.Succeeded
+- 테스크 템플릿: hub-image-vulnerability-scanning
+    - 기본 값
+
+
+5. 승인 단계 추가
 - 테스크 이름: approve
   - 승인자 목록: approve
 - 테스크 연관 관계: image-build.Succeeded
